@@ -1,0 +1,2517 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Plotting in R &#8212; Home Page</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/style.css?v=aa869d35" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'individual_modules/introduction_to_r/plots';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Statistical Analysis" href="stats.html" />
+    <link rel="prev" title="Control Flow" href="control_flow.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../home_page.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/exeter_logo.png" class="logo__image only-light" alt="Home Page - Home"/>
+    <script>document.write(`<img src="../../_static/exeter_logo.png" class="logo__image only-dark" alt="Home Page - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../home_page.html">
+                    Coding for Reproducible Research (CfRR) Training Programme Home Page
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">What is Coding For Reproducible Research?</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../cfrr_program_details/about_us.html">About Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cfrr_program_details/how_to_use_CfRR.html">How to Use This Website</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">What Courses Should I Take?</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../where_is_my_understanding/homepage_where_is_my_understanding.html">Where Is My Understanding Quizzes</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../where_is_my_understanding/python.html">Python</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/intro_to_python.html">Introduction to Python Quiz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/python_for_data_analysis.html">Python for Data Analysis Quiz</a></li>
+
+
+
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../where_is_my_understanding/R.html">R</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/intro_to_r.html">Introduction to R Quiz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/regression_analysis_with_R.html">Regression Analysis With R Quiz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/advanced_regression_analysis_with_R.html">Advanced Regression Analysis with R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/working_with_data_in_r.html">Working With Data in R Quiz</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../where_is_my_understanding/high_performance_computing.html">High Performance Computing</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/intro_to_hpc.html">Introduction to HPC Quiz</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../where_is_my_understanding/version_control.html">Version Control</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/intro_to_version_control.html">Introduction to Version Control with Git and Github Quiz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/intermediate_version_control.html">Intermediate Version Control Quiz</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../where_is_my_understanding/unix.html">UNIX</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/intro_to_unix.html">Introduction to UNIX Quiz</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../where_is_my_understanding/computational_thinking_overview.html">Computational Thinking</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/computational_thinking.html">Computational Thinking Quiz</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../where_is_my_understanding/software_development.html">Software Development</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/software_development_best_practice.html">Software Development Best Practice Quiz</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../where_is_my_understanding/julia.html">Julia</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/introduction_to_julia.html">Introduction to Julia</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../pathways/related_courses.html">How do these courses relate?</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../pathways/hpc.html">High Performance Computing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pathways/r_ds.html">R Data Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pathways/python_ds.html">Python Data Science</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Courses We Offer</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../cfrr_program_details/courses_overview.html">Workshop Schedule and Signup</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../programme_information/programme_information.html">Workshop Information</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../programme_information/python.html">Python</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/intro_to_python.html">Introduction to Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/python_for_data_analysis.html">Python for Data Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../programme_information/R.html">R</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/intro_to_r.html">Introduction to R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/regression_analysis_with_r.html">Regression Analysis with R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/advanced_regression_analysis_with_r.html">Advanced Regression Analysis With R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/working_with_data_in_r.html">Working With Data in R</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../programme_information/high_performance_computing.html">High Performance Computing</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/intro_to_hpc.html">Introduction to HPC</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../programme_information/version_control.html">Version Control</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/intro_to_version_control.html">Introduction to Version Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/intermediate_version_control.html">Intermediate Version Control</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../programme_information/unix.html">UNIX</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/intro_to_unix.html">Introduction to UNIX</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../programme_information/computational_thinking_overview.html">Computational Thinking</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/computational_thinking.html">Computational Thinking</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../programme_information/software_development.html">Software Development</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/software_development_best_practices.html">Software Development Best Practice</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../programme_information/julia.html">Julia</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/intro_to_julia.html">Introduction to Julia</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cfrr_program_details/course_feedback.html">Course Feedback</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../cfrr_program_details/self_study_notes.html">Self Study Notes</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../course_homepages/python.html">Python</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-21"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/introduction_to_python.html">Introduction to Python</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/motivation.html">Motivation and Background</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/fundamentals.html">Python Fundamentals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/lists.html">Lists</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/dictionaries.html">Dictionaries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/control_flow.html">Control Flow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/loops.html">Loops</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/additional_exercises.html">Additional Session 1 Exercises</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/recap.html">Session 1 Recap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/functions.html">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/imports.html">Imports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/analysis_task_intro.html">Data Analysis Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/analysis_task_1.html">Data Analysis Task 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/analysis_task_2.html">Data Analysis Task 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/analysis_task_3.html">Data Analysis Task 3</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/python_for_data_analysis.html">Python for Data Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-23"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../python_for_data_analysis/Python_Language_features.html">Advanced Language Features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python_for_data_analysis/Python_Virtual_environments.html">Virtual environments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python_for_data_analysis/Python_NumPy.html">Numpy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python_for_data_analysis/Python_Pandas.html">Pandas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python_for_data_analysis/Python_Matplotlib.html">Matplotlib</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python_for_data_analysis/Python_ScikitLearn.html">Scikit-Learn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python_for_data_analysis/data-analysis-plotly.html">Plotly</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python_for_data_analysis/Python_Testing.html">Checking and Testing Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python_for_data_analysis/data-analysis-task.html">Example Project</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../../course_homepages/R.html">R</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-24"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="../section_landing_pages/introduction_to_r.html">Introduction to R</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-25"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="gettingstarted.html">Getting Up and Running with R</a></li>
+<li class="toctree-l4"><a class="reference internal" href="basic_commands.html">Running Commands With R</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l4"><a class="reference internal" href="data_types.html">Data Types and Structures</a></li>
+
+
+
+
+
+<li class="toctree-l4"><a class="reference internal" href="load_data.html">Loading Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manipulating_data.html">Manipulating Datasets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control_flow.html">Control Flow</a></li>
+
+
+<li class="toctree-l4 current active"><a class="current reference internal" href="#">Plotting in R</a></li>
+
+
+
+
+
+<li class="toctree-l4"><a class="reference internal" href="stats.html">Statistical Analysis</a></li>
+
+
+
+
+
+
+
+
+
+<li class="toctree-l4"><a class="reference internal" href="good_practise.html">Establishing Good Practices when Coding</a></li>
+
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/regression_analysis_with_R.html">Regression Analysis with R</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-26"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../regression_analysis_with_R/introduction_to_regression.html">Introduction to Regression Analysis</a></li>
+
+<li class="toctree-l4"><a class="reference internal" href="../regression_analysis_with_R/hypothesis_testing.html">Hypothesis Testing for Regression Models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../regression_analysis_with_R/multiple_linear_regression.html">Multiple Linear Regression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../regression_analysis_with_R/logistic_regression.html">Logistic Regression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../regression_analysis_with_R/summary.html">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../regression_analysis_with_R/extras.html">Extras</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/advanced_regression_analysis_with_R.html">Advanced Regression Analysis with R</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-27"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../advanced_regression_analysis_with_R/mixed_effects_models.html">Mixed Effects Models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../advanced_regression_analysis_with_R/expanding_the_mixed_effects_model_framework.html">Expanding the mixed effects model framework</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../advanced_regression_analysis_with_R/regression_models_with_interaction_terms.html">Regression models with interaction terms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../advanced_regression_analysis_with_R/summary.html">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../advanced_regression_analysis_with_R/extras.html">Extras</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/working_with_data_in_R.html">Working With Data in R</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-28"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../working_with_data_in_R/introducing_tidyverse.html">Tidyverse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../working_with_data_in_R/loading_data.html">Loading Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../working_with_data_in_R/manipulating_a_dataframe.html">Manipulating A Dataframe</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../working_with_data_in_R/piping.html">Piping and Functional Style</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../working_with_data_in_R/combining_datasets.html">Combining Datasets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../working_with_data_in_R/reshaping_datasets.html">Reshaping Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../working_with_data_in_R/strings_and_dates.html">Strings and Dates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../working_with_data_in_R/summary.html">Summary</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../course_homepages/high_performance_computing.html">High Performance Computing</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-29"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/introduction_to_hpc.html">Introduction to HPC and ISCA</a><input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-30"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_hpc/motivation.html">Why might I want to use a HPC Cluster?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_hpc/isca.html">Exeter supported HPC facilities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_hpc/connection.html">How do I connect to a HPC Cluster?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_hpc/file_transfer.html">File Transfer Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_hpc/schedulers.html">Running a job on a HPC system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_hpc/modules.html">Loading software packages on HPC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_hpc/example_jobs.html">Running more complex jobs on a HPC system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_hpc/exploiting_slurm.html">Harnessing the power of the scheduler</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../course_homepages/version_control.html">Version Control</a><input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-31"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/introduction_to_version_control.html">Introduction to Version Control</a><input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-32"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_version_control/motivation.html">Motivation: Why use Version Control Systems?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_version_control/git_vs_github.html">Git vs Github</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_version_control/configuring_git.html">Setting up Git and GitHub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_version_control/making_repos.html">Making Repositories</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_version_control/example_repo.html">An Example Repository</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_version_control/recording_changes.html">Recording Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_version_control/history_and_changes.html">Viewing History and Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_version_control/recording_changes_revisited.html">Recording Changes – Revisited</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_version_control/pushing_and_pulling.html">Pushing to and Pulling From the Remote Repository</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_version_control/undoing_changes.html">Undoing Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_version_control/ignoring_files.html">Ignoring Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_version_control/local_branches.html">Working with Local Branches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_version_control/remote_branches_with_github.html">Remote Branches with GitHub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_version_control/collaborating_with_branches.html">Collaborating with Branches</a></li>
+
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_version_control/merge_conflicts.html">Merge Conflicts</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/intermediate_version_control.html">Intermediate Version Control</a><input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-33"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../intermediate_version_control/introduction.html">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intermediate_version_control/config_git.html">Configuring Git</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intermediate_version_control/basic_git.html">Basic Git</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intermediate_version_control/typical_workflow.html">Typical Workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intermediate_version_control/branches_and_merging.html">Branches and Merging</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intermediate_version_control/remotes.html">Working with Remotes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intermediate_version_control/github_workflows.html">GitHub Workflows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intermediate_version_control/rewriting_history.html">Rewriting the History</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intermediate_version_control/further_topics.html">Some Additional Topics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../course_homepages/unix.html">UNIX</a><input class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-34"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/introduction_to_unix.html">Introduction to UNIX</a><input class="toctree-checkbox" id="toctree-checkbox-35" name="toctree-checkbox-35" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-35"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_unix/intro.html">Introducing the UNIX shell</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_unix/filedir.html">File Directory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_unix/create.html">Working With Files and Directories</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_unix/pipefilter.html">Pipes and Filters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_unix/loop.html">Loops</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_unix/script.html">Shell Scripts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_unix/find.html">Finding Things</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../course_homepages/computational_thinking.html">Computational Thinking</a><input class="toctree-checkbox" id="toctree-checkbox-36" name="toctree-checkbox-36" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-36"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/computational_thinking.html">Computational Thinking</a><input class="toctree-checkbox" id="toctree-checkbox-37" name="toctree-checkbox-37" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-37"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../computational_thinking/introduction.html">Computational Thinking</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../computational_thinking/algorithms.html">Algorithms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../computational_thinking/decomposition.html">Decomposition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../computational_thinking/pattern_recognition.html">Pattern recognition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../computational_thinking/abstraction.html">Abstraction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../computational_thinking/alignment.html">Aligning the human solution with the computer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../computational_thinking/final_exercise.html">Sudoku Task</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../course_homepages/software_development.html">Software Development</a><input class="toctree-checkbox" id="toctree-checkbox-38" name="toctree-checkbox-38" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-38"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/software_development_best_practice.html">Software Development Best Practice</a><input class="toctree-checkbox" id="toctree-checkbox-39" name="toctree-checkbox-39" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-39"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../software_development_best_practices/software_development_life_cycle.html">Software Development Life Cycle &amp; Methodologies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../software_development_best_practices/data_management.html">Data Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../software_development_best_practices/problem_solving.html">Problem Solving</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../software_development_best_practices/virtual_environments_dependency_managers.html">Virtual Environment and Dependency Managers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../software_development_best_practices/version_control.html">Version Control</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../software_development_best_practices/readable_code_and_documentation.html">Readable Code and Documentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../software_development_best_practices/testing.html">Testing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../software_development_best_practices/collaboration.html">Collaboration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../software_development_best_practices/reproducibility.html">Reproducibility</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../course_homepages/julia.html">Julia</a><input class="toctree-checkbox" id="toctree-checkbox-40" name="toctree-checkbox-40" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-40"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/introduction_to_julia.html">Introduction to Julia</a><input class="toctree-checkbox" id="toctree-checkbox-41" name="toctree-checkbox-41" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-41"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_julia/introduction_to_julia.html">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_julia/variables.html">Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_julia/operations.html">Operations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_julia/control_flow.html">Control Flow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_julia/functions.html">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_julia/arrays_and_matrices.html">Arrays and Matrices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_julia/io.html">Input Output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_julia/package_management.html">Package Management</a></li>
+
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_julia/visualisation.html">Plotting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_julia/performant_code.html">Performant Code</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../bibliography.html">Bibliography</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Join Us!</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/contributing.html">Contributing to CfRR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/roles.html">Roles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/contributing_guidelines.html">Contributor Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/developing_a_course.html">Developing a Course Guidance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/suggestions_form.html">Feedback</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Community Guidelines</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../cfrr_program_details/code_of_conduct.html">Code of Conduct</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/coding-for-reproducible-research/CfRR_Courses/main?urlpath=tree/individual_modules/introduction_to_r/plots.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/coding-for-reproducible-research/CfRR_Courses" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/coding-for-reproducible-research/CfRR_Courses/issues/new?title=Issue%20on%20page%20%2Findividual_modules/introduction_to_r/plots.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/individual_modules/introduction_to_r/plots.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Plotting in R</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Plotting in R</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plots">Plots</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arguements">Arguements</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-data-to-an-existing-plot">Adding data to an existing plot</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#further-customisations">Further customisations</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#adjusting-the-plot-margins">Adjusting the plot margins</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-composite-plots">Creating composite plots</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-and-exporting-plots">Saving and exporting plots</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#activity">Activity:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-quiz">Summary Quiz</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="plotting-in-r">
+<h1>Plotting in R<a class="headerlink" href="#plotting-in-r" title="Link to this heading">#</a></h1>
+<section id="learning-objectives">
+<h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Learn the basics of creating plots using the <code class="docutils literal notranslate"><span class="pre">plot()</span></code> function</p></li>
+<li><p>Understand how to use various arguments such as <code class="docutils literal notranslate"><span class="pre">xlab</span></code>, <code class="docutils literal notranslate"><span class="pre">ylab</span></code>, and <code class="docutils literal notranslate"><span class="pre">col</span></code> to customize plots</p></li>
+<li><p>Learn how to add new data points or lines to existing plots for enhanced visualization</p></li>
+<li><p>Understand how to adjust plot margins and layout for better presentation</p></li>
+<li><p>Learn how to create multiple plots in a single window for comparative analysis</p></li>
+<li><p>Understand how to save and export plots to different file formats</p></li>
+</ul>
+</section>
+<section id="plots">
+<h2>Plots<a class="headerlink" href="#plots" title="Link to this heading">#</a></h2>
+<p>The mathematician Richard Hamming once said, “The purpose of computing is insight, not numbers,” and the best way
+to develop insight is often to visualize data. Visualization deserves an entire lecture (or course) of its own,
+but we can explore a few of R’s plotting features. R is synonymous with data analysis and visualisation. R is capable of plotting many
+different types of plots and importantly these are infinitely customisable. To mke a plot look the way we want,
+we need to take advantage of the many arguments available in plotting functions.</p>
+<p>The R base function <code class="docutils literal notranslate"><span class="pre">plot()</span></code> can generate a range of different plots from some user supplied data.</p>
+<p>If we provide one vector of continuous data, it plots that on the y-axis against the index on the x-axis.</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+plot(iris$Sepal.Length)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/18338d93fdff807c2f0b6b4042f1dd3e1dac85621c1ca36342c8b82c696b4b99.png" src="../../_images/18338d93fdff807c2f0b6b4042f1dd3e1dac85621c1ca36342c8b82c696b4b99.png" />
+</div>
+</div>
+<p>If we want to plot a scatterplot between two continuous variables, we provide both to the <code class="docutils literal notranslate"><span class="pre">plot()</span></code> function. The order here can be important, if not explicitly labeled as the x or y variable, R will take the first entry as the x variable and  the second entry as the y variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+plot(iris$Sepal.Length, iris$Sepal.Width)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/334f7a8b4e7e9d34bddffdfdec95f2225a2c11981e1de94958943400de28b02d.png" src="../../_images/334f7a8b4e7e9d34bddffdfdec95f2225a2c11981e1de94958943400de28b02d.png" />
+</div>
+</div>
+<p>Alternatively we can use the argument keywords to specify which variable should be plotted on which axis, in this
+case is doesn’t matter which order we include the arguments. For example we can state the y variable first.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+plot(y = iris$Sepal.Length, x = iris$Sepal.Width)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/ed9601dc1cbfcc40265b3d55bc5f7c4945b5cde2e88ca936cc0cf0411220e522.png" src="../../_images/ed9601dc1cbfcc40265b3d55bc5f7c4945b5cde2e88ca936cc0cf0411220e522.png" />
+</div>
+</div>
+</section>
+<section id="arguements">
+<h2>Arguements<a class="headerlink" href="#arguements" title="Link to this heading">#</a></h2>
+<p>When calling a function, in the case of multiple arguments, there are two ways arguments can be specified.  They can be specified <strong>positionally</strong>, where R knows which argument is which based on the order they are listed or  using <strong>keywords</strong> where a keyword followed by = is used to inform R which argument is which. With keyword arguments,  the order does not matter, with positional arguments it is critical. It is not uncommon to see both ways used within the same function call.</p>
+<p>You will see that R has generated the axis labels from the variable names. We can customise this with additional
+arguments (<code class="docutils literal notranslate"><span class="pre">xlab</span></code> and <code class="docutils literal notranslate"><span class="pre">ylab</span></code>) in the function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+plot(iris$Sepal.Length, iris$Sepal.Width , xlab = &quot;Sepal Length (cm)&quot;, ylab = &quot;Sepal Width (cm)&quot;)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/fc8443b640019524313f1d97b2662ea6d499a53e7d9c04af77efba5510fc45f1.png" src="../../_images/fc8443b640019524313f1d97b2662ea6d499a53e7d9c04af77efba5510fc45f1.png" />
+</div>
+</div>
+<p>We can also change the colour of the points with the <code class="docutils literal notranslate"><span class="pre">col</span></code> argument. If we give it one colour, all the points
+will be changed to the same colour.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+plot(iris$Sepal.Length, iris$Sepal.Width , xlab = &quot;Sepal Length (cm)&quot;, ylab = &quot;Sepal Width (cm)&quot;, col = &quot;red&quot;)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/70bfd18cceee0576e386db47f54fec4f426f0681839d1fe2d231f5276927e8b9.png" src="../../_images/70bfd18cceee0576e386db47f54fec4f426f0681839d1fe2d231f5276927e8b9.png" />
+</div>
+</div>
+<p>Alternatively, we can provide a vector of colours, where the first colour will be the colour of the first point drawn, the second colour, the colour of the second point and so on.
+This vector does have to be the same length as the number of points. For example if we provide a vector of three colours, this will recycled until all the points have been pointed.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+plot(iris$Sepal.Length, iris$Sepal.Width , xlab = &quot;Sepal Length (cm)&quot;, ylab = &quot;Sepal Width (cm)&quot;, col = c(&quot;red&quot;, &quot;blue&quot;, &quot;#ddaa33&quot;))
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/2850881ac1195bdd97973936cdb971d95dc01cd513b71bf6b6278f31c2be3681.png" src="../../_images/2850881ac1195bdd97973936cdb971d95dc01cd513b71bf6b6278f31c2be3681.png" />
+</div>
+</div>
+<p>What has happened is the 1st,4th,7th etc are pointed in red, the 2nd,5th,8th etc in blue and the 3rd,6th,9th etc in #ddaa33.</p>
+<p>If we want to colour the points by some categorial variable, we can use the fact that factors are represented as integers to subset a vector of colours.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+plot(iris$Sepal.Length, iris$Sepal.Width , xlab = &quot;Sepal Length (cm)&quot;, ylab = &quot;Sepal Width (cm)&quot;, col = c(&quot;red&quot;, &quot;blue&quot;, &quot;#ddaa33&quot;)[iris$Species])
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/625a7f44cdedcadfed17957b2f7d5fe0b4413cc31cff43e2c231efd59c2751cd.png" src="../../_images/625a7f44cdedcadfed17957b2f7d5fe0b4413cc31cff43e2c231efd59c2751cd.png" />
+</div>
+</div>
+<p>There are three levels in the factor <code class="docutils literal notranslate"><span class="pre">iris$Species</span></code>, which are represented internally by the numbers 1,2,3. These integers can be used to index a vector of at
+least three as shown below, and create a new vector, where each level is replaced by the same colour.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+iris$Species[1:10]
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [1] setosa setosa setosa setosa setosa setosa setosa setosa setosa setosa
+Levels: setosa versicolor virginica
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+as.numeric(iris$Species[1:10])
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [1] 1 1 1 1 1 1 1 1 1 1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+c(&quot;red&quot;, &quot;blue&quot;, &quot;#ddaa33&quot;)[iris$Species[1:10]]
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [1] &quot;red&quot; &quot;red&quot; &quot;red&quot; &quot;red&quot; &quot;red&quot; &quot;red&quot; &quot;red&quot; &quot;red&quot; &quot;red&quot; &quot;red&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Depending on the data we are attempting to visualize, the type of plot we may want to use will vary. R will automatically try and plot the most  appropriate plot for the data provided. Next, we will use a “~” to provide a formula denoting what we want to plot.  As <code class="docutils literal notranslate"><span class="pre">iris$Species</span></code> is a factor, R defaults to a boxplot.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+plot(iris$Sepal.Length ~ iris$Species, ylab = &quot;Sepal Length (cm)&quot;, xlab = &quot;Species&quot;, col =  c(&quot;red&quot;, &quot;blue&quot;, &quot;#ddaa33&quot;))
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/02b3790fb63012cab17ad36328760a40d7dfec281399ad5ffc53896647ae34e4.png" src="../../_images/02b3790fb63012cab17ad36328760a40d7dfec281399ad5ffc53896647ae34e4.png" />
+</div>
+</div>
+<p>Note here, we only need to provide a vector of three colours, as there are only three boxes in the figure.</p>
+<p>As well as the <code class="docutils literal notranslate"><span class="pre">plot()</span></code> function R has some specific plot functions (box plots (boxplot()), histograms (hist())
+and bar plots (barplot())) we can call instead. These functions use a lot of the same arguments to customise the visualise
+the appearance of the plot.</p>
+<p>For example we can recreate the same boxplot as follows</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+boxplot(iris$Sepal.Length ~ iris$Species, ylab = &quot;Sepal Length (cm)&quot;, xlab = &quot;Species&quot;, 
+     col =  c(&quot;red&quot;, &quot;blue&quot;, &quot;#ddaa33&quot;))
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/02b3790fb63012cab17ad36328760a40d7dfec281399ad5ffc53896647ae34e4.png" src="../../_images/02b3790fb63012cab17ad36328760a40d7dfec281399ad5ffc53896647ae34e4.png" />
+</div>
+</div>
+<p>Histograms are plotted using the function <code class="docutils literal notranslate"><span class="pre">hist()</span></code>, which allows us to plot the frequency distribution of a vector.
+You can use standard plotting arguments such as col, but also used the argument breaks to adjust the amount of bins.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+# Plotting &quot;Sepal.Length&quot; with increased bins
+hist(iris$Sepal.Length, breaks = 16)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/4872e9e2ed7150e5e02e00ef758a9bfa0a8b989ff1216b9c70fd190d93d4cfd1.png" src="../../_images/4872e9e2ed7150e5e02e00ef758a9bfa0a8b989ff1216b9c70fd190d93d4cfd1.png" />
+</div>
+</div>
+<p>Below you can see a table containing a lot of basic plotting arguments. Also, for colour selection, making colour themes and looking for colour blind options, you can use <a class="reference external" href="https://www.colorhexa.com/">https://www.colorhexa.com/</a> which will give you R friendly colour codes.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Argument</p></th>
+<th class="head text-left"><p>Description</p></th>
+<th class="head text-left"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>bg</p></td>
+<td class="text-left"><p>The color to be used for the background</p></td>
+<td class="text-left"><p>bg = “blue”</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>cex</p></td>
+<td class="text-left"><p>Character size and expansion</p></td>
+<td class="text-left"><p>cex = 1.5, cex = 0.8</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>cex.axis</p></td>
+<td class="text-left"><p>The magnification to be used for axis annotation</p></td>
+<td class="text-left"><p>cex.axis = 1.2</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>cex.lab</p></td>
+<td class="text-left"><p>he magnification to be used for x and y label</p></td>
+<td class="text-left"><p>cex.lab = 0.8</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>cex.main</p></td>
+<td class="text-left"><p>The magnification to be used for main titles</p></td>
+<td class="text-left"><p>cex.main = 1.3</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>cex.sub</p></td>
+<td class="text-left"><p>The magnification to be used for sub-titles</p></td>
+<td class="text-left"><p>cex.sub = 0.9</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>col</p></td>
+<td class="text-left"><p>Colour</p></td>
+<td class="text-left"><p>col = “red”, col = “#ff0000”</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>family</p></td>
+<td class="text-left"><p>Font on the plot</p></td>
+<td class="text-left"><p>family = “Arial”</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>fg</p></td>
+<td class="text-left"><p>The colour to be used for the foreground of plots</p></td>
+<td class="text-left"><p>fg = “orange”</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>font</p></td>
+<td class="text-left"><p>An integer which specifies which font to use for text. Italic, bold etc.</p></td>
+<td class="text-left"><p>font = 3</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>font.axis</p></td>
+<td class="text-left"><p>The font to be used for axis annotation</p></td>
+<td class="text-left"><p>font.axis = 2</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>font.lab</p></td>
+<td class="text-left"><p>The font to be used for x and y labels</p></td>
+<td class="text-left"><p>font.lab = 3</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>font.main</p></td>
+<td class="text-left"><p>The font to be used for plot main titles</p></td>
+<td class="text-left"><p>font.main = 2</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>font.sub</p></td>
+<td class="text-left"><p>The font to be used for plot sub-titles</p></td>
+<td class="text-left"><p>font.sub = 2</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>lty</p></td>
+<td class="text-left"><p>Line type</p></td>
+<td class="text-left"><p>lty = 2</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>lwd</p></td>
+<td class="text-left"><p>Line width</p></td>
+<td class="text-left"><p>lwd = 3</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>main</p></td>
+<td class="text-left"><p>Plot primary title</p></td>
+<td class="text-left"><p>main = “Iris”</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>pch</p></td>
+<td class="text-left"><p>Scatter plot symbol for points</p></td>
+<td class="text-left"><p>pch = 1, pch= “p”</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>srt</p></td>
+<td class="text-left"><p>The string rotation in degrees</p></td>
+<td class="text-left"><p>srt = 90</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>sub</p></td>
+<td class="text-left"><p>Subtitle of plot</p></td>
+<td class="text-left"><p>sub = “All data”</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>xlab, ylab</p></td>
+<td class="text-left"><p>Label of the x or y axis</p></td>
+<td class="text-left"><p>xlab = “Distance (Miles)”</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>xlim, ylim</p></td>
+<td class="text-left"><p>Min/max x or y axis values</p></td>
+<td class="text-left"><p>xlim = c(0, 10)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>xpd</p></td>
+<td class="text-left"><p>If true, allows plotting outside the plot</p></td>
+<td class="text-left"><p>xpd = TRUE</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="adding-data-to-an-existing-plot">
+<h1>Adding data to an existing plot<a class="headerlink" href="#adding-data-to-an-existing-plot" title="Link to this heading">#</a></h1>
+<p>Once you have created a plot, there are various methods which allow us to add more data on top. For example, we may
+want to add individual data points on top of a boxplot, add more data points to a plot or add a line. To do this we
+can use functions such as points(), lines() or abline().</p>
+<p>Using <code class="docutils literal notranslate"><span class="pre">points()</span></code> and <code class="docutils literal notranslate"><span class="pre">lines()</span></code>, you can add more data to your plot. They use similar arguments to <code class="docutils literal notranslate"><span class="pre">plot()</span></code>,
+such as col, lty, pch, cex etc.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+# Plot &quot;Sepal.Length&quot; on a, then add &quot;Sepal.Width&quot; data as points and &quot;Petal.Length&quot; as lines
+plot(iris$Sepal.Length, ylim = c(0, 8), ylab = &quot;Size (cm)&quot;, xlab = &quot;Sample&quot;)
+points(iris$Sepal.Width, col = &quot;red&quot;, pch = 19, cex = 0.8)
+lines(iris$Petal.Length, lty = 2, col = &quot;blue&quot;)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/a656a607522bf0da048200c18af4af3406376a2c24b21628e9c85ee5f0e234dd.png" src="../../_images/a656a607522bf0da048200c18af4af3406376a2c24b21628e9c85ee5f0e234dd.png" />
+</div>
+</div>
+<p>using <code class="docutils literal notranslate"><span class="pre">abline()</span></code>, you can add horizontal lines (<code class="docutils literal notranslate"><span class="pre">h=</span></code>), vertical lines (<code class="docutils literal notranslate"><span class="pre">v=</span></code>), or diagonal lines(x, y). You can also specify the parameters of the straight line i.e the intercept (<code class="docutils literal notranslate"><span class="pre">a=</span></code>) and slope coefficient (<code class="docutils literal notranslate"><span class="pre">b=</span></code>). It can also be wrapped around a linear regression (<code class="docutils literal notranslate"><span class="pre">lm()</span></code>) to add a line of best fit.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+# Adding a horizontal line at 6 and a vertical line at 60
+plot(iris$Sepal.Length)
+abline(h = 6, col = &quot;red&quot;)
+abline(v = 60, col = &quot;blue&quot;)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/373c57ba029f113acdfcfbee59cbe2fe95b8a1166cd25438cb32bf3e0cc6b7dd.png" src="../../_images/373c57ba029f113acdfcfbee59cbe2fe95b8a1166cd25438cb32bf3e0cc6b7dd.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+# Plotting &quot;Sepal.Length&quot; against &quot;Petal.Length&quot; and adding a line of best fit
+plot(iris$Sepal.Length ~ iris$Petal.Length)
+abline(lm(iris$Sepal.Length ~ iris$Petal.Length), lty = 3, col = &quot;green&quot;, lwd = 3)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/4426cfe6c3e1c976ab54ca7f4375bee94ac164ac140ec6acf5b23d75f56a37d0.png" src="../../_images/4426cfe6c3e1c976ab54ca7f4375bee94ac164ac140ec6acf5b23d75f56a37d0.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="further-customisations">
+<h1>Further customisations<a class="headerlink" href="#further-customisations" title="Link to this heading">#</a></h1>
+<p>We can make many additions to our plots. As there are so many, we will only explore the most common ones here but will
+list additional ones which may be useful in the future.</p>
+<p>We often need to add a legend to our, and can do this using <code class="docutils literal notranslate"><span class="pre">legend()</span></code>. The <code class="docutils literal notranslate"><span class="pre">legend()</span></code> function allows us to
+define position, either by using x, y coordinates or by a word such as “topleft”. We also provide the text, colours
+and background.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+# Plotting &quot;Sepal.Length&quot; and colouring and using different points by &quot;Species&quot;, then adding a legend
+plot(iris$Sepal.Length, col = c(&quot;red&quot;, &quot;blue&quot;, &quot;#ddaa33&quot;)[iris$Species], 
+     pch = c(1, 2, 3)[iris$Species])
+legend(&quot;topleft&quot;, legend = c(&quot;Setosa&quot;, &quot;Versicolor&quot;, &quot;Virginica&quot;), 
+       pch = c(1,2,3), col = c(&quot;red&quot;, &quot;blue&quot;, &quot;#ddaa33&quot;))
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/901e6a84403bb9154ee43a58c9e7034049439a574b5d869cb0f48b99b4a59351.png" src="../../_images/901e6a84403bb9154ee43a58c9e7034049439a574b5d869cb0f48b99b4a59351.png" />
+</div>
+</div>
+<p>We can add additional text to a plot by using <code class="docutils literal notranslate"><span class="pre">text()</span></code> or <code class="docutils literal notranslate"><span class="pre">mtext()</span></code> for putting text in the margin. To use
+<code class="docutils literal notranslate"><span class="pre">text()</span></code>, we provide x, y coordinates,
+the text to be written (<code class="docutils literal notranslate"><span class="pre">labels</span> <span class="pre">=</span></code>), size (<code class="docutils literal notranslate"><span class="pre">cex</span> <span class="pre">=</span></code>), and colour (<code class="docutils literal notranslate"><span class="pre">col</span> <span class="pre">=</span></code>) and font (<code class="docutils literal notranslate"><span class="pre">font</span> <span class="pre">=</span></code>).</p>
+<p>Using <code class="docutils literal notranslate"><span class="pre">mtext()</span></code> requires different arguments as it is relation to the margin side we put the text in. It requires
+the text (<code class="docutils literal notranslate"><span class="pre">text</span> <span class="pre">=</span> </code>), the side of the plot
+the text will go (side =) with 1 = bottom, 2 = left, 3 = top, 4 = right, the margin line to put the text on (line = ).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+# Adding text to a plot
+plot(iris$Sepal.Length)
+text(20, 6, &quot;text&quot;, cex = 0.7, col = &quot;blue&quot;, font = 2)
+mtext(&quot;text&quot;, side = 4, line = 1, col = &quot;red&quot;)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/b1626be699c851a47bec1238b9c013833ea90cc1b9ef6d2a037815b5403a0027.png" src="../../_images/b1626be699c851a47bec1238b9c013833ea90cc1b9ef6d2a037815b5403a0027.png" />
+</div>
+</div>
+<p>There are times when we may want to add additional axes or move and adjust the axes of a plot. For this, we use
+<code class="docutils literal notranslate"><span class="pre">axis()</span></code> function after we create our plot. But first we need to tell R not to plot the default axes by
+setting the argument <code class="docutils literal notranslate"><span class="pre">axes</span></code> to FALSE when running <code class="docutils literal notranslate"><span class="pre">plot()</span></code>. <code class="docutils literal notranslate"><span class="pre">axis()</span></code> can be used to plot one axis at a time.
+Arguments for <code class="docutils literal notranslate"><span class="pre">axis()</span></code> including stating which side you want the axis to be drawn <code class="docutils literal notranslate"><span class="pre">(side</span> <span class="pre">=)</span></code> where 1 = below,
+2 = left, 3 = above and 4 = right, the positions of the tick-marks are drawn <code class="docutils literal notranslate"><span class="pre">(at</span> <span class="pre">=)</span></code>, what the labels are
+<code class="docutils literal notranslate"><span class="pre">(labels</span> <span class="pre">=)</span></code>, how far from the axis the ticks should extend <code class="docutils literal notranslate"><span class="pre">(line</span> <span class="pre">=)</span></code>, the position of the axis <code class="docutils literal notranslate"><span class="pre">(pos</span> <span class="pre">=)</span></code>
+and if tick marks should be drawn <code class="docutils literal notranslate"><span class="pre">(tick</span> <span class="pre">=)</span></code>. You can also change the line width <code class="docutils literal notranslate"><span class="pre">(lwd</span> <span class="pre">=)</span></code>, colour <code class="docutils literal notranslate"><span class="pre">(col</span> <span class="pre">=)</span></code>
+and type of line <code class="docutils literal notranslate"><span class="pre">(lty</span> <span class="pre">=)</span></code>. You need to use <code class="docutils literal notranslate"><span class="pre">axis()</span></code> for each axis you want to add.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+# Plotting &quot;Sepal.Length&quot; without axes and adding them with adjustment
+plot(iris$Sepal.Length, axes = F, ylab=&quot;Sepal Length (cm)&quot;)
+axis(1)
+axis(2, pos = 50, at = 1:8, lwd = 2, col = &quot;blue&quot;)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/3e59330b8284c54025561b0751777b526b82112aff01892c95e2f789649e62d4.png" src="../../_images/3e59330b8284c54025561b0751777b526b82112aff01892c95e2f789649e62d4.png" />
+</div>
+</div>
+<p>If you want to enclose the plot in a box (i.e. add in the extra axes as straight lines) you can use the function <code class="docutils literal notranslate"><span class="pre">box()</span></code>.</p>
+<p>Additional functions to add elements to your plots are <code class="docutils literal notranslate"><span class="pre">segments()</span></code>, <code class="docutils literal notranslate"><span class="pre">arrows()</span></code>, <code class="docutils literal notranslate"><span class="pre">curve()</span></code>, <code class="docutils literal notranslate"><span class="pre">rect()</span></code>,
+<code class="docutils literal notranslate"><span class="pre">polygon()</span></code> and <code class="docutils literal notranslate"><span class="pre">grid()</span></code>.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="adjusting-the-plot-margins">
+<h1>Adjusting the plot margins<a class="headerlink" href="#adjusting-the-plot-margins" title="Link to this heading">#</a></h1>
+<p>There are times when you want to adjust the size of the margins of a plot to make better use of the space available.
+Using <code class="docutils literal notranslate"><span class="pre">par()</span></code> with <code class="docutils literal notranslate"><span class="pre">mar()</span></code> and/or <code class="docutils literal notranslate"><span class="pre">mgp()</span></code> before calling <code class="docutils literal notranslate"><span class="pre">plot()</span></code>, we can adjust the margins of our plot.
+The function <code class="docutils literal notranslate"><span class="pre">par()</span></code> is essentially the function to set the parameters of the plots that follow. We can can it multiple times In
+a script to change the appearance of different plots.</p>
+<p>Using the argument <code class="docutils literal notranslate"><span class="pre">mar</span></code> allows us to adjust the width of the margins on each side of the plot. They are specificed in the unit of
+lines, with the default being <code class="docutils literal notranslate"><span class="pre">c(5,</span> <span class="pre">4,</span> <span class="pre">4,</span> <span class="pre">2)</span> <span class="pre">+</span> <span class="pre">0.1</span></code> relating to bottom, left, top and right respectively.</p>
+<p>As the <code class="docutils literal notranslate"><span class="pre">mar()</span></code> function just changes the width of the margins, anything located outside of the new sized margins
+is just pushed outside of the plotting region. For this reason we may also need to adjust the elements in the margin
+so we don’t just loose them or have them partly cut off. Using <code class="docutils literal notranslate"><span class="pre">mgp()</span></code> sets the axis label locations relative to
+the edge of the inner plot window. It takes a vector of length 3 where, the first value represents the location of
+the axis label, the second value the position of the tick-mark labels, and third value the position of the tick marks.
+The default is  <code class="docutils literal notranslate"><span class="pre">c(3,</span> <span class="pre">1,</span> <span class="pre">0)</span></code>.</p>
+<p>The argument <code class="docutils literal notranslate"><span class="pre">las()</span></code> allows us to specify the orientation of the tick mark labels or any other text added to a plot.
+The options are parallel to the axis (the default, las = 0), always horizontal (las = 1), always perpendicular to the
+axis (las = 2), and always vertical (las = 3). It can also be used within the <code class="docutils literal notranslate"><span class="pre">axis()</span></code> or <code class="docutils literal notranslate"><span class="pre">text()</span></code>
+functions to change the orientation of specific elements.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+par(mar = c(4, 4, 2, 1), mgp = c(2, 0.5, 0), las = 1)
+plot(iris$Sepal.Length, ylab=&quot;Sepal Length (cm)&quot;)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/8038b96b54eac1656193647496c92d7d36d126724997cebc41f2706e02fc558a.png" src="../../_images/8038b96b54eac1656193647496c92d7d36d126724997cebc41f2706e02fc558a.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="creating-composite-plots">
+<h1>Creating composite plots<a class="headerlink" href="#creating-composite-plots" title="Link to this heading">#</a></h1>
+<p>There are two options for making composite plots, or a multi-panel plots.</p>
+<p>We can use the <code class="docutils literal notranslate"><span class="pre">par()</span></code> function with the arguments <code class="docutils literal notranslate"><span class="pre">mfrow</span></code> <code class="docutils literal notranslate"><span class="pre">mfcol</span></code> which allows us define a matrix of plots
+with a specified number of rows and columns. Using <code class="docutils literal notranslate"><span class="pre">mfcol</span></code> draws by columns and <code class="docutils literal notranslate"><span class="pre">mfrow</span></code> draws by rows.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+par(mar = c(4, 4, 2, 1))
+par(mfrow = c(1, 2))
+plot(iris$Sepal.Length, ylab=&quot;Sepal Length (cm)&quot;)
+plot(iris$Sepal.Width, ylab=&quot;Sepal Width (cm)&quot;)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/fc36f5fb6f2c920eb42d03daf3e4c2e057bb5ae86e7fedf0e32c7c1d1052f7e8.png" src="../../_images/fc36f5fb6f2c920eb42d03daf3e4c2e057bb5ae86e7fedf0e32c7c1d1052f7e8.png" />
+</div>
+</div>
+<p>Alternatively we can use the function <code class="docutils literal notranslate"><span class="pre">layout()</span></code> which allows for complicated ways of combining plots. Again you should think
+think of it as a matrix or grid, but in this case a plot can occupy multiple elements. In this way plots can be different sizes.
+The relevant argument is <code class="docutils literal notranslate"><span class="pre">matrix</span></code> where you need to provide a matrix with increasing integers specifying where you want each plot
+to be located.</p>
+<p>For example if we want a plot with three figures, where one figure occupies the top, and there are two figures underneath,
+we need a 2x2 matrix with 1s across top and 2 and 3 underneath. We can create a matrix with the function <code class="docutils literal notranslate"><span class="pre">matrix()</span></code>
+where we provide the elements as a vector, the number of rows (or columns or both). The <code class="docutils literal notranslate"><span class="pre">byrow</span></code> argument, if true,
+will add the numbers to the matrix by row, if FALSE, it will add by column.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+matrix(c(1, 1, 2, 3), nrow = 2, ncol = 2, byrow = TRUE)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     [,1] [,2]
+[1,]    1    1
+[2,]    2    3
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we provide the this matrix to the <code class="docutils literal notranslate"><span class="pre">layout()</span></code> function, we are telling it to put the first plot to the positions
+occupied with the value 1, the second plot where the value 2 is located, and the third plot where the value 3 is located.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+par(mar = c(4, 4, 2, 1))
+layout(matrix(c(1, 1, 2, 3), 2, 2, byrow = TRUE))
+plot(iris$Sepal.Length, ylab = &quot;Sepal Length (cm)&quot;)
+plot(iris$Sepal.Width, ylab = &quot;Sepal Width (cm)&quot;)
+plot(iris$Petal.Length, ylab = &quot;Petal Length (cm)&quot;)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/b38c3bcf1e919033bbd6b317b250c838e12cfbf6e8e95cfd219ff34918946e9d.png" src="../../_images/b38c3bcf1e919033bbd6b317b250c838e12cfbf6e8e95cfd219ff34918946e9d.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="saving-and-exporting-plots">
+<h1>Saving and exporting plots<a class="headerlink" href="#saving-and-exporting-plots" title="Link to this heading">#</a></h1>
+<p>We can save our plots in various file formats byusing the appropriate function. These include as a pdf <code class="docutils literal notranslate"><span class="pre">(pdf())</span></code>,
+jpeg <code class="docutils literal notranslate"><span class="pre">(jpeg())</span></code>, png <code class="docutils literal notranslate"><span class="pre">(png())</span></code> or tiff <code class="docutils literal notranslate"><span class="pre">(tiff())</span></code>. These functions, with their arguments, need to be called
+before the plot is created (in order to open the connection to the file), and then the connection needs to be closed
+by executing <code class="docutils literal notranslate"><span class="pre">dev.off()</span></code>. The first argument for all of these functions is the path and/or file name where you want
+save the plot. When you call these functions you can also define the size of the image (using the arguments <code class="docutils literal notranslate"><span class="pre">width</span></code>,
+<code class="docutils literal notranslate"><span class="pre">height</span></code>, <code class="docutils literal notranslate"><span class="pre">units</span></code>, the background colour <code class="docutils literal notranslate"><span class="pre">bg</span></code> and resolution <code class="docutils literal notranslate"><span class="pre">res</span></code>. If the file does not exist it will be
+created, if it already exists, it will be overwritten without warning. All of these functions apart from <code class="docutils literal notranslate"><span class="pre">pdf()</span></code>
+will only save one image (although this could be a multi panel plot), and the last image that is plotted before <code class="docutils literal notranslate"><span class="pre">dev.off()</span></code>
+is called. <code class="docutils literal notranslate"><span class="pre">pdf()</span></code> on the other hand will save multiple images as multiple pages.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+# Saving a plot as a jpeg file
+jpeg(&quot;images/exampleplot.jpg&quot;, width = 300, height = 300, units = &quot;mm&quot;, bg = &quot;white&quot;, res = 200)
+plot(iris$Sepal.Length, ylab = &quot;Sepal Length (cm)&quot;)
+dev.off()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>quartz_off_screen 
+                2 
+</pre></div>
+</div>
+</div>
+</div>
+<section id="activity">
+<h2>Activity:<a class="headerlink" href="#activity" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Make two objects, one object containing values 1-20, and another object containing values 40-21</p>
+<ul class="simple">
+<li><p>Using your objects, create a plot with the object containing 1:20 on the x-axis and the object containing 40-21 on y-axis</p></li>
+<li><p>Change the x-axis label to “Independent Variable” and y-axis label to “Dependent Variable”</p></li>
+<li><p>Expand both axes to show values 1-40</p></li>
+<li><p>Increase the data point size, change their style and make them repeat between five colours</p></li>
+<li><p>Add a legend top the top right of the plot showing the five colours you have chosen and labelling them A, B, C, D, and E</p></li>
+<li><p>Add a horizontal line at 30, choose a colour, weight and style</p></li>
+<li><p>Add a vertical line at 10, choose a different colour, weight and style</p></li>
+<li><p>Add text saying “Cross Point” to the top right of the intersection of the two lines. Adjust the colour and size</p></li>
+</ul>
+</li>
+<li><p>Using “iris”, create a scatter plot with “Sepal.Length” on x-axis, labelled “Sepal length (cm)”, and the other three variables plotted on y-axis, with the label being “Size (cm)”</p>
+<ul class="simple">
+<li><p>Colour the three species differently and make the three measures different style of points</p></li>
+<li><p>Add a legend to show all the groups, and make sure it doesn’t cover any points</p></li>
+<li><p>Make sure the x-axis limits are 0-8 and y-axis limit is 4-8</p></li>
+<li><p>Adjust the margins to give a larger space around the edge of the plot and move the axis labels a little away from the axes</p></li>
+<li><p>Export the image as a pdf</p></li>
+</ul>
+</li>
+<li><p>Create a composite plot with the following panels using “iris”. Make the plots colourful and variable, that all points are visible in plotting window, axes have labels and measurement units. Export the plot as a high resolution (200) jpeg. Make sure the points and text are readable, and all info is visible. You may need to adjust margins</p>
+<ul class="simple">
+<li><p>Box plot of “Petal.Length” by species coloured by species</p></li>
+<li><p>Histogram of “Petal.Length” with 6 breaks, each one coloured differently, with a line added for the mean (hint: mean), coloured and labelled “Mean = X” where “X” is the mean value. Make this panel take more space</p></li>
+<li><p>“Petal.Length” against “Petal.Width” for just “virginica” species, with a line of best fit (hint: subsetting)</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="summary-quiz">
+<h2>Summary Quiz<a class="headerlink" href="#summary-quiz" title="Link to this heading">#</a></h2>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div id="YgBrtASxiDnw" data-shufflequestions="False"
+               data-shuffleanswers="True"
+               data-preserveresponses="false"
+               data-numquestions="1000000"
+               data-maxwidth="600"
+               style="border-radius: 10px; text-align: left"> <style>
+#YgBrtASxiDnw {
+   --jq-multiple-choice-bg: #6f78ffff;
+   --jq-mc-button-bg: #fafafa;
+   --jq-mc-button-border: #e0e0e0e0;
+   --jq-mc-button-inset-shadow: #555555;
+   --jq-many-choice-bg: #f75c03ff;
+   --jq-numeric-bg: #392061ff;
+   --jq-numeric-input-bg: #c0c0c0;
+   --jq-numeric-input-label: #101010;
+   --jq-numeric-input-shadow: #999999;
+   --jq-incorrect-color: #c80202;
+   --jq-correct-color: #009113;
+   --jq-text-color: #fafafa;
+}
+
+.Quiz {
+    max-width: 600px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    line-height: 1.1;
+    font-size: 16pt;
+    border-radius: inherit;
+}
+
+.QuizCode {
+    font-size: 14pt;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.QuizCode>pre {
+    padding: 4px;
+}
+
+.Answer {
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    border-radius: inherit;
+}
+
+.Feedback {
+    font-size: 16pt;
+    text-align: center;
+    min-height: 2em;
+}
+
+.Input {
+    align: left;
+    font-size: 20pt;
+}
+
+.Input-text {
+    display: block;
+    margin: 10px;
+    color: inherit;
+    width: 140px;
+    background-color: var(--jq-numeric-input-bg);
+    color: var(--jq-text-color);
+    padding: 5px;
+    padding-left: 10px;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: inherit;
+    line-height: 20pt;
+    border: none;
+    border-radius: 0.2rem;
+    transition: box-shadow 0.1s);
+}
+
+.Input-text:focus {
+    outline: none;
+    background-color: var(--jq-numeric-input-bg);
+    box-shadow: 0.6rem 0.8rem 1.4rem -0.5rem var(--jq-numeric-input-shadow);
+}
+
+.MCButton {
+    background: var(--jq-mc-button-bg);
+    border: 1px solid var(--jq-mc-button-border);
+    border-radius: inherit;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MCButton p {
+    color: inherit;
+}
+
+.MultipleChoiceQn {
+    padding: 10px;
+    background: var(--jq-multiple-choice-bg);
+    color: var(--jq-text-color);
+    border-radius: inherit;
+}
+
+.ManyChoiceQn {
+    padding: 10px;
+    background: var(--jq-many-choice-bg);
+    color: var(--jq-text-color);
+    border-radius: inherit;
+}
+
+.NumericQn {
+    padding: 10px;
+    background: var(--jq-numeric-bg);
+    color: var(--jq-text-color);
+    border-radius: inherit;
+}
+
+.NumericQn p {
+    color: inherit;
+}
+
+.InpLabel {
+    line-height: 34px;
+    float: left;
+    margin-right: 10px;
+    color: var(--jq-numeric-input-label);
+    font-size: 15pt;
+}
+
+.incorrect {
+    color: var(--jq-incorrect-color);
+}
+
+.correct {
+    color: var(--jq-correct-color);
+}
+
+.correctButton {
+    /*
+    background: var(--jq-correct-color);
+   */
+    animation: correct-anim 0.6s ease;
+    animation-fill-mode: forwards;
+    color: var(--jq-text-color);
+    box-shadow: inset 0px 0px 5px var(--jq-mc-button-inset-shadow);
+    outline: none;
+}
+
+.incorrectButton {
+    animation: incorrect-anim 0.8s ease;
+    animation-fill-mode: forwards;
+    color: var(--jq-text-color);
+    box-shadow: inset 0px 0px 5px var(--jq-mc-button-inset-shadow);
+    outline: none;
+}
+
+@keyframes incorrect-anim {
+    100% {
+        background-color: var(--jq-incorrect-color);
+    }
+}
+
+@keyframes correct-anim {
+    100% {
+        background-color: var(--jq-correct-color);
+    }
+}
+</style></div><script type="application/javascript">var questionsYgBrtASxiDnw=[
+    {
+        "question": "Which arguement is used to customize the x-axis label in an R plot?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "xlab",
+                "correct": true,
+                "feedback": "Correct"
+            },
+            {
+                "answer": "ylab",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "main",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "xaxis",
+                "correct": false,
+                "feedback": "Incorrect"
+            }
+        ]
+    },
+    {
+        "question": "How can you change the color of the points in a plot to red?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "plot(x, y, color = \"red\")",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "plot(x, y, col = \"red\")",
+                "correct": true,
+                "feedback": "Correct"
+            },
+            {
+                "answer": "plot(x, y, colour = \"red\")",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "plot(x, y, pointcolor = \"red\")",
+                "correct": false,
+                "feedback": "Incorrect"
+            }
+        ]
+    },
+    {
+        "question": "What happens if you provide a vector of colors shorter than the number of points in a plot?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "R return an error",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "Only the first few points are colored",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "The colors are recycled",
+                "correct": true,
+                "feedback": "Correct"
+            },
+            {
+                "answer": "The points are all black",
+                "correct": false,
+                "feedback": "Incorrect"
+            }
+        ]
+    }
+];
+    // Make a random ID
+function makeid(length) {
+    var result = [];
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+    var charactersLength = characters.length;
+    for (var i = 0; i < length; i++) {
+        result.push(characters.charAt(Math.floor(Math.random() * charactersLength)));
+    }
+    return result.join('');
+}
+
+// Choose a random subset of an array. Can also be used to shuffle the array
+function getRandomSubarray(arr, size) {
+    var shuffled = arr.slice(0), i = arr.length, temp, index;
+    while (i--) {
+        index = Math.floor((i + 1) * Math.random());
+        temp = shuffled[index];
+        shuffled[index] = shuffled[i];
+        shuffled[i] = temp;
+    }
+    return shuffled.slice(0, size);
+}
+
+function printResponses(responsesContainer) {
+    var responses=JSON.parse(responsesContainer.dataset.responses);
+    var stringResponses='<B>IMPORTANT!</B>To preserve this answer sequence for submission, when you have finalized your answers: <ol> <li> Copy the text in this cell below "Answer String"</li> <li> Double click on the cell directly below the Answer String, labeled "Replace Me"</li> <li> Select the whole "Replace Me" text</li> <li> Paste in your answer string and press shift-Enter.</li><li>Save the notebook using the save icon or File->Save Notebook menu item</li></ul><br><br><br><b>Answer String:</b><br> ';
+    console.log(responses);
+    responses.forEach((response, index) => {
+        if (response) {
+            console.log(index + ': ' + response);
+            stringResponses+= index + ': ' + response +"<BR>";
+        }
+    });
+    responsesContainer.innerHTML=stringResponses;
+}
+function check_mc() {
+    var id = this.id.split('-')[0];
+    //var response = this.id.split('-')[1];
+    //console.log(response);
+    //console.log("In check_mc(), id="+id);
+    //console.log(event.srcElement.id)           
+    //console.log(event.srcElement.dataset.correct)   
+    //console.log(event.srcElement.dataset.feedback)
+
+    var label = event.srcElement;
+    //console.log(label, label.nodeName);
+    var depth = 0;
+    while ((label.nodeName != "LABEL") && (depth < 20)) {
+        label = label.parentElement;
+        console.log(depth, label);
+        depth++;
+    }
+
+
+
+    var answers = label.parentElement.children;
+
+    //console.log(answers);
+
+
+    // Split behavior based on multiple choice vs many choice:
+    var fb = document.getElementById("fb" + id);
+
+
+
+
+    if (fb.dataset.numcorrect == 1) {
+        // What follows is for the saved responses stuff
+        var outerContainer = fb.parentElement.parentElement;
+        var responsesContainer = document.getElementById("responses" + outerContainer.id);
+        if (responsesContainer) {
+            //console.log(responsesContainer);
+            var response = label.firstChild.innerText;
+            if (label.querySelector(".QuizCode")){
+                response+= label.querySelector(".QuizCode").firstChild.innerText;
+            }
+            console.log(response);
+            //console.log(document.getElementById("quizWrap"+id));
+            var qnum = document.getElementById("quizWrap"+id).dataset.qnum;
+            console.log("Question " + qnum);
+            //console.log(id, ", got numcorrect=",fb.dataset.numcorrect);
+            var responses=JSON.parse(responsesContainer.dataset.responses);
+            console.log(responses);
+            responses[qnum]= response;
+            responsesContainer.setAttribute('data-responses', JSON.stringify(responses));
+            printResponses(responsesContainer);
+        }
+        // End code to preserve responses
+        
+        for (var i = 0; i < answers.length; i++) {
+            var child = answers[i];
+            //console.log(child);
+            child.className = "MCButton";
+        }
+
+
+
+        if (label.dataset.correct == "true") {
+            // console.log("Correct action");
+            if ("feedback" in label.dataset) {
+                fb.textContent = jaxify(label.dataset.feedback);
+            } else {
+                fb.textContent = "Correct!";
+            }
+            label.classList.add("correctButton");
+
+            fb.className = "Feedback";
+            fb.classList.add("correct");
+
+        } else {
+            if ("feedback" in label.dataset) {
+                fb.textContent = jaxify(label.dataset.feedback);
+            } else {
+                fb.textContent = "Incorrect -- try again.";
+            }
+            //console.log("Error action");
+            label.classList.add("incorrectButton");
+            fb.className = "Feedback";
+            fb.classList.add("incorrect");
+        }
+    }
+    else {
+        var reset = false;
+        var feedback;
+         if (label.dataset.correct == "true") {
+            if ("feedback" in label.dataset) {
+                feedback = jaxify(label.dataset.feedback);
+            } else {
+                feedback = "Correct!";
+            }
+            if (label.dataset.answered <= 0) {
+                if (fb.dataset.answeredcorrect < 0) {
+                    fb.dataset.answeredcorrect = 1;
+                    reset = true;
+                } else {
+                    fb.dataset.answeredcorrect++;
+                }
+                if (reset) {
+                    for (var i = 0; i < answers.length; i++) {
+                        var child = answers[i];
+                        child.className = "MCButton";
+                        child.dataset.answered = 0;
+                    }
+                }
+                label.classList.add("correctButton");
+                label.dataset.answered = 1;
+                fb.className = "Feedback";
+                fb.classList.add("correct");
+
+            }
+        } else {
+            if ("feedback" in label.dataset) {
+                feedback = jaxify(label.dataset.feedback);
+            } else {
+                feedback = "Incorrect -- try again.";
+            }
+            if (fb.dataset.answeredcorrect > 0) {
+                fb.dataset.answeredcorrect = -1;
+                reset = true;
+            } else {
+                fb.dataset.answeredcorrect--;
+            }
+
+            if (reset) {
+                for (var i = 0; i < answers.length; i++) {
+                    var child = answers[i];
+                    child.className = "MCButton";
+                    child.dataset.answered = 0;
+                }
+            }
+            label.classList.add("incorrectButton");
+            fb.className = "Feedback";
+            fb.classList.add("incorrect");
+        }
+        // What follows is for the saved responses stuff
+        var outerContainer = fb.parentElement.parentElement;
+        var responsesContainer = document.getElementById("responses" + outerContainer.id);
+        if (responsesContainer) {
+            //console.log(responsesContainer);
+            var response = label.firstChild.innerText;
+            if (label.querySelector(".QuizCode")){
+                response+= label.querySelector(".QuizCode").firstChild.innerText;
+            }
+            console.log(response);
+            //console.log(document.getElementById("quizWrap"+id));
+            var qnum = document.getElementById("quizWrap"+id).dataset.qnum;
+            console.log("Question " + qnum);
+            //console.log(id, ", got numcorrect=",fb.dataset.numcorrect);
+            var responses=JSON.parse(responsesContainer.dataset.responses);
+            if (label.dataset.correct == "true") {
+                if (typeof(responses[qnum]) == "object"){
+                    if (!responses[qnum].includes(response))
+                        responses[qnum].push(response);
+                } else{
+                    responses[qnum]= [ response ];
+                }
+            } else {
+                responses[qnum]= response;
+            }
+            console.log(responses);
+            responsesContainer.setAttribute('data-responses', JSON.stringify(responses));
+            printResponses(responsesContainer);
+        }
+        // End save responses stuff
+
+
+
+        var numcorrect = fb.dataset.numcorrect;
+        var answeredcorrect = fb.dataset.answeredcorrect;
+        if (answeredcorrect >= 0) {
+            fb.textContent = feedback + " [" + answeredcorrect + "/" + numcorrect + "]";
+        } else {
+            fb.textContent = feedback + " [" + 0 + "/" + numcorrect + "]";
+        }
+
+
+    }
+
+    if (typeof MathJax != 'undefined') {
+        var version = MathJax.version;
+        console.log('MathJax version', version);
+        if (version[0] == "2") {
+            MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+        } else if (version[0] == "3") {
+            MathJax.typeset([fb]);
+        }
+    } else {
+        console.log('MathJax not detected');
+    }
+
+}
+
+function make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id) {
+    var shuffled;
+    if (shuffle_answers == "True") {
+        //console.log(shuffle_answers+" read as true");
+        shuffled = getRandomSubarray(qa.answers, qa.answers.length);
+    } else {
+        //console.log(shuffle_answers+" read as false");
+        shuffled = qa.answers;
+    }
+
+
+    var num_correct = 0;
+
+
+
+    shuffled.forEach((item, index, ans_array) => {
+        //console.log(answer);
+
+        // Make input element
+        var inp = document.createElement("input");
+        inp.type = "radio";
+        inp.id = "quizo" + id + index;
+        inp.style = "display:none;";
+        aDiv.append(inp);
+
+        //Make label for input element
+        var lab = document.createElement("label");
+        lab.className = "MCButton";
+        lab.id = id + '-' + index;
+        lab.onclick = check_mc;
+        var aSpan = document.createElement('span');
+        aSpan.classsName = "";
+        //qDiv.id="quizQn"+id+index;
+        if ("answer" in item) {
+            aSpan.innerHTML = jaxify(item.answer);
+            //aSpan.innerHTML=item.answer;
+        }
+        lab.append(aSpan);
+
+        // Create div for code inside question
+        var codeSpan;
+        if ("code" in item) {
+            codeSpan = document.createElement('span');
+            codeSpan.id = "code" + id + index;
+            codeSpan.className = "QuizCode";
+            var codePre = document.createElement('pre');
+            codeSpan.append(codePre);
+            var codeCode = document.createElement('code');
+            codePre.append(codeCode);
+            codeCode.innerHTML = item.code;
+            lab.append(codeSpan);
+            //console.log(codeSpan);
+        }
+
+        //lab.textContent=item.answer;
+
+        // Set the data attributes for the answer
+        lab.setAttribute('data-correct', item.correct);
+        if (item.correct) {
+            num_correct++;
+        }
+        if ("feedback" in item) {
+            lab.setAttribute('data-feedback', item.feedback);
+        }
+        lab.setAttribute('data-answered', 0);
+
+        aDiv.append(lab);
+
+    });
+
+    if (num_correct > 1) {
+        outerqDiv.className = "ManyChoiceQn";
+    } else {
+        outerqDiv.className = "MultipleChoiceQn";
+    }
+
+    return num_correct;
+
+}
+function check_numeric(ths, event) {
+
+    if (event.keyCode === 13) {
+        ths.blur();
+
+        var id = ths.id.split('-')[0];
+
+        var submission = ths.value;
+        if (submission.indexOf('/') != -1) {
+            var sub_parts = submission.split('/');
+            //console.log(sub_parts);
+            submission = sub_parts[0] / sub_parts[1];
+        }
+        //console.log("Reader entered", submission);
+
+        if ("precision" in ths.dataset) {
+            var precision = ths.dataset.precision;
+            // console.log("1:", submission)
+            submission = Math.round((1 * submission + Number.EPSILON) * 10 ** precision) / 10 ** precision;
+            // console.log("Rounded to ", submission, " precision=", precision  );
+        }
+
+
+        //console.log("In check_numeric(), id="+id);
+        //console.log(event.srcElement.id)           
+        //console.log(event.srcElement.dataset.feedback)
+
+        var fb = document.getElementById("fb" + id);
+        fb.style.display = "none";
+        fb.textContent = "Incorrect -- try again.";
+
+        var answers = JSON.parse(ths.dataset.answers);
+        //console.log(answers);
+
+        var defaultFB = "";
+        var correct;
+        var done = false;
+        answers.every(answer => {
+            //console.log(answer.type);
+
+            correct = false;
+            // if (answer.type=="value"){
+            if ('value' in answer) {
+                if (submission == answer.value) {
+                    if ("feedback" in answer) {
+                        fb.textContent = jaxify(answer.feedback);
+                    } else {
+                        fb.textContent = jaxify("Correct");
+                    }
+                    correct = answer.correct;
+                    //console.log(answer.correct);
+                    done = true;
+                }
+                // } else if (answer.type=="range") {
+            } else if ('range' in answer) {
+                //console.log(answer.range);
+                if ((submission >= answer.range[0]) && (submission < answer.range[1])) {
+                    fb.textContent = jaxify(answer.feedback);
+                    correct = answer.correct;
+                    //console.log(answer.correct);
+                    done = true;
+                }
+            } else if (answer.type == "default") {
+                defaultFB = answer.feedback;
+            }
+            if (done) {
+                return false; // Break out of loop if this has been marked correct
+            } else {
+                return true; // Keep looking for case that includes this as a correct answer
+            }
+        });
+
+        if ((!done) && (defaultFB != "")) {
+            fb.innerHTML = jaxify(defaultFB);
+            //console.log("Default feedback", defaultFB);
+        }
+
+        fb.style.display = "block";
+        if (correct) {
+            ths.className = "Input-text";
+            ths.classList.add("correctButton");
+            fb.className = "Feedback";
+            fb.classList.add("correct");
+        } else {
+            ths.className = "Input-text";
+            ths.classList.add("incorrectButton");
+            fb.className = "Feedback";
+            fb.classList.add("incorrect");
+        }
+
+        // What follows is for the saved responses stuff
+        var outerContainer = fb.parentElement.parentElement;
+        var responsesContainer = document.getElementById("responses" + outerContainer.id);
+        if (responsesContainer) {
+            console.log(submission);
+            var qnum = document.getElementById("quizWrap"+id).dataset.qnum;
+            //console.log("Question " + qnum);
+            //console.log(id, ", got numcorrect=",fb.dataset.numcorrect);
+            var responses=JSON.parse(responsesContainer.dataset.responses);
+            console.log(responses);
+            if (submission == ths.value){
+                responses[qnum]= submission;
+            } else {
+                responses[qnum]= ths.value + "(" + submission +")";
+            }
+            responsesContainer.setAttribute('data-responses', JSON.stringify(responses));
+            printResponses(responsesContainer);
+        }
+        // End code to preserve responses
+
+        if (typeof MathJax != 'undefined') {
+            var version = MathJax.version;
+            console.log('MathJax version', version);
+            if (version[0] == "2") {
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+            } else if (version[0] == "3") {
+                MathJax.typeset([fb]);
+            }
+        } else {
+            console.log('MathJax not detected');
+        }
+        return false;
+    }
+
+}
+
+function isValid(el, charC) {
+    //console.log("Input char: ", charC);
+    if (charC == 46) {
+        if (el.value.indexOf('.') === -1) {
+            return true;
+        } else if (el.value.indexOf('/') != -1) {
+            var parts = el.value.split('/');
+            if (parts[1].indexOf('.') === -1) {
+                return true;
+            }
+        }
+        else {
+            return false;
+        }
+    } else if (charC == 47) {
+        if (el.value.indexOf('/') === -1) {
+            if ((el.value != "") && (el.value != ".")) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    } else if (charC == 45) {
+        var edex = el.value.indexOf('e');
+        if (edex == -1) {
+            edex = el.value.indexOf('E');
+        }
+
+        if (el.value == "") {
+            return true;
+        } else if (edex == (el.value.length - 1)) { // If just after e or E
+            return true;
+        } else {
+            return false;
+        }
+    } else if (charC == 101) { // "e"
+        if ((el.value.indexOf('e') === -1) && (el.value.indexOf('E') === -1) && (el.value.indexOf('/') == -1)) {
+            // Prev symbol must be digit or decimal point:
+            if (el.value.slice(-1).search(/\d/) >= 0) {
+                return true;
+            } else if (el.value.slice(-1).search(/\./) >= 0) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    } else {
+        if (charC > 31 && (charC < 48 || charC > 57))
+            return false;
+    }
+    return true;
+}
+
+function numeric_keypress(evnt) {
+    var charC = (evnt.which) ? evnt.which : evnt.keyCode;
+
+    if (charC == 13) {
+        check_numeric(this, evnt);
+    } else {
+        return isValid(this, charC);
+    }
+}
+
+
+
+
+
+function make_numeric(qa, outerqDiv, qDiv, aDiv, id) {
+
+
+
+    //console.log(answer);
+
+
+    outerqDiv.className = "NumericQn";
+    aDiv.style.display = 'block';
+
+    var lab = document.createElement("label");
+    lab.className = "InpLabel";
+    lab.textContent = "Type numeric answer here:";
+    aDiv.append(lab);
+
+    var inp = document.createElement("input");
+    inp.type = "text";
+    //inp.id="input-"+id;
+    inp.id = id + "-0";
+    inp.className = "Input-text";
+    inp.setAttribute('data-answers', JSON.stringify(qa.answers));
+    if ("precision" in qa) {
+        inp.setAttribute('data-precision', qa.precision);
+    }
+    aDiv.append(inp);
+    //console.log(inp);
+
+    //inp.addEventListener("keypress", check_numeric);
+    //inp.addEventListener("keypress", numeric_keypress);
+    /*
+    inp.addEventListener("keypress", function(event) {
+        return numeric_keypress(this, event);
+    }
+                        );
+                        */
+    //inp.onkeypress="return numeric_keypress(this, event)";
+    inp.onkeypress = numeric_keypress;
+    inp.onpaste = event => false;
+
+    inp.addEventListener("focus", function (event) {
+        this.value = "";
+        return false;
+    }
+    );
+
+
+}
+function jaxify(string) {
+    var mystring = string;
+
+    var count = 0;
+    var loc = mystring.search(/([^\\]|^)(\$)/);
+
+    var count2 = 0;
+    var loc2 = mystring.search(/([^\\]|^)(\$\$)/);
+
+    //console.log(loc);
+
+    while ((loc >= 0) || (loc2 >= 0)) {
+
+        /* Have to replace all the double $$ first with current implementation */
+        if (loc2 >= 0) {
+            if (count2 % 2 == 0) {
+                mystring = mystring.replace(/([^\\]|^)(\$\$)/, "$1\\[");
+            } else {
+                mystring = mystring.replace(/([^\\]|^)(\$\$)/, "$1\\]");
+            }
+            count2++;
+        } else {
+            if (count % 2 == 0) {
+                mystring = mystring.replace(/([^\\]|^)(\$)/, "$1\\(");
+            } else {
+                mystring = mystring.replace(/([^\\]|^)(\$)/, "$1\\)");
+            }
+            count++;
+        }
+        loc = mystring.search(/([^\\]|^)(\$)/);
+        loc2 = mystring.search(/([^\\]|^)(\$\$)/);
+        //console.log(mystring,", loc:",loc,", loc2:",loc2);
+    }
+
+    //console.log(mystring);
+    return mystring;
+}
+
+
+function show_questions(json, mydiv) {
+    console.log('show_questions');
+    //var mydiv=document.getElementById(myid);
+    var shuffle_questions = mydiv.dataset.shufflequestions;
+    var num_questions = mydiv.dataset.numquestions;
+    var shuffle_answers = mydiv.dataset.shuffleanswers;
+    var max_width = mydiv.dataset.maxwidth;
+
+    if (num_questions > json.length) {
+        num_questions = json.length;
+    }
+
+    var questions;
+    if ((num_questions < json.length) || (shuffle_questions == "True")) {
+        //console.log(num_questions+","+json.length);
+        questions = getRandomSubarray(json, num_questions);
+    } else {
+        questions = json;
+    }
+
+    //console.log("SQ: "+shuffle_questions+", NQ: " + num_questions + ", SA: ", shuffle_answers);
+
+    // Iterate over questions
+    questions.forEach((qa, index, array) => {
+        //console.log(qa.question); 
+
+        var id = makeid(8);
+        //console.log(id);
+
+
+        // Create Div to contain question and answers
+        var iDiv = document.createElement('div');
+        //iDiv.id = 'quizWrap' + id + index;
+        iDiv.id = 'quizWrap' + id;
+        iDiv.className = 'Quiz';
+        iDiv.setAttribute('data-qnum', index);
+        iDiv.style.maxWidth  =max_width+"px";
+        mydiv.appendChild(iDiv);
+        // iDiv.innerHTML=qa.question;
+        
+        var outerqDiv = document.createElement('div');
+        outerqDiv.id = "OuterquizQn" + id + index;
+        // Create div to contain question part
+        var qDiv = document.createElement('div');
+        qDiv.id = "quizQn" + id + index;
+        
+        if (qa.question) {
+            iDiv.append(outerqDiv);
+
+            //qDiv.textContent=qa.question;
+            qDiv.innerHTML = jaxify(qa.question);
+            outerqDiv.append(qDiv);
+        }
+
+        // Create div for code inside question
+        var codeDiv;
+        if ("code" in qa) {
+            codeDiv = document.createElement('div');
+            codeDiv.id = "code" + id + index;
+            codeDiv.className = "QuizCode";
+            var codePre = document.createElement('pre');
+            codeDiv.append(codePre);
+            var codeCode = document.createElement('code');
+            codePre.append(codeCode);
+            codeCode.innerHTML = qa.code;
+            outerqDiv.append(codeDiv);
+            //console.log(codeDiv);
+        }
+
+
+        // Create div to contain answer part
+        var aDiv = document.createElement('div');
+        aDiv.id = "quizAns" + id + index;
+        aDiv.className = 'Answer';
+        iDiv.append(aDiv);
+
+        //console.log(qa.type);
+
+        var num_correct;
+        if ((qa.type == "multiple_choice") || (qa.type == "many_choice") ) {
+            num_correct = make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id);
+            if ("answer_cols" in qa) {
+                //aDiv.style.gridTemplateColumns = 'auto '.repeat(qa.answer_cols);
+                aDiv.style.gridTemplateColumns = 'repeat(' + qa.answer_cols + ', 1fr)';
+            }
+        } else if (qa.type == "numeric") {
+            //console.log("numeric");
+            make_numeric(qa, outerqDiv, qDiv, aDiv, id);
+        }
+
+
+        //Make div for feedback
+        var fb = document.createElement("div");
+        fb.id = "fb" + id;
+        //fb.style="font-size: 20px;text-align:center;";
+        fb.className = "Feedback";
+        fb.setAttribute("data-answeredcorrect", 0);
+        fb.setAttribute("data-numcorrect", num_correct);
+        iDiv.append(fb);
+
+
+    });
+    var preserveResponses = mydiv.dataset.preserveresponses;
+    console.log(preserveResponses);
+    console.log(preserveResponses == "true");
+    if (preserveResponses == "true") {
+        console.log(preserveResponses);
+        // Create Div to contain record of answers
+        var iDiv = document.createElement('div');
+        iDiv.id = 'responses' + mydiv.id;
+        iDiv.className = 'JCResponses';
+        // Create a place to store responses as an empty array
+        iDiv.setAttribute('data-responses', '[]');
+
+        // Dummy Text
+        iDiv.innerHTML="<b>Select your answers and then follow the directions that will appear here.</b>"
+        //iDiv.className = 'Quiz';
+        mydiv.appendChild(iDiv);
+    }
+//console.log("At end of show_questions");
+    if (typeof MathJax != 'undefined') {
+        console.log("MathJax version", MathJax.version);
+        var version = MathJax.version;
+        setTimeout(function(){
+            var version = MathJax.version;
+            console.log('After sleep, MathJax version', version);
+            if (version[0] == "2") {
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+            } else if (version[0] == "3") {
+                MathJax.typeset([mydiv]);
+            }
+        }, 500);
+if (typeof version == 'undefined') {
+        } else
+        {
+            if (version[0] == "2") {
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+            } else if (version[0] == "3") {
+                MathJax.typeset([mydiv]);
+            } else {
+                console.log("MathJax not found");
+            }
+        }
+    }
+    return false;
+}
+/* This is to handle asynchrony issues in loading Jupyter notebooks
+           where the quiz has been previously run. The Javascript was generally
+           being run before the div was added to the DOM. I tried to do this
+           more elegantly using Mutation Observer, but I didn't get it to work.
+
+           Someone more knowledgeable could make this better ;-) */
+
+        function try_show() {
+          if(document.getElementById("YgBrtASxiDnw")) {
+            show_questions(questionsYgBrtASxiDnw,  YgBrtASxiDnw); 
+          } else {
+             setTimeout(try_show, 200);
+          }
+        };
+    
+        {
+        // console.log(element);
+
+        //console.log("YgBrtASxiDnw");
+        // console.log(document.getElementById("YgBrtASxiDnw"));
+
+        try_show();
+        }
+        </script></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "coding-for-reproducible-research/CfRR_Courses",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./individual_modules/introduction_to_r"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="control_flow.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Control Flow</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="stats.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Statistical Analysis</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Plotting in R</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plots">Plots</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arguements">Arguements</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-data-to-an-existing-plot">Adding data to an existing plot</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#further-customisations">Further customisations</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#adjusting-the-plot-margins">Adjusting the plot margins</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-composite-plots">Creating composite plots</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-and-exporting-plots">Saving and exporting plots</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#activity">Activity:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-quiz">Summary Quiz</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Coding For Reproducible Research Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

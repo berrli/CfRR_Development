@@ -1,0 +1,2389 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Recording Changes &#8212; Home Page</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/style.css?v=aa869d35" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'individual_modules/introduction_to_version_control/recording_changes';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Viewing History and Changes" href="history_and_changes.html" />
+    <link rel="prev" title="An Example Repository" href="example_repo.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../home_page.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/exeter_logo.png" class="logo__image only-light" alt="Home Page - Home"/>
+    <script>document.write(`<img src="../../_static/exeter_logo.png" class="logo__image only-dark" alt="Home Page - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../home_page.html">
+                    Coding for Reproducible Research (CfRR) Training Programme Home Page
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">What is Coding For Reproducible Research?</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../cfrr_program_details/about_us.html">About Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cfrr_program_details/how_to_use_CfRR.html">How to Use This Website</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">What Courses Should I Take?</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../where_is_my_understanding/homepage_where_is_my_understanding.html">Where Is My Understanding Quizzes</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../where_is_my_understanding/python.html">Python</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/intro_to_python.html">Introduction to Python Quiz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/python_for_data_analysis.html">Python for Data Analysis Quiz</a></li>
+
+
+
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../where_is_my_understanding/R.html">R</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/intro_to_r.html">Introduction to R Quiz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/regression_analysis_with_R.html">Regression Analysis With R Quiz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/advanced_regression_analysis_with_R.html">Advanced Regression Analysis with R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/working_with_data_in_r.html">Working With Data in R Quiz</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../where_is_my_understanding/high_performance_computing.html">High Performance Computing</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/intro_to_hpc.html">Introduction to HPC Quiz</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../where_is_my_understanding/version_control.html">Version Control</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/intro_to_version_control.html">Introduction to Version Control with Git and Github Quiz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/intermediate_version_control.html">Intermediate Version Control Quiz</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../where_is_my_understanding/unix.html">UNIX</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/intro_to_unix.html">Introduction to UNIX Quiz</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../where_is_my_understanding/computational_thinking_overview.html">Computational Thinking</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/computational_thinking.html">Computational Thinking Quiz</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../where_is_my_understanding/software_development.html">Software Development</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/software_development_best_practice.html">Software Development Best Practice Quiz</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../where_is_my_understanding/julia.html">Julia</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/introduction_to_julia.html">Introduction to Julia</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../pathways/related_courses.html">How do these courses relate?</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../pathways/hpc.html">High Performance Computing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pathways/r_ds.html">R Data Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pathways/python_ds.html">Python Data Science</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Courses We Offer</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../cfrr_program_details/courses_overview.html">Workshop Schedule and Signup</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../programme_information/programme_information.html">Workshop Information</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../programme_information/python.html">Python</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/intro_to_python.html">Introduction to Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/python_for_data_analysis.html">Python for Data Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../programme_information/R.html">R</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/intro_to_r.html">Introduction to R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/regression_analysis_with_r.html">Regression Analysis with R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/advanced_regression_analysis_with_r.html">Advanced Regression Analysis With R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/working_with_data_in_r.html">Working With Data in R</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../programme_information/high_performance_computing.html">High Performance Computing</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/intro_to_hpc.html">Introduction to HPC</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../programme_information/version_control.html">Version Control</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/intro_to_version_control.html">Introduction to Version Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/intermediate_version_control.html">Intermediate Version Control</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../programme_information/unix.html">UNIX</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/intro_to_unix.html">Introduction to UNIX</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../programme_information/computational_thinking_overview.html">Computational Thinking</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/computational_thinking.html">Computational Thinking</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../programme_information/software_development.html">Software Development</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/software_development_best_practices.html">Software Development Best Practice</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../programme_information/julia.html">Julia</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/intro_to_julia.html">Introduction to Julia</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cfrr_program_details/course_feedback.html">Course Feedback</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../cfrr_program_details/self_study_notes.html">Self Study Notes</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../course_homepages/python.html">Python</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-21"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/introduction_to_python.html">Introduction to Python</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/motivation.html">Motivation and Background</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/fundamentals.html">Python Fundamentals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/lists.html">Lists</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/dictionaries.html">Dictionaries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/control_flow.html">Control Flow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/loops.html">Loops</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/additional_exercises.html">Additional Session 1 Exercises</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/recap.html">Session 1 Recap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/functions.html">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/imports.html">Imports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/analysis_task_intro.html">Data Analysis Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/analysis_task_1.html">Data Analysis Task 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/analysis_task_2.html">Data Analysis Task 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/analysis_task_3.html">Data Analysis Task 3</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/python_for_data_analysis.html">Python for Data Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-23"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../python_for_data_analysis/Python_Language_features.html">Advanced Language Features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python_for_data_analysis/Python_Virtual_environments.html">Virtual environments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python_for_data_analysis/Python_NumPy.html">Numpy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python_for_data_analysis/Python_Pandas.html">Pandas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python_for_data_analysis/Python_Matplotlib.html">Matplotlib</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python_for_data_analysis/Python_ScikitLearn.html">Scikit-Learn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python_for_data_analysis/data-analysis-plotly.html">Plotly</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python_for_data_analysis/Python_Testing.html">Checking and Testing Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python_for_data_analysis/data-analysis-task.html">Example Project</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../course_homepages/R.html">R</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-24"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/introduction_to_r.html">Introduction to R</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-25"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_r/gettingstarted.html">Getting Up and Running with R</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_r/basic_commands.html">Running Commands With R</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_r/data_types.html">Data Types and Structures</a></li>
+
+
+
+
+
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_r/load_data.html">Loading Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_r/manipulating_data.html">Manipulating Datasets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_r/control_flow.html">Control Flow</a></li>
+
+
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_r/plots.html">Plotting in R</a></li>
+
+
+
+
+
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_r/stats.html">Statistical Analysis</a></li>
+
+
+
+
+
+
+
+
+
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_r/good_practise.html">Establishing Good Practices when Coding</a></li>
+
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/regression_analysis_with_R.html">Regression Analysis with R</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-26"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../regression_analysis_with_R/introduction_to_regression.html">Introduction to Regression Analysis</a></li>
+
+<li class="toctree-l4"><a class="reference internal" href="../regression_analysis_with_R/hypothesis_testing.html">Hypothesis Testing for Regression Models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../regression_analysis_with_R/multiple_linear_regression.html">Multiple Linear Regression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../regression_analysis_with_R/logistic_regression.html">Logistic Regression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../regression_analysis_with_R/summary.html">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../regression_analysis_with_R/extras.html">Extras</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/advanced_regression_analysis_with_R.html">Advanced Regression Analysis with R</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-27"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../advanced_regression_analysis_with_R/mixed_effects_models.html">Mixed Effects Models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../advanced_regression_analysis_with_R/expanding_the_mixed_effects_model_framework.html">Expanding the mixed effects model framework</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../advanced_regression_analysis_with_R/regression_models_with_interaction_terms.html">Regression models with interaction terms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../advanced_regression_analysis_with_R/summary.html">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../advanced_regression_analysis_with_R/extras.html">Extras</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/working_with_data_in_R.html">Working With Data in R</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-28"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../working_with_data_in_R/introducing_tidyverse.html">Tidyverse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../working_with_data_in_R/loading_data.html">Loading Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../working_with_data_in_R/manipulating_a_dataframe.html">Manipulating A Dataframe</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../working_with_data_in_R/piping.html">Piping and Functional Style</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../working_with_data_in_R/combining_datasets.html">Combining Datasets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../working_with_data_in_R/reshaping_datasets.html">Reshaping Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../working_with_data_in_R/strings_and_dates.html">Strings and Dates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../working_with_data_in_R/summary.html">Summary</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../course_homepages/high_performance_computing.html">High Performance Computing</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-29"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/introduction_to_hpc.html">Introduction to HPC and ISCA</a><input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-30"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_hpc/motivation.html">Why might I want to use a HPC Cluster?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_hpc/isca.html">Exeter supported HPC facilities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_hpc/connection.html">How do I connect to a HPC Cluster?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_hpc/file_transfer.html">File Transfer Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_hpc/schedulers.html">Running a job on a HPC system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_hpc/modules.html">Loading software packages on HPC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_hpc/example_jobs.html">Running more complex jobs on a HPC system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_hpc/exploiting_slurm.html">Harnessing the power of the scheduler</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../../course_homepages/version_control.html">Version Control</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-31"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="../section_landing_pages/introduction_to_version_control.html">Introduction to Version Control</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-32"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="motivation.html">Motivation: Why use Version Control Systems?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="git_vs_github.html">Git vs Github</a></li>
+<li class="toctree-l4"><a class="reference internal" href="configuring_git.html">Setting up Git and GitHub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="making_repos.html">Making Repositories</a></li>
+<li class="toctree-l4"><a class="reference internal" href="example_repo.html">An Example Repository</a></li>
+<li class="toctree-l4 current active"><a class="current reference internal" href="#">Recording Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="history_and_changes.html">Viewing History and Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="recording_changes_revisited.html">Recording Changes – Revisited</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pushing_and_pulling.html">Pushing to and Pulling From the Remote Repository</a></li>
+<li class="toctree-l4"><a class="reference internal" href="undoing_changes.html">Undoing Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ignoring_files.html">Ignoring Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="local_branches.html">Working with Local Branches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="remote_branches_with_github.html">Remote Branches with GitHub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="collaborating_with_branches.html">Collaborating with Branches</a></li>
+
+<li class="toctree-l4"><a class="reference internal" href="merge_conflicts.html">Merge Conflicts</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/intermediate_version_control.html">Intermediate Version Control</a><input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-33"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../intermediate_version_control/introduction.html">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intermediate_version_control/config_git.html">Configuring Git</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intermediate_version_control/basic_git.html">Basic Git</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intermediate_version_control/typical_workflow.html">Typical Workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intermediate_version_control/branches_and_merging.html">Branches and Merging</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intermediate_version_control/remotes.html">Working with Remotes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intermediate_version_control/github_workflows.html">GitHub Workflows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intermediate_version_control/rewriting_history.html">Rewriting the History</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intermediate_version_control/further_topics.html">Some Additional Topics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../course_homepages/unix.html">UNIX</a><input class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-34"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/introduction_to_unix.html">Introduction to UNIX</a><input class="toctree-checkbox" id="toctree-checkbox-35" name="toctree-checkbox-35" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-35"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_unix/intro.html">Introducing the UNIX shell</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_unix/filedir.html">File Directory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_unix/create.html">Working With Files and Directories</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_unix/pipefilter.html">Pipes and Filters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_unix/loop.html">Loops</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_unix/script.html">Shell Scripts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_unix/find.html">Finding Things</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../course_homepages/computational_thinking.html">Computational Thinking</a><input class="toctree-checkbox" id="toctree-checkbox-36" name="toctree-checkbox-36" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-36"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/computational_thinking.html">Computational Thinking</a><input class="toctree-checkbox" id="toctree-checkbox-37" name="toctree-checkbox-37" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-37"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../computational_thinking/introduction.html">Computational Thinking</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../computational_thinking/algorithms.html">Algorithms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../computational_thinking/decomposition.html">Decomposition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../computational_thinking/pattern_recognition.html">Pattern recognition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../computational_thinking/abstraction.html">Abstraction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../computational_thinking/alignment.html">Aligning the human solution with the computer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../computational_thinking/final_exercise.html">Sudoku Task</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../course_homepages/software_development.html">Software Development</a><input class="toctree-checkbox" id="toctree-checkbox-38" name="toctree-checkbox-38" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-38"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/software_development_best_practice.html">Software Development Best Practice</a><input class="toctree-checkbox" id="toctree-checkbox-39" name="toctree-checkbox-39" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-39"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../software_development_best_practices/software_development_life_cycle.html">Software Development Life Cycle &amp; Methodologies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../software_development_best_practices/data_management.html">Data Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../software_development_best_practices/problem_solving.html">Problem Solving</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../software_development_best_practices/virtual_environments_dependency_managers.html">Virtual Environment and Dependency Managers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../software_development_best_practices/version_control.html">Version Control</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../software_development_best_practices/readable_code_and_documentation.html">Readable Code and Documentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../software_development_best_practices/testing.html">Testing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../software_development_best_practices/collaboration.html">Collaboration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../software_development_best_practices/reproducibility.html">Reproducibility</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../course_homepages/julia.html">Julia</a><input class="toctree-checkbox" id="toctree-checkbox-40" name="toctree-checkbox-40" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-40"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/introduction_to_julia.html">Introduction to Julia</a><input class="toctree-checkbox" id="toctree-checkbox-41" name="toctree-checkbox-41" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-41"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_julia/introduction_to_julia.html">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_julia/variables.html">Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_julia/operations.html">Operations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_julia/control_flow.html">Control Flow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_julia/functions.html">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_julia/arrays_and_matrices.html">Arrays and Matrices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_julia/io.html">Input Output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_julia/package_management.html">Package Management</a></li>
+
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_julia/visualisation.html">Plotting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_julia/performant_code.html">Performant Code</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../bibliography.html">Bibliography</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Join Us!</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/contributing.html">Contributing to CfRR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/roles.html">Roles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/contributing_guidelines.html">Contributor Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/developing_a_course.html">Developing a Course Guidance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/suggestions_form.html">Feedback</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Community Guidelines</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../cfrr_program_details/code_of_conduct.html">Code of Conduct</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/coding-for-reproducible-research/CfRR_Courses/main?urlpath=tree/individual_modules/introduction_to_version_control/recording_changes.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/coding-for-reproducible-research/CfRR_Courses" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/coding-for-reproducible-research/CfRR_Courses/issues/new?title=Issue%20on%20page%20%2Findividual_modules/introduction_to_version_control/recording_changes.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/individual_modules/introduction_to_version_control/recording_changes.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Recording Changes</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-the-status-of-a-repository">Viewing the status of a repository</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-git-status-often">Run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> often</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-and-committing-files">Adding and committing files</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown-syntax">Markdown syntax</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practice-commit-messages">Best practice: commit messages</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-add-commit">Modify-add-commit</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practice-commit-little-and-often">Best practice: commit little and often</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#selective-staging">Selective staging</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Markdown syntax</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review">Review</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-quiz">Summary Quiz</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="recording-changes">
+<h1>Recording Changes<a class="headerlink" href="#recording-changes" title="Link to this heading">#</a></h1>
+<section id="learning-objectives">
+<h2>Learning objectives<a class="headerlink" href="#learning-objectives" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Understand the process of recording changes in a Git repository using the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> commands.</p></li>
+<li><p>Learn to check the status of a Git repository using the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> command</p></li>
+<li><p>Comprehend the concept of the modify-add-commit workflow for building a version history in Git</p></li>
+<li><p>Practice creating and committing new files in a repository</p></li>
+<li><p>Develop best practices for writing informative commit messages</p></li>
+</ul>
+</section>
+<section id="viewing-the-status-of-a-repository">
+<h2>Viewing the status of a repository<a class="headerlink" href="#viewing-the-status-of-a-repository" title="Link to this heading">#</a></h2>
+<p>So, we have a new repository, either a clone from a remote repository or a
+brand new, empty one. It’s time to get to work adding content to it. But before
+we do that, let’s cover one of the simplest, yet most useful, Git commands:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> command gives you information about the current state of work
+when working with a Git repository. Let’s take a look at an example with our recently cloned
+<code class="docutils literal notranslate"><span class="pre">git-good-practice</span></code> repository. We first need to make sure that we’re located
+in the root folder of the repository. In the example below, this is contained
+within the parent folder <code class="docutils literal notranslate"><span class="pre">~/repositories</span></code>, so we first change directories with
+<code class="docutils literal notranslate"><span class="pre">cd</span></code> and remind ourselves of the contents:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>~/repositories/git-good-practice
+$<span class="w"> </span>ls
+README.md
+</pre></div>
+</div>
+<p>Currently there’s just a single readme file. Recall that the <code class="docutils literal notranslate"><span class="pre">git-good-practice</span></code>
+folder actually also contains the hidden folder <code class="docutils literal notranslate"><span class="pre">.git</span></code>, which we would have also
+seen if we’d used <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-a</span></code> instead of just plain old <code class="docutils literal notranslate"><span class="pre">ls</span></code>. Now we can check the
+status of the repository:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>status
+On<span class="w"> </span>branch<span class="w"> </span>main
+Your<span class="w"> </span>branch<span class="w"> </span>is<span class="w"> </span>up<span class="w"> </span>to<span class="w"> </span>date<span class="w"> </span>with<span class="w"> </span><span class="s1">&#39;origin/main&#39;</span>.
+
+nothing<span class="w"> </span>to<span class="w"> </span>commit,<span class="w"> </span>working<span class="w"> </span>tree<span class="w"> </span>clean
+</pre></div>
+</div>
+<p>Let’s consider what the output means:</p>
+<ul class="simple">
+<li><p>The first two lines refer to a <em>branch</em> called <code class="docutils literal notranslate"><span class="pre">main</span></code>, and how it’s up-to-date
+with another branch called <code class="docutils literal notranslate"><span class="pre">origin/main</span></code>. For now,
+you can regard these lines as saying that our local version of the repository
+is in sync with the remote version. (This is not the whole story and
+is, at best, a partial truth. We’ll uncover more about what this really means later
+in the course when we learn about branches more generally.)</p></li>
+<li><p>The line <code class="docutils literal notranslate"><span class="pre">nothing</span> <span class="pre">to</span> <span class="pre">commit,</span> <span class="pre">working</span> <span class="pre">tree</span> <span class="pre">clean</span></code> is of more immediate interest.
+This is Git’s way of saying that it hasn’t identified any changes to the
+contents of the repository (‘working tree clean’), so there are no new changes
+that could be recorded in the repository’s history (‘nothing to commit’).</p></li>
+<li><p>Finally, note that <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> only gives us information about <em>changes</em> to
+the contents of the repository. It doesn’t spell out the whole contents of
+the repository like <code class="docutils literal notranslate"><span class="pre">ls</span></code> would. For example, we know that the repository
+contains the file <code class="docutils literal notranslate"><span class="pre">README.md</span></code>, yet it doesn’t feature in
+the output of <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> because there aren’t any (new) changes to it.</p></li>
+</ul>
+<p>For our purposes, you can think of the <strong>working tree</strong> as the contents of the
+repository, just like you’re used to thinking of files within a folder or
+subfolders. Git is able to detect changes to files in the working tree, including
+those that are in subfolders of the repository root folder (or sub-subfolders, etc.)</p>
+<section id="run-git-status-often">
+<h3>Run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> often<a class="headerlink" href="#run-git-status-often" title="Link to this heading">#</a></h3>
+<p>We’re going to flag here that you should get into the habit of running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> often. It’s the primary way of seeing at a glance what state your working tree is in and how it differs (or not) with what was last recorded in the repository.</p>
+</section>
+</section>
+<section id="adding-and-committing-files">
+<h2>Adding and committing files<a class="headerlink" href="#adding-and-committing-files" title="Link to this heading">#</a></h2>
+<p>Let’s make some changes to the repository. First, we’ll create a new Markdown
+file called <code class="docutils literal notranslate"><span class="pre">Git-cheatsheet.md</span></code>, for us to record key Git commands as we go.
+Running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> now shows us:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>status
+On<span class="w"> </span>branch<span class="w"> </span>main
+Your<span class="w"> </span>branch<span class="w"> </span>is<span class="w"> </span>up<span class="w"> </span>to<span class="w"> </span>date<span class="w"> </span>with<span class="w"> </span><span class="s1">&#39;origin/main&#39;</span>.
+
+Untracked<span class="w"> </span>files:
+<span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git add &lt;file&gt;...&quot;</span><span class="w"> </span>to<span class="w"> </span>include<span class="w"> </span><span class="k">in</span><span class="w"> </span>what<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>committed<span class="o">)</span>
+<span class="w">        </span>Git-cheatsheet.md
+
+nothing<span class="w"> </span>added<span class="w"> </span>to<span class="w"> </span>commit<span class="w"> </span>but<span class="w"> </span>untracked<span class="w"> </span>files<span class="w"> </span>present<span class="w"> </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git add&quot;</span><span class="w"> </span>to<span class="w"> </span>track<span class="o">)</span>
+</pre></div>
+</div>
+<p>The ‘Untracked files:’ bit indicates that Git has spotted a new file which it
+has no record of. Before going further, let’s add some content to the cheatsheet
+about <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Git Cheatsheet</span>
+
+*Note:<span class="w"> </span>run<span class="w"> </span>commands<span class="w"> </span>from<span class="w"> </span>within<span class="w"> </span>a<span class="w"> </span>Git<span class="w"> </span>repository*
+
+
+<span class="c1">## Checking the state of files (do this often!)</span>
+
+<span class="sb">`</span>git<span class="w"> </span>status<span class="sb">`</span><span class="w"> </span>—<span class="w"> </span>Checks<span class="w"> </span>the<span class="w"> </span>state<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>working<span class="w"> </span>tree<span class="w"> </span><span class="k">in</span><span class="w"> </span>a<span class="w"> </span>Git<span class="w"> </span>repository.
+</pre></div>
+</div>
+<section id="markdown-syntax">
+<h3>Markdown syntax<a class="headerlink" href="#markdown-syntax" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Hash symbols (<code class="docutils literal notranslate"><span class="pre">#</span></code>) are used to denote the document title and headings. One hash <code class="docutils literal notranslate"><span class="pre">#</span></code> denotes the document title, two hashes <code class="docutils literal notranslate"><span class="pre">##</span></code> indicates a section heading, three hashes <code class="docutils literal notranslate"><span class="pre">###</span></code> indicates a sub-heading, etc.</p></li>
+<li><p>Wrapping text with asterisks (<code class="docutils literal notranslate"><span class="pre">*</span></code>) will emphasise text i.e. set it in italics. You can also wrap the text in underscores (<code class="docutils literal notranslate"><span class="pre">_</span></code>) e.g. <code class="docutils literal notranslate"><span class="pre">*This*</span> <span class="pre">is</span> <span class="pre">in</span> <span class="pre">italics,</span> <span class="pre">so</span> <span class="pre">is</span> <span class="pre">_this_.</span></code></p></li>
+<li><p>Wrapping text in backticks (<code class="docutils literal notranslate"><span class="pre">`</span></code>) is used to display code. It won’t be formatted like regular text. Compare:</p>
+<ul>
+<li><p>Wrapped in backticks: <code class="docutils literal notranslate"><span class="pre">`foo</span> <span class="pre">_bar_`</span></code> renders as <code class="docutils literal notranslate"><span class="pre">foo</span> <span class="pre">_bar_</span></code></p></li>
+<li><p>As regular text: <code class="docutils literal notranslate"><span class="pre">foo</span> <span class="pre">_bar_</span></code> renders as foo <em>bar</em></p></li>
+</ul>
+</li>
+<li><p>Extra spaces and tabs are just treated as a single space. Paragraphs must have a blank line between them to be rendered on different lines.</p></li>
+</ul>
+<p>After adding the above text to <code class="docutils literal notranslate"><span class="pre">Git-cheatsheet.md</span></code> file and saving our changes,
+we now tell Git to start tracking changes to this file by using the <code class="docutils literal notranslate"><span class="pre">add</span></code>
+command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>Git-cheatsheet.md
+</pre></div>
+</div>
+<p>Let’s see what <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> now tells us:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>status
+On<span class="w"> </span>branch<span class="w"> </span>main
+Your<span class="w"> </span>branch<span class="w"> </span>is<span class="w"> </span>up<span class="w"> </span>to<span class="w"> </span>date<span class="w"> </span>with<span class="w"> </span><span class="s1">&#39;origin/main&#39;</span>.
+
+Changes<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>committed:
+<span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git restore --staged &lt;file&gt;...&quot;</span><span class="w"> </span>to<span class="w"> </span>unstage<span class="o">)</span>
+<span class="w">        </span>new<span class="w"> </span>file:<span class="w">   </span>Git-cheatsheet.md
+</pre></div>
+</div>
+<p>The difference between this status and the status before we did <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> on our
+cheatsheet is the ‘Changes to be committed:’ bit. Git has now recognised that
+it has a new file, called <code class="docutils literal notranslate"><span class="pre">Git-cheatsheet.md</span></code>, to keep track of. It Git parlance,
+<code class="docutils literal notranslate"><span class="pre">Git-cheatsheet.md</span></code> has become a <strong>tracked</strong> file. But it hasn’t
+yet stored the new version of the file as part of its history. To do that, we
+need to run another Git command, called <code class="docutils literal notranslate"><span class="pre">commit</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>commit
+</pre></div>
+</div>
+<p>Upon entering this command, the text editor we configured for Git earlier springs into life, opening up a file with some pre-defined text and leaving space at the top for us
+to write in. (The lines preceded by hashes are comments that are ignored by Git.)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Please enter the commit message for your changes. Lines starting</span>
+<span class="c1"># with &#39;#&#39; will be ignored, and an empty message aborts the commit.</span>
+<span class="c1">#</span>
+<span class="c1"># On branch main</span>
+<span class="c1"># Your branch is up to date with &#39;origin/main&#39;.</span>
+<span class="c1">#</span>
+<span class="c1"># Changes to be committed:</span>
+<span class="c1">#       new file:   Git-cheatsheet.md</span>
+<span class="c1">#</span>
+</pre></div>
+</div>
+<p>As you can see, this file is for writing a <strong>commit message</strong>. This is a message
+that tells people about changes that are being committed to the repository.
+It should briefly, but clearly, describe the main changes that have been made. We
+add our commit message at the top of the opened file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Create<span class="w"> </span>a<span class="w"> </span>cheatsheet<span class="w"> </span>document
+
+Start<span class="w"> </span>the<span class="w"> </span>document<span class="w"> </span>by<span class="w"> </span>adding<span class="w"> </span>an<span class="w"> </span>entry<span class="w"> </span><span class="k">for</span><span class="w"> </span>Git<span class="s1">&#39;s status command.</span>
+
+<span class="s1"># Please enter the commit message for your changes. Lines starting</span>
+<span class="s1"># with &#39;</span><span class="c1">#&#39; will be ignored, and an empty message aborts the commit.</span>
+<span class="c1">#</span>
+<span class="c1"># On branch main</span>
+<span class="c1"># Your branch is up to date with &#39;origin/main&#39;.</span>
+<span class="c1">#</span>
+<span class="c1"># Changes to be committed:</span>
+<span class="c1">#       new file:   Git-cheatsheet.md</span>
+<span class="c1">#</span>
+</pre></div>
+</div>
+<p>Once we’ve written our message, we save the document (<strong>don’t</strong> change the file
+name!) and close it. The <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> command finishes and we get a little
+summary message about what was just committed (note the first line of our
+commit message is included):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>commit
+<span class="o">[</span>main<span class="w"> </span>17912ce<span class="o">]</span><span class="w"> </span>Create<span class="w"> </span>a<span class="w"> </span>cheatsheet<span class="w"> </span>document
+<span class="w"> </span><span class="m">1</span><span class="w"> </span>file<span class="w"> </span>changed,<span class="w"> </span><span class="m">8</span><span class="w"> </span>insertions<span class="o">(</span>+<span class="o">)</span>
+<span class="w"> </span>create<span class="w"> </span>mode<span class="w"> </span><span class="m">100644</span><span class="w"> </span>Git-cheatsheet.md
+</pre></div>
+</div>
+<p>When we run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>,
+Git takes everything we have told it to save by using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code>
+and stores a copy permanently inside the special <code class="docutils literal notranslate"><span class="pre">.git</span></code> directory.
+This permanent copy is called a <strong>commit</strong> (or <strong>revision</strong>).</p>
+</section>
+<section id="best-practice-commit-messages">
+<h3>Best practice: commit messages<a class="headerlink" href="#best-practice-commit-messages" title="Link to this heading">#</a></h3>
+<p><a href="https://chris.beams.io/posts/git-commit/" target="_blank" rel="external noreferrer">Good commit messages</a> start with a brief (usually &lt; 50 characters) statement about the changes made in the commit. Generally, the message should complete the sentence “If applied, this commit will [<em>commit message here</em>]”. If you want to go into more detail, add a blank line between the summary line and your additional notes. Use this additional space to explain why you made changes and/or what their impact will be. Avoid uninformative messages such as “small tweaks” or “updates” — write what will be useful for others to read (which includes yourself in one year’s time).</p>
+<p>If we now run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> again, we get the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>status
+On<span class="w"> </span>branch<span class="w"> </span>main
+Your<span class="w"> </span>branch<span class="w"> </span>is<span class="w"> </span>ahead<span class="w"> </span>of<span class="w"> </span><span class="s1">&#39;origin/main&#39;</span><span class="w"> </span>by<span class="w"> </span><span class="m">1</span><span class="w"> </span>commit.
+<span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git push&quot;</span><span class="w"> </span>to<span class="w"> </span>publish<span class="w"> </span>your<span class="w"> </span><span class="nb">local</span><span class="w"> </span>commits<span class="o">)</span>
+
+nothing<span class="w"> </span>to<span class="w"> </span>commit,<span class="w"> </span>working<span class="w"> </span>tree<span class="w"> </span>clean
+</pre></div>
+</div>
+<p>Git is now telling us that:</p>
+<ul class="simple">
+<li><p>There are no further changes in the repository to record
+(‘nothing to commit, working tree clean’).</p></li>
+<li><p>The new version of the repository has been recorded in a commit (“Your branch
+is ahead of ‘origin/main’ by 1 commit.”) The “ahead of
+‘origin/main’” bit indicates that our local repository now has new snapshots
+that aren’t recorded in the remote repository. We’ll discuss this in a later
+episode, so just focus on the “1 commit” bit for now.</p></li>
+</ul>
+</section>
+</section>
+<section id="modify-add-commit">
+<h2>Modify-add-commit<a class="headerlink" href="#modify-add-commit" title="Link to this heading">#</a></h2>
+<p>The example above alludes to the idea that developing files in Git involves
+iteratively going round a three step cycle:</p>
+<ol class="arabic simple">
+<li><p><em>Modify</em> the files in your repository.</p></li>
+<li><p><em>Add</em> the changes you want to record.</p></li>
+<li><p><em>Commit</em> these changes to the repository’s history.</p></li>
+</ol>
+<p>This <em>modify-add-commit</em> cycle is the bread-and-butter of using Git and it will
+very soon become second nature to you.</p>
+<p>Before continuing, we want to mention another piece of terminology relating to
+the <code class="docutils literal notranslate"><span class="pre">add</span></code> command. In Git parlance, applying <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> to a file
+<strong>stages</strong> the changes in that file, ready for committing. To allow for this,
+Git has a special <strong>staging area</strong> (also called the <strong>index</strong>) where it keeps
+track of things that should go into the next commit. It might help to remember
+these terms by thinking of <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> as ‘setting the stage’ for the next commit.</p>
+<section id="best-practice-commit-little-and-often">
+<h3>Best practice: commit little and often<a class="headerlink" href="#best-practice-commit-little-and-often" title="Link to this heading">#</a></h3>
+<p>A commit is much easier to digest if it contains few changes. In fact, you should aim for each commit to capture one conceptual change to your work that can stand alone. This will make the history of your files’ development much easier to follow. A good rule of thumb: a commit should capture a change that you can describe in about 50 characters or fewer, potentially with extra explanation in the commit message if needed. Examples (with commit message):</p>
+<ul class="simple">
+<li><p>Adding a new function to read in some sequencing data (’<em>Add a function to read in sequencing data</em>’).</p></li>
+<li><p>Updating a configuration file to include the setting required for a particular experiment (’<em>Change settings for experiment A simulation</em>’ — the rest of the commit message may then give more detail on what these settings are).</p></li>
+<li><p>Giving a variable a better name, which may be done across multiple files in the same commit (’<em>Rename input variable to a more descriptive name</em>’).</p></li>
+<li><p>Adding this box about best practice for commit (’<em>Add content about best practice for commits</em>’).
+This is something you gain a feel for as you use Git more and study other developers’ work.</p></li>
+</ul>
+</section>
+</section>
+<section id="selective-staging">
+<h2>Selective staging<a class="headerlink" href="#selective-staging" title="Link to this heading">#</a></h2>
+<p>Let’s make some more changes to our example repository, in a way that
+demonstrates the flexibility afforded by separating out the ‘add’ and ‘commit’
+steps.</p>
+<p>We’ll first modify <code class="docutils literal notranslate"><span class="pre">Git-cheatsheet</span></code> to include a note about how to use
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> for staging changes to files.
+Note that, although we’ve only seen an example of adding changes to a single file, we
+can actually add changes to multiple files by listing them out when running
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code>, like this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>add<span class="w"> </span>path/to/file1<span class="w"> </span>path/to/file2<span class="w"> </span>path/to/file3<span class="w"> </span>...
+</pre></div>
+</div>
+<p>So we add the following lines to <code class="docutils literal notranslate"><span class="pre">Git-cheatsheet.md</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">## Adding / committing changes</span>
+
+<span class="sb">`</span>git<span class="w"> </span>add<span class="w"> </span>&lt;files&gt;<span class="sb">`</span><span class="w"> </span>—<span class="w"> </span>Stages<span class="w"> </span>changes<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span><span class="sb">`</span>&lt;files&gt;<span class="sb">`</span>,<span class="w"> </span>ready<span class="w"> </span><span class="k">for</span><span class="w"> </span>committing.
+</pre></div>
+</div>
+<p>However, we’ve also seen some tips on good practice about commits and commit
+messages. So let’s create a new file, called <code class="docutils literal notranslate"><span class="pre">Commit-good-practice.md</span></code> and record
+what we learnt about commit messages:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Best practice when committing</span>
+
+<span class="c1">## Commit messages</span>
+
+<span class="o">[</span>Good<span class="w"> </span>commit<span class="w"> </span>messages<span class="o">](</span>https://chris.beams.io/posts/git-commit/<span class="o">)</span>
+start<span class="w"> </span>with<span class="w"> </span>a<span class="w"> </span>brief<span class="w"> </span><span class="o">(</span>usually<span class="w"> </span>&lt;<span class="w"> </span><span class="m">50</span><span class="w"> </span>characters<span class="o">)</span><span class="w"> </span>summary<span class="w"> </span>statement<span class="w"> </span>about<span class="w"> </span>the
+changes<span class="w"> </span>made<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>commit,<span class="w"> </span>with<span class="w"> </span>more<span class="w"> </span>explanation<span class="w"> </span>given<span class="w"> </span><span class="k">in</span><span class="w"> </span>a<span class="w"> </span>new<span class="w"> </span>paragraph<span class="w"> </span><span class="k">if</span>
+required.<span class="w"> </span>Generally,<span class="w"> </span>the<span class="w"> </span>summary<span class="w"> </span>should<span class="w"> </span><span class="nb">complete</span><span class="w"> </span>the<span class="w"> </span>sentence<span class="w"> </span><span class="s2">&quot;If applied, this</span>
+<span class="s2">commit will [_commit message here_]&quot;</span>.
+
+Avoid<span class="w"> </span>uninformative<span class="w"> </span>messages<span class="w"> </span>such<span class="w"> </span>as<span class="w"> </span><span class="s2">&quot;small tweaks&quot;</span><span class="w"> </span>or<span class="w"> </span><span class="s2">&quot;updates&quot;</span><span class="w"> </span>—<span class="w"> </span>write<span class="w"> </span>what
+will<span class="w"> </span>be<span class="w"> </span>useful<span class="w"> </span><span class="k">for</span><span class="w"> </span>others<span class="w"> </span>to<span class="w"> </span>read.
+</pre></div>
+</div>
+<section id="id1">
+<h3>Markdown syntax<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>Hyperlinks to external URLs are included by putting the text of the hyperlink in square brackets, immediately followed by the URL of the link in parentheses (with no space between the square brackets and parentheses). To just include a URL as its own hyperlink, just place it between angle brackets. Examples:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[Good</span> <span class="pre">commit</span> <span class="pre">messages](https://chris.beams.io/posts/git-commit/)</span></code> renders as the hyperlinked text <a class="reference external" href="https://chris.beams.io/posts/git-commit/">Good commit messages</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;https://chris.beams.io/posts/git-commit/&gt;</span></code> renders as <a class="reference external" href="https://chris.beams.io/posts/git-commit/">https://chris.beams.io/posts/git-commit/</a>.</p></li>
+</ul>
+<p>Let’s now check the state of the working tree:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>status
+On<span class="w"> </span>branch<span class="w"> </span>main
+Your<span class="w"> </span>branch<span class="w"> </span>is<span class="w"> </span>ahead<span class="w"> </span>of<span class="w"> </span><span class="s1">&#39;origin/main&#39;</span><span class="w"> </span>by<span class="w"> </span><span class="m">1</span><span class="w"> </span>commit.
+<span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git push&quot;</span><span class="w"> </span>to<span class="w"> </span>publish<span class="w"> </span>your<span class="w"> </span><span class="nb">local</span><span class="w"> </span>commits<span class="o">)</span>
+
+Changes<span class="w"> </span>not<span class="w"> </span>staged<span class="w"> </span><span class="k">for</span><span class="w"> </span>commit:
+<span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git add &lt;file&gt;...&quot;</span><span class="w"> </span>to<span class="w"> </span>update<span class="w"> </span>what<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>committed<span class="o">)</span>
+<span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git restore &lt;file&gt;...&quot;</span><span class="w"> </span>to<span class="w"> </span>discard<span class="w"> </span>changes<span class="w"> </span><span class="k">in</span><span class="w"> </span>working<span class="w"> </span>directory<span class="o">)</span>
+<span class="w">        </span>modified:<span class="w">   </span>Git-cheatsheet.md
+
+Untracked<span class="w"> </span>files:
+<span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git add &lt;file&gt;...&quot;</span><span class="w"> </span>to<span class="w"> </span>include<span class="w"> </span><span class="k">in</span><span class="w"> </span>what<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>committed<span class="o">)</span>
+<span class="w">        </span>Commit-good-practice.md
+
+no<span class="w"> </span>changes<span class="w"> </span>added<span class="w"> </span>to<span class="w"> </span>commit<span class="w"> </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git add&quot;</span><span class="w"> </span>and/or<span class="w"> </span><span class="s2">&quot;git commit -a&quot;</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>Git has noticed that:</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">Git-cheatsheet.md</span></code> file has been modified, but it’s not yet been ‘staged’
+for committing i.e. it’s not been added to the set of changes to include in the
+next commit. (Note the output under the section ‘Changes not staged for commit:’.)</p></li>
+<li><p>There is a new file <code class="docutils literal notranslate"><span class="pre">Commit-good-practice.md</span></code>, which is currently not being
+tracked because we haven’t run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> on it.</p></li>
+</ul>
+<p>At this point, we could run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">Git-cheatsheet.md</span> <span class="pre">Commit-good-practice.md</span></code>
+to add both of these files, ready to commit with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>. However, the
+changes made to <code class="docutils literal notranslate"><span class="pre">Git-cheatsheet.md</span></code> are about using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code>, whereas
+the content of the new file <code class="docutils literal notranslate"><span class="pre">Commit-best-practice.md</span></code> is all about commits. So
+it would instead be better to separate these changes out:
+first commit the material about <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> in the cheatsheet, then commit the
+material about best practice with commit messages. Come to think of it,
+we could extend the cheatsheet with a note about <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> along the way: this
+would be a natural accompaniment to the <code class="docutils literal notranslate"><span class="pre">Commit-good-practice.md</span></code> file.</p>
+<p>First thing’s first: we commit only the cheatsheet with it’s material about
+using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code>. We apply <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> to <code class="docutils literal notranslate"><span class="pre">Git-cheatsheet.md</span></code>, then check the
+status of the repository:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>Git-cheatsheet.md
+$<span class="w"> </span>git<span class="w"> </span>status
+On<span class="w"> </span>branch<span class="w"> </span>main
+Your<span class="w"> </span>branch<span class="w"> </span>is<span class="w"> </span>ahead<span class="w"> </span>of<span class="w"> </span><span class="s1">&#39;origin/main&#39;</span><span class="w"> </span>by<span class="w"> </span><span class="m">1</span><span class="w"> </span>commit.
+<span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git push&quot;</span><span class="w"> </span>to<span class="w"> </span>publish<span class="w"> </span>your<span class="w"> </span><span class="nb">local</span><span class="w"> </span>commits<span class="o">)</span>
+
+Changes<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>committed:
+<span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git restore --staged &lt;file&gt;...&quot;</span><span class="w"> </span>to<span class="w"> </span>unstage<span class="o">)</span>
+<span class="w">        </span>modified:<span class="w">   </span>Git-cheatsheet.md
+
+Untracked<span class="w"> </span>files:
+<span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git add &lt;file&gt;...&quot;</span><span class="w"> </span>to<span class="w"> </span>include<span class="w"> </span><span class="k">in</span><span class="w"> </span>what<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>committed<span class="o">)</span>
+<span class="w">        </span>Commit-good-practice.md
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Commit-good-practice.md</span></code> is still not being tracked, but now the modifications
+made to <code class="docutils literal notranslate"><span class="pre">Git-cheatsheet.md</span></code> have been staged, ready to be committed (as indicated
+by the ‘Changes to be committed:’ part of the output).</p>
+<p>Next we’ll commit the change to <code class="docutils literal notranslate"><span class="pre">Git-cheatsheet.md</span></code>, using the message
+“Add entry about staging files with ‘git add’”. To speed things up a bit, we can
+use the optional argument <code class="docutils literal notranslate"><span class="pre">--message</span></code> (equivalently, <code class="docutils literal notranslate"><span class="pre">-m</span></code>) to record use this
+commit message without opening up a text editor, like so:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add entry about staging files with &#39;git add&#39;&quot;</span>
+<span class="o">[</span>main<span class="w"> </span>ad56194<span class="o">]</span><span class="w"> </span>Add<span class="w"> </span>entry<span class="w"> </span>about<span class="w"> </span>staging<span class="w"> </span>files<span class="w"> </span>with<span class="w"> </span><span class="s1">&#39;git add&#39;</span>
+<span class="w"> </span><span class="m">1</span><span class="w"> </span>file<span class="w"> </span>changed,<span class="w"> </span><span class="m">5</span><span class="w"> </span>insertions<span class="o">(</span>+<span class="o">)</span>
+</pre></div>
+</div>
+<p>Having committed just the changes to <code class="docutils literal notranslate"><span class="pre">Git-cheatsheet.md</span></code>, we see that Git still
+recognises it has an untracked file in <code class="docutils literal notranslate"><span class="pre">Commit-good-practice.md</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>status
+On<span class="w"> </span>branch<span class="w"> </span>main
+Your<span class="w"> </span>branch<span class="w"> </span>is<span class="w"> </span>ahead<span class="w"> </span>of<span class="w"> </span><span class="s1">&#39;origin/main&#39;</span><span class="w"> </span>by<span class="w"> </span><span class="m">2</span><span class="w"> </span>commits.
+<span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git push&quot;</span><span class="w"> </span>to<span class="w"> </span>publish<span class="w"> </span>your<span class="w"> </span><span class="nb">local</span><span class="w"> </span>commits<span class="o">)</span>
+
+Untracked<span class="w"> </span>files:
+<span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git add &lt;file&gt;...&quot;</span><span class="w"> </span>to<span class="w"> </span>include<span class="w"> </span><span class="k">in</span><span class="w"> </span>what<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>committed<span class="o">)</span>
+<span class="w">        </span>Commit-good-practice.md
+
+nothing<span class="w"> </span>added<span class="w"> </span>to<span class="w"> </span>commit<span class="w"> </span>but<span class="w"> </span>untracked<span class="w"> </span>files<span class="w"> </span>present<span class="w"> </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git add&quot;</span><span class="w"> </span>to<span class="w"> </span>track<span class="o">)</span>
+</pre></div>
+</div>
+<p>We now take the opportunity to add an cheatsheet entry about the <code class="docutils literal notranslate"><span class="pre">commit</span></code>
+command (under the ‘Adding / committing changes’ section):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="sb">`</span>git<span class="w"> </span>commit<span class="sb">`</span><span class="w"> </span>—<span class="w"> </span>Commit<span class="w"> </span>changes<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>repository<span class="w"> </span>that<span class="w"> </span>have<span class="w"> </span>been<span class="w"> </span>staged<span class="w"> </span>with
+<span class="w">               </span><span class="sb">`</span>git<span class="w"> </span>add<span class="sb">`</span>.
+</pre></div>
+</div>
+<p>We now again have two sets of changes that have yet to be staged, one to the
+cheatsheet and the other to the as yet still untracked <code class="docutils literal notranslate"><span class="pre">Commit-good-practice.md</span></code>.
+So, finally, we now bank these changes in a single commit; first we stage them
+with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>Git-cheatsheet.md<span class="w"> </span>Commit-good-practice.md
+$<span class="w"> </span>git<span class="w"> </span>status
+On<span class="w"> </span>branch<span class="w"> </span>main
+Your<span class="w"> </span>branch<span class="w"> </span>is<span class="w"> </span>ahead<span class="w"> </span>of<span class="w"> </span><span class="s1">&#39;origin/main&#39;</span><span class="w"> </span>by<span class="w"> </span><span class="m">2</span><span class="w"> </span>commits.
+<span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git push&quot;</span><span class="w"> </span>to<span class="w"> </span>publish<span class="w"> </span>your<span class="w"> </span><span class="nb">local</span><span class="w"> </span>commits<span class="o">)</span>
+
+Changes<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>committed:
+<span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git restore --staged &lt;file&gt;...&quot;</span><span class="w"> </span>to<span class="w"> </span>unstage<span class="o">)</span>
+<span class="w">        </span>new<span class="w"> </span>file:<span class="w">   </span>Commit-good-practice.md
+<span class="w">        </span>modified:<span class="w">   </span>Git-cheatsheet.md
+</pre></div>
+</div>
+<p>Having checked with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> that each file has indeed been staged, we
+go ahead and perform the commit. The commit message we use is the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Add<span class="w"> </span>material<span class="w"> </span>on<span class="w"> </span>committing
+
+This<span class="w"> </span>includes<span class="w"> </span>both<span class="w"> </span>an<span class="w"> </span>entry<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s1">&#39;git commit&#39;</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>cheatsheet
+and<span class="w"> </span>also<span class="w"> </span>material<span class="w"> </span>on<span class="w"> </span>good<span class="w"> </span>practice<span class="w"> </span><span class="k">for</span><span class="w"> </span>commit<span class="w"> </span>messages<span class="w"> </span><span class="k">in</span><span class="w"> </span>a<span class="w"> </span>new
+<span class="s1">&#39;good practice&#39;</span><span class="w"> </span>document.
+</pre></div>
+</div>
+<p>Since this is a longer message (in particular, featuring line breaks) we use
+the default <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> to use a text editor:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>commit
+<span class="o">[</span>main<span class="w"> </span>34c19f2<span class="o">]</span><span class="w"> </span>Add<span class="w"> </span>material<span class="w"> </span>on<span class="w"> </span>committing
+<span class="w"> </span><span class="m">2</span><span class="w"> </span>files<span class="w"> </span>changed,<span class="w"> </span><span class="m">15</span><span class="w"> </span>insertions<span class="o">(</span>+<span class="o">)</span>
+<span class="w"> </span>create<span class="w"> </span>mode<span class="w"> </span><span class="m">100644</span><span class="w"> </span>Commit-good-practice.md
+</pre></div>
+</div>
+<p>If we wanted, we could now verify that we have no more changes outstanding by
+another call to <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code>.</p>
+</section>
+</section>
+<section id="review">
+<h2>Review<a class="headerlink" href="#review" title="Link to this heading">#</a></h2>
+<p>At this point, you are hopefully starting to get an appreciation for why there
+are two separate steps required to record changes to files in a
+repository. Git insists that we
+identify which files we want to commit, via <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code>,
+before actually committing anything. If you think of Git as taking snapshots of
+changes over the life of a project,
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> specifies <em>what</em> will go in a snapshot (putting things in the staging
+area), and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> then <em>actually takes</em> the snapshot, making a permanent
+record of it (as a commit). This allows us to commit our
+changes in stages and be selective in what we capture, so that changes are
+recorded in logical steps rather than in large batches.</p>
+<p>To summarise, there are three key ‘spaces’ to be aware of when working with files
+in Git:</p>
+<ul class="simple">
+<li><p>The working tree — modifications that have not been staged with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code></p></li>
+<li><p>The staging area (a.k.a index) — contains changes that have been staged
+with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> but not yet committed with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>.</p></li>
+<li><p>The repository — a permanent record of changes (commits) that have been
+committed with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>.</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> moves changes from the working tree to the staging area, and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>
+‘seals the deal’ by moving changes from the staging area to the repository. This
+process is captured in the following diagram.</p>
+<p><img alt="The Git Commit Workflow" src="https://swcarpentry.github.io/git-novice/fig/git-committing.svg" /></p>
+<p><a href="https://swcarpentry.github.io/git-novice/fig/git-committing.svg">The Git Commit Workflow</a>
+<em>image is © Software Carpentry and reused under
+<a href ="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>.
+It’s taken from <a href="https://swcarpentry.github.io/git-novice/04-changes/index.html">Version Control with Git – Tracking Changes</a>.</em></p>
+<section id="exercise">
+<h3>Exercise<a class="headerlink" href="#exercise" title="Link to this heading">#</a></h3>
+<p>Using the modify-add-commit cycle, add more content to the cheatsheet and commit good practice documents, by adding an entry in the cheatsheet about the <code class="docutils literal notranslate"><span class="pre">--message</span></code> / <code class="docutils literal notranslate"><span class="pre">-m</span></code> option for <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> and including a section on ‘committing little and often’ in the <code class="docutils literal notranslate"><span class="pre">Commit-good-practice.md</span></code> document. Try practising ‘selective staging’ when you do this: modify both files to begin with, but then commit the changes one file at a time by using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> selectively.</p>
+</section>
+</section>
+<section id="summary-quiz">
+<h2>Summary Quiz<a class="headerlink" href="#summary-quiz" title="Link to this heading">#</a></h2>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div id="UpmUWrcetgCK" data-shufflequestions="False"
+               data-shuffleanswers="True"
+               data-preserveresponses="false"
+               data-numquestions="1000000"
+               data-maxwidth="600"
+               style="border-radius: 10px; text-align: left"> <style>
+#UpmUWrcetgCK {
+   --jq-multiple-choice-bg: #6f78ffff;
+   --jq-mc-button-bg: #fafafa;
+   --jq-mc-button-border: #e0e0e0e0;
+   --jq-mc-button-inset-shadow: #555555;
+   --jq-many-choice-bg: #f75c03ff;
+   --jq-numeric-bg: #392061ff;
+   --jq-numeric-input-bg: #c0c0c0;
+   --jq-numeric-input-label: #101010;
+   --jq-numeric-input-shadow: #999999;
+   --jq-incorrect-color: #c80202;
+   --jq-correct-color: #009113;
+   --jq-text-color: #fafafa;
+}
+
+.Quiz {
+    max-width: 600px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    line-height: 1.1;
+    font-size: 16pt;
+    border-radius: inherit;
+}
+
+.QuizCode {
+    font-size: 14pt;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.QuizCode>pre {
+    padding: 4px;
+}
+
+.Answer {
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    border-radius: inherit;
+}
+
+.Feedback {
+    font-size: 16pt;
+    text-align: center;
+    min-height: 2em;
+}
+
+.Input {
+    align: left;
+    font-size: 20pt;
+}
+
+.Input-text {
+    display: block;
+    margin: 10px;
+    color: inherit;
+    width: 140px;
+    background-color: var(--jq-numeric-input-bg);
+    color: var(--jq-text-color);
+    padding: 5px;
+    padding-left: 10px;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: inherit;
+    line-height: 20pt;
+    border: none;
+    border-radius: 0.2rem;
+    transition: box-shadow 0.1s);
+}
+
+.Input-text:focus {
+    outline: none;
+    background-color: var(--jq-numeric-input-bg);
+    box-shadow: 0.6rem 0.8rem 1.4rem -0.5rem var(--jq-numeric-input-shadow);
+}
+
+.MCButton {
+    background: var(--jq-mc-button-bg);
+    border: 1px solid var(--jq-mc-button-border);
+    border-radius: inherit;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MCButton p {
+    color: inherit;
+}
+
+.MultipleChoiceQn {
+    padding: 10px;
+    background: var(--jq-multiple-choice-bg);
+    color: var(--jq-text-color);
+    border-radius: inherit;
+}
+
+.ManyChoiceQn {
+    padding: 10px;
+    background: var(--jq-many-choice-bg);
+    color: var(--jq-text-color);
+    border-radius: inherit;
+}
+
+.NumericQn {
+    padding: 10px;
+    background: var(--jq-numeric-bg);
+    color: var(--jq-text-color);
+    border-radius: inherit;
+}
+
+.NumericQn p {
+    color: inherit;
+}
+
+.InpLabel {
+    line-height: 34px;
+    float: left;
+    margin-right: 10px;
+    color: var(--jq-numeric-input-label);
+    font-size: 15pt;
+}
+
+.incorrect {
+    color: var(--jq-incorrect-color);
+}
+
+.correct {
+    color: var(--jq-correct-color);
+}
+
+.correctButton {
+    /*
+    background: var(--jq-correct-color);
+   */
+    animation: correct-anim 0.6s ease;
+    animation-fill-mode: forwards;
+    color: var(--jq-text-color);
+    box-shadow: inset 0px 0px 5px var(--jq-mc-button-inset-shadow);
+    outline: none;
+}
+
+.incorrectButton {
+    animation: incorrect-anim 0.8s ease;
+    animation-fill-mode: forwards;
+    color: var(--jq-text-color);
+    box-shadow: inset 0px 0px 5px var(--jq-mc-button-inset-shadow);
+    outline: none;
+}
+
+@keyframes incorrect-anim {
+    100% {
+        background-color: var(--jq-incorrect-color);
+    }
+}
+
+@keyframes correct-anim {
+    100% {
+        background-color: var(--jq-correct-color);
+    }
+}
+</style></div><script type="application/javascript">var questionsUpmUWrcetgCK=[
+    {
+        "question": "Which command is used to check the status of a Git repository?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "git add",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "git commit",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "git status",
+                "correct": true,
+                "feedback": "Correct"
+            },
+            {
+                "answer": "git log",
+                "correct": false,
+                "feedback": "Incorrect"
+            }
+        ]
+    },
+    {
+        "question": "What is the purpose of the git add command?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "To check the status of the repository",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "To add changes to the staging area for the next commit",
+                "correct": true,
+                "feedback": "Correct"
+            },
+            {
+                "answer": "To commit changes to the repository",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "To view the commit history",
+                "correct": false,
+                "feedback": "Incorrect"
+            }
+        ]
+    },
+    {
+        "question": "What should be included in a good commit message according to best practices?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Detailed descriptions of changes made, including file paths and line numbers",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "A brief statement (usually <50 characters) about the changes made, with optional additional notes",
+                "correct": true,
+                "feedback": "Correct"
+            },
+            {
+                "answer": "A simple \"update\" or \"fix\" message without additional details",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "Personal comments about the development process",
+                "correct": false,
+                "feedback": "Incorrect"
+            }
+        ]
+    }
+];
+    // Make a random ID
+function makeid(length) {
+    var result = [];
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+    var charactersLength = characters.length;
+    for (var i = 0; i < length; i++) {
+        result.push(characters.charAt(Math.floor(Math.random() * charactersLength)));
+    }
+    return result.join('');
+}
+
+// Choose a random subset of an array. Can also be used to shuffle the array
+function getRandomSubarray(arr, size) {
+    var shuffled = arr.slice(0), i = arr.length, temp, index;
+    while (i--) {
+        index = Math.floor((i + 1) * Math.random());
+        temp = shuffled[index];
+        shuffled[index] = shuffled[i];
+        shuffled[i] = temp;
+    }
+    return shuffled.slice(0, size);
+}
+
+function printResponses(responsesContainer) {
+    var responses=JSON.parse(responsesContainer.dataset.responses);
+    var stringResponses='<B>IMPORTANT!</B>To preserve this answer sequence for submission, when you have finalized your answers: <ol> <li> Copy the text in this cell below "Answer String"</li> <li> Double click on the cell directly below the Answer String, labeled "Replace Me"</li> <li> Select the whole "Replace Me" text</li> <li> Paste in your answer string and press shift-Enter.</li><li>Save the notebook using the save icon or File->Save Notebook menu item</li></ul><br><br><br><b>Answer String:</b><br> ';
+    console.log(responses);
+    responses.forEach((response, index) => {
+        if (response) {
+            console.log(index + ': ' + response);
+            stringResponses+= index + ': ' + response +"<BR>";
+        }
+    });
+    responsesContainer.innerHTML=stringResponses;
+}
+function check_mc() {
+    var id = this.id.split('-')[0];
+    //var response = this.id.split('-')[1];
+    //console.log(response);
+    //console.log("In check_mc(), id="+id);
+    //console.log(event.srcElement.id)           
+    //console.log(event.srcElement.dataset.correct)   
+    //console.log(event.srcElement.dataset.feedback)
+
+    var label = event.srcElement;
+    //console.log(label, label.nodeName);
+    var depth = 0;
+    while ((label.nodeName != "LABEL") && (depth < 20)) {
+        label = label.parentElement;
+        console.log(depth, label);
+        depth++;
+    }
+
+
+
+    var answers = label.parentElement.children;
+
+    //console.log(answers);
+
+
+    // Split behavior based on multiple choice vs many choice:
+    var fb = document.getElementById("fb" + id);
+
+
+
+
+    if (fb.dataset.numcorrect == 1) {
+        // What follows is for the saved responses stuff
+        var outerContainer = fb.parentElement.parentElement;
+        var responsesContainer = document.getElementById("responses" + outerContainer.id);
+        if (responsesContainer) {
+            //console.log(responsesContainer);
+            var response = label.firstChild.innerText;
+            if (label.querySelector(".QuizCode")){
+                response+= label.querySelector(".QuizCode").firstChild.innerText;
+            }
+            console.log(response);
+            //console.log(document.getElementById("quizWrap"+id));
+            var qnum = document.getElementById("quizWrap"+id).dataset.qnum;
+            console.log("Question " + qnum);
+            //console.log(id, ", got numcorrect=",fb.dataset.numcorrect);
+            var responses=JSON.parse(responsesContainer.dataset.responses);
+            console.log(responses);
+            responses[qnum]= response;
+            responsesContainer.setAttribute('data-responses', JSON.stringify(responses));
+            printResponses(responsesContainer);
+        }
+        // End code to preserve responses
+        
+        for (var i = 0; i < answers.length; i++) {
+            var child = answers[i];
+            //console.log(child);
+            child.className = "MCButton";
+        }
+
+
+
+        if (label.dataset.correct == "true") {
+            // console.log("Correct action");
+            if ("feedback" in label.dataset) {
+                fb.textContent = jaxify(label.dataset.feedback);
+            } else {
+                fb.textContent = "Correct!";
+            }
+            label.classList.add("correctButton");
+
+            fb.className = "Feedback";
+            fb.classList.add("correct");
+
+        } else {
+            if ("feedback" in label.dataset) {
+                fb.textContent = jaxify(label.dataset.feedback);
+            } else {
+                fb.textContent = "Incorrect -- try again.";
+            }
+            //console.log("Error action");
+            label.classList.add("incorrectButton");
+            fb.className = "Feedback";
+            fb.classList.add("incorrect");
+        }
+    }
+    else {
+        var reset = false;
+        var feedback;
+         if (label.dataset.correct == "true") {
+            if ("feedback" in label.dataset) {
+                feedback = jaxify(label.dataset.feedback);
+            } else {
+                feedback = "Correct!";
+            }
+            if (label.dataset.answered <= 0) {
+                if (fb.dataset.answeredcorrect < 0) {
+                    fb.dataset.answeredcorrect = 1;
+                    reset = true;
+                } else {
+                    fb.dataset.answeredcorrect++;
+                }
+                if (reset) {
+                    for (var i = 0; i < answers.length; i++) {
+                        var child = answers[i];
+                        child.className = "MCButton";
+                        child.dataset.answered = 0;
+                    }
+                }
+                label.classList.add("correctButton");
+                label.dataset.answered = 1;
+                fb.className = "Feedback";
+                fb.classList.add("correct");
+
+            }
+        } else {
+            if ("feedback" in label.dataset) {
+                feedback = jaxify(label.dataset.feedback);
+            } else {
+                feedback = "Incorrect -- try again.";
+            }
+            if (fb.dataset.answeredcorrect > 0) {
+                fb.dataset.answeredcorrect = -1;
+                reset = true;
+            } else {
+                fb.dataset.answeredcorrect--;
+            }
+
+            if (reset) {
+                for (var i = 0; i < answers.length; i++) {
+                    var child = answers[i];
+                    child.className = "MCButton";
+                    child.dataset.answered = 0;
+                }
+            }
+            label.classList.add("incorrectButton");
+            fb.className = "Feedback";
+            fb.classList.add("incorrect");
+        }
+        // What follows is for the saved responses stuff
+        var outerContainer = fb.parentElement.parentElement;
+        var responsesContainer = document.getElementById("responses" + outerContainer.id);
+        if (responsesContainer) {
+            //console.log(responsesContainer);
+            var response = label.firstChild.innerText;
+            if (label.querySelector(".QuizCode")){
+                response+= label.querySelector(".QuizCode").firstChild.innerText;
+            }
+            console.log(response);
+            //console.log(document.getElementById("quizWrap"+id));
+            var qnum = document.getElementById("quizWrap"+id).dataset.qnum;
+            console.log("Question " + qnum);
+            //console.log(id, ", got numcorrect=",fb.dataset.numcorrect);
+            var responses=JSON.parse(responsesContainer.dataset.responses);
+            if (label.dataset.correct == "true") {
+                if (typeof(responses[qnum]) == "object"){
+                    if (!responses[qnum].includes(response))
+                        responses[qnum].push(response);
+                } else{
+                    responses[qnum]= [ response ];
+                }
+            } else {
+                responses[qnum]= response;
+            }
+            console.log(responses);
+            responsesContainer.setAttribute('data-responses', JSON.stringify(responses));
+            printResponses(responsesContainer);
+        }
+        // End save responses stuff
+
+
+
+        var numcorrect = fb.dataset.numcorrect;
+        var answeredcorrect = fb.dataset.answeredcorrect;
+        if (answeredcorrect >= 0) {
+            fb.textContent = feedback + " [" + answeredcorrect + "/" + numcorrect + "]";
+        } else {
+            fb.textContent = feedback + " [" + 0 + "/" + numcorrect + "]";
+        }
+
+
+    }
+
+    if (typeof MathJax != 'undefined') {
+        var version = MathJax.version;
+        console.log('MathJax version', version);
+        if (version[0] == "2") {
+            MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+        } else if (version[0] == "3") {
+            MathJax.typeset([fb]);
+        }
+    } else {
+        console.log('MathJax not detected');
+    }
+
+}
+
+function make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id) {
+    var shuffled;
+    if (shuffle_answers == "True") {
+        //console.log(shuffle_answers+" read as true");
+        shuffled = getRandomSubarray(qa.answers, qa.answers.length);
+    } else {
+        //console.log(shuffle_answers+" read as false");
+        shuffled = qa.answers;
+    }
+
+
+    var num_correct = 0;
+
+
+
+    shuffled.forEach((item, index, ans_array) => {
+        //console.log(answer);
+
+        // Make input element
+        var inp = document.createElement("input");
+        inp.type = "radio";
+        inp.id = "quizo" + id + index;
+        inp.style = "display:none;";
+        aDiv.append(inp);
+
+        //Make label for input element
+        var lab = document.createElement("label");
+        lab.className = "MCButton";
+        lab.id = id + '-' + index;
+        lab.onclick = check_mc;
+        var aSpan = document.createElement('span');
+        aSpan.classsName = "";
+        //qDiv.id="quizQn"+id+index;
+        if ("answer" in item) {
+            aSpan.innerHTML = jaxify(item.answer);
+            //aSpan.innerHTML=item.answer;
+        }
+        lab.append(aSpan);
+
+        // Create div for code inside question
+        var codeSpan;
+        if ("code" in item) {
+            codeSpan = document.createElement('span');
+            codeSpan.id = "code" + id + index;
+            codeSpan.className = "QuizCode";
+            var codePre = document.createElement('pre');
+            codeSpan.append(codePre);
+            var codeCode = document.createElement('code');
+            codePre.append(codeCode);
+            codeCode.innerHTML = item.code;
+            lab.append(codeSpan);
+            //console.log(codeSpan);
+        }
+
+        //lab.textContent=item.answer;
+
+        // Set the data attributes for the answer
+        lab.setAttribute('data-correct', item.correct);
+        if (item.correct) {
+            num_correct++;
+        }
+        if ("feedback" in item) {
+            lab.setAttribute('data-feedback', item.feedback);
+        }
+        lab.setAttribute('data-answered', 0);
+
+        aDiv.append(lab);
+
+    });
+
+    if (num_correct > 1) {
+        outerqDiv.className = "ManyChoiceQn";
+    } else {
+        outerqDiv.className = "MultipleChoiceQn";
+    }
+
+    return num_correct;
+
+}
+function check_numeric(ths, event) {
+
+    if (event.keyCode === 13) {
+        ths.blur();
+
+        var id = ths.id.split('-')[0];
+
+        var submission = ths.value;
+        if (submission.indexOf('/') != -1) {
+            var sub_parts = submission.split('/');
+            //console.log(sub_parts);
+            submission = sub_parts[0] / sub_parts[1];
+        }
+        //console.log("Reader entered", submission);
+
+        if ("precision" in ths.dataset) {
+            var precision = ths.dataset.precision;
+            // console.log("1:", submission)
+            submission = Math.round((1 * submission + Number.EPSILON) * 10 ** precision) / 10 ** precision;
+            // console.log("Rounded to ", submission, " precision=", precision  );
+        }
+
+
+        //console.log("In check_numeric(), id="+id);
+        //console.log(event.srcElement.id)           
+        //console.log(event.srcElement.dataset.feedback)
+
+        var fb = document.getElementById("fb" + id);
+        fb.style.display = "none";
+        fb.textContent = "Incorrect -- try again.";
+
+        var answers = JSON.parse(ths.dataset.answers);
+        //console.log(answers);
+
+        var defaultFB = "";
+        var correct;
+        var done = false;
+        answers.every(answer => {
+            //console.log(answer.type);
+
+            correct = false;
+            // if (answer.type=="value"){
+            if ('value' in answer) {
+                if (submission == answer.value) {
+                    if ("feedback" in answer) {
+                        fb.textContent = jaxify(answer.feedback);
+                    } else {
+                        fb.textContent = jaxify("Correct");
+                    }
+                    correct = answer.correct;
+                    //console.log(answer.correct);
+                    done = true;
+                }
+                // } else if (answer.type=="range") {
+            } else if ('range' in answer) {
+                //console.log(answer.range);
+                if ((submission >= answer.range[0]) && (submission < answer.range[1])) {
+                    fb.textContent = jaxify(answer.feedback);
+                    correct = answer.correct;
+                    //console.log(answer.correct);
+                    done = true;
+                }
+            } else if (answer.type == "default") {
+                defaultFB = answer.feedback;
+            }
+            if (done) {
+                return false; // Break out of loop if this has been marked correct
+            } else {
+                return true; // Keep looking for case that includes this as a correct answer
+            }
+        });
+
+        if ((!done) && (defaultFB != "")) {
+            fb.innerHTML = jaxify(defaultFB);
+            //console.log("Default feedback", defaultFB);
+        }
+
+        fb.style.display = "block";
+        if (correct) {
+            ths.className = "Input-text";
+            ths.classList.add("correctButton");
+            fb.className = "Feedback";
+            fb.classList.add("correct");
+        } else {
+            ths.className = "Input-text";
+            ths.classList.add("incorrectButton");
+            fb.className = "Feedback";
+            fb.classList.add("incorrect");
+        }
+
+        // What follows is for the saved responses stuff
+        var outerContainer = fb.parentElement.parentElement;
+        var responsesContainer = document.getElementById("responses" + outerContainer.id);
+        if (responsesContainer) {
+            console.log(submission);
+            var qnum = document.getElementById("quizWrap"+id).dataset.qnum;
+            //console.log("Question " + qnum);
+            //console.log(id, ", got numcorrect=",fb.dataset.numcorrect);
+            var responses=JSON.parse(responsesContainer.dataset.responses);
+            console.log(responses);
+            if (submission == ths.value){
+                responses[qnum]= submission;
+            } else {
+                responses[qnum]= ths.value + "(" + submission +")";
+            }
+            responsesContainer.setAttribute('data-responses', JSON.stringify(responses));
+            printResponses(responsesContainer);
+        }
+        // End code to preserve responses
+
+        if (typeof MathJax != 'undefined') {
+            var version = MathJax.version;
+            console.log('MathJax version', version);
+            if (version[0] == "2") {
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+            } else if (version[0] == "3") {
+                MathJax.typeset([fb]);
+            }
+        } else {
+            console.log('MathJax not detected');
+        }
+        return false;
+    }
+
+}
+
+function isValid(el, charC) {
+    //console.log("Input char: ", charC);
+    if (charC == 46) {
+        if (el.value.indexOf('.') === -1) {
+            return true;
+        } else if (el.value.indexOf('/') != -1) {
+            var parts = el.value.split('/');
+            if (parts[1].indexOf('.') === -1) {
+                return true;
+            }
+        }
+        else {
+            return false;
+        }
+    } else if (charC == 47) {
+        if (el.value.indexOf('/') === -1) {
+            if ((el.value != "") && (el.value != ".")) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    } else if (charC == 45) {
+        var edex = el.value.indexOf('e');
+        if (edex == -1) {
+            edex = el.value.indexOf('E');
+        }
+
+        if (el.value == "") {
+            return true;
+        } else if (edex == (el.value.length - 1)) { // If just after e or E
+            return true;
+        } else {
+            return false;
+        }
+    } else if (charC == 101) { // "e"
+        if ((el.value.indexOf('e') === -1) && (el.value.indexOf('E') === -1) && (el.value.indexOf('/') == -1)) {
+            // Prev symbol must be digit or decimal point:
+            if (el.value.slice(-1).search(/\d/) >= 0) {
+                return true;
+            } else if (el.value.slice(-1).search(/\./) >= 0) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    } else {
+        if (charC > 31 && (charC < 48 || charC > 57))
+            return false;
+    }
+    return true;
+}
+
+function numeric_keypress(evnt) {
+    var charC = (evnt.which) ? evnt.which : evnt.keyCode;
+
+    if (charC == 13) {
+        check_numeric(this, evnt);
+    } else {
+        return isValid(this, charC);
+    }
+}
+
+
+
+
+
+function make_numeric(qa, outerqDiv, qDiv, aDiv, id) {
+
+
+
+    //console.log(answer);
+
+
+    outerqDiv.className = "NumericQn";
+    aDiv.style.display = 'block';
+
+    var lab = document.createElement("label");
+    lab.className = "InpLabel";
+    lab.textContent = "Type numeric answer here:";
+    aDiv.append(lab);
+
+    var inp = document.createElement("input");
+    inp.type = "text";
+    //inp.id="input-"+id;
+    inp.id = id + "-0";
+    inp.className = "Input-text";
+    inp.setAttribute('data-answers', JSON.stringify(qa.answers));
+    if ("precision" in qa) {
+        inp.setAttribute('data-precision', qa.precision);
+    }
+    aDiv.append(inp);
+    //console.log(inp);
+
+    //inp.addEventListener("keypress", check_numeric);
+    //inp.addEventListener("keypress", numeric_keypress);
+    /*
+    inp.addEventListener("keypress", function(event) {
+        return numeric_keypress(this, event);
+    }
+                        );
+                        */
+    //inp.onkeypress="return numeric_keypress(this, event)";
+    inp.onkeypress = numeric_keypress;
+    inp.onpaste = event => false;
+
+    inp.addEventListener("focus", function (event) {
+        this.value = "";
+        return false;
+    }
+    );
+
+
+}
+function jaxify(string) {
+    var mystring = string;
+
+    var count = 0;
+    var loc = mystring.search(/([^\\]|^)(\$)/);
+
+    var count2 = 0;
+    var loc2 = mystring.search(/([^\\]|^)(\$\$)/);
+
+    //console.log(loc);
+
+    while ((loc >= 0) || (loc2 >= 0)) {
+
+        /* Have to replace all the double $$ first with current implementation */
+        if (loc2 >= 0) {
+            if (count2 % 2 == 0) {
+                mystring = mystring.replace(/([^\\]|^)(\$\$)/, "$1\\[");
+            } else {
+                mystring = mystring.replace(/([^\\]|^)(\$\$)/, "$1\\]");
+            }
+            count2++;
+        } else {
+            if (count % 2 == 0) {
+                mystring = mystring.replace(/([^\\]|^)(\$)/, "$1\\(");
+            } else {
+                mystring = mystring.replace(/([^\\]|^)(\$)/, "$1\\)");
+            }
+            count++;
+        }
+        loc = mystring.search(/([^\\]|^)(\$)/);
+        loc2 = mystring.search(/([^\\]|^)(\$\$)/);
+        //console.log(mystring,", loc:",loc,", loc2:",loc2);
+    }
+
+    //console.log(mystring);
+    return mystring;
+}
+
+
+function show_questions(json, mydiv) {
+    console.log('show_questions');
+    //var mydiv=document.getElementById(myid);
+    var shuffle_questions = mydiv.dataset.shufflequestions;
+    var num_questions = mydiv.dataset.numquestions;
+    var shuffle_answers = mydiv.dataset.shuffleanswers;
+    var max_width = mydiv.dataset.maxwidth;
+
+    if (num_questions > json.length) {
+        num_questions = json.length;
+    }
+
+    var questions;
+    if ((num_questions < json.length) || (shuffle_questions == "True")) {
+        //console.log(num_questions+","+json.length);
+        questions = getRandomSubarray(json, num_questions);
+    } else {
+        questions = json;
+    }
+
+    //console.log("SQ: "+shuffle_questions+", NQ: " + num_questions + ", SA: ", shuffle_answers);
+
+    // Iterate over questions
+    questions.forEach((qa, index, array) => {
+        //console.log(qa.question); 
+
+        var id = makeid(8);
+        //console.log(id);
+
+
+        // Create Div to contain question and answers
+        var iDiv = document.createElement('div');
+        //iDiv.id = 'quizWrap' + id + index;
+        iDiv.id = 'quizWrap' + id;
+        iDiv.className = 'Quiz';
+        iDiv.setAttribute('data-qnum', index);
+        iDiv.style.maxWidth  =max_width+"px";
+        mydiv.appendChild(iDiv);
+        // iDiv.innerHTML=qa.question;
+        
+        var outerqDiv = document.createElement('div');
+        outerqDiv.id = "OuterquizQn" + id + index;
+        // Create div to contain question part
+        var qDiv = document.createElement('div');
+        qDiv.id = "quizQn" + id + index;
+        
+        if (qa.question) {
+            iDiv.append(outerqDiv);
+
+            //qDiv.textContent=qa.question;
+            qDiv.innerHTML = jaxify(qa.question);
+            outerqDiv.append(qDiv);
+        }
+
+        // Create div for code inside question
+        var codeDiv;
+        if ("code" in qa) {
+            codeDiv = document.createElement('div');
+            codeDiv.id = "code" + id + index;
+            codeDiv.className = "QuizCode";
+            var codePre = document.createElement('pre');
+            codeDiv.append(codePre);
+            var codeCode = document.createElement('code');
+            codePre.append(codeCode);
+            codeCode.innerHTML = qa.code;
+            outerqDiv.append(codeDiv);
+            //console.log(codeDiv);
+        }
+
+
+        // Create div to contain answer part
+        var aDiv = document.createElement('div');
+        aDiv.id = "quizAns" + id + index;
+        aDiv.className = 'Answer';
+        iDiv.append(aDiv);
+
+        //console.log(qa.type);
+
+        var num_correct;
+        if ((qa.type == "multiple_choice") || (qa.type == "many_choice") ) {
+            num_correct = make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id);
+            if ("answer_cols" in qa) {
+                //aDiv.style.gridTemplateColumns = 'auto '.repeat(qa.answer_cols);
+                aDiv.style.gridTemplateColumns = 'repeat(' + qa.answer_cols + ', 1fr)';
+            }
+        } else if (qa.type == "numeric") {
+            //console.log("numeric");
+            make_numeric(qa, outerqDiv, qDiv, aDiv, id);
+        }
+
+
+        //Make div for feedback
+        var fb = document.createElement("div");
+        fb.id = "fb" + id;
+        //fb.style="font-size: 20px;text-align:center;";
+        fb.className = "Feedback";
+        fb.setAttribute("data-answeredcorrect", 0);
+        fb.setAttribute("data-numcorrect", num_correct);
+        iDiv.append(fb);
+
+
+    });
+    var preserveResponses = mydiv.dataset.preserveresponses;
+    console.log(preserveResponses);
+    console.log(preserveResponses == "true");
+    if (preserveResponses == "true") {
+        console.log(preserveResponses);
+        // Create Div to contain record of answers
+        var iDiv = document.createElement('div');
+        iDiv.id = 'responses' + mydiv.id;
+        iDiv.className = 'JCResponses';
+        // Create a place to store responses as an empty array
+        iDiv.setAttribute('data-responses', '[]');
+
+        // Dummy Text
+        iDiv.innerHTML="<b>Select your answers and then follow the directions that will appear here.</b>"
+        //iDiv.className = 'Quiz';
+        mydiv.appendChild(iDiv);
+    }
+//console.log("At end of show_questions");
+    if (typeof MathJax != 'undefined') {
+        console.log("MathJax version", MathJax.version);
+        var version = MathJax.version;
+        setTimeout(function(){
+            var version = MathJax.version;
+            console.log('After sleep, MathJax version', version);
+            if (version[0] == "2") {
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+            } else if (version[0] == "3") {
+                MathJax.typeset([mydiv]);
+            }
+        }, 500);
+if (typeof version == 'undefined') {
+        } else
+        {
+            if (version[0] == "2") {
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+            } else if (version[0] == "3") {
+                MathJax.typeset([mydiv]);
+            } else {
+                console.log("MathJax not found");
+            }
+        }
+    }
+    return false;
+}
+/* This is to handle asynchrony issues in loading Jupyter notebooks
+           where the quiz has been previously run. The Javascript was generally
+           being run before the div was added to the DOM. I tried to do this
+           more elegantly using Mutation Observer, but I didn't get it to work.
+
+           Someone more knowledgeable could make this better ;-) */
+
+        function try_show() {
+          if(document.getElementById("UpmUWrcetgCK")) {
+            show_questions(questionsUpmUWrcetgCK,  UpmUWrcetgCK); 
+          } else {
+             setTimeout(try_show, 200);
+          }
+        };
+    
+        {
+        // console.log(element);
+
+        //console.log("UpmUWrcetgCK");
+        // console.log(document.getElementById("UpmUWrcetgCK"));
+
+        try_show();
+        }
+        </script></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "coding-for-reproducible-research/CfRR_Courses",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./individual_modules/introduction_to_version_control"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="example_repo.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">An Example Repository</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="history_and_changes.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Viewing History and Changes</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-the-status-of-a-repository">Viewing the status of a repository</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-git-status-often">Run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> often</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-and-committing-files">Adding and committing files</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown-syntax">Markdown syntax</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practice-commit-messages">Best practice: commit messages</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-add-commit">Modify-add-commit</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practice-commit-little-and-often">Best practice: commit little and often</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#selective-staging">Selective staging</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Markdown syntax</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review">Review</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-quiz">Summary Quiz</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Coding For Reproducible Research Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

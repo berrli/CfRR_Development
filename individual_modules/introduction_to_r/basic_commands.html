@@ -1,0 +1,2167 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Running Commands With R &#8212; Home Page</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/style.css?v=aa869d35" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'individual_modules/introduction_to_r/basic_commands';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Data Types and Structures" href="data_types.html" />
+    <link rel="prev" title="Getting Up and Running with R" href="gettingstarted.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../home_page.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/exeter_logo.png" class="logo__image only-light" alt="Home Page - Home"/>
+    <script>document.write(`<img src="../../_static/exeter_logo.png" class="logo__image only-dark" alt="Home Page - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../home_page.html">
+                    Coding for Reproducible Research (CfRR) Training Programme Home Page
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">What is Coding For Reproducible Research?</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../cfrr_program_details/about_us.html">About Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cfrr_program_details/how_to_use_CfRR.html">How to Use This Website</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">What Courses Should I Take?</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../where_is_my_understanding/homepage_where_is_my_understanding.html">Where Is My Understanding Quizzes</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../where_is_my_understanding/python.html">Python</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/intro_to_python.html">Introduction to Python Quiz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/python_for_data_analysis.html">Python for Data Analysis Quiz</a></li>
+
+
+
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../where_is_my_understanding/R.html">R</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/intro_to_r.html">Introduction to R Quiz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/regression_analysis_with_R.html">Regression Analysis With R Quiz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/advanced_regression_analysis_with_R.html">Advanced Regression Analysis with R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/working_with_data_in_r.html">Working With Data in R Quiz</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../where_is_my_understanding/high_performance_computing.html">High Performance Computing</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/intro_to_hpc.html">Introduction to HPC Quiz</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../where_is_my_understanding/version_control.html">Version Control</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/intro_to_version_control.html">Introduction to Version Control with Git and Github Quiz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/intermediate_version_control.html">Intermediate Version Control Quiz</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../where_is_my_understanding/unix.html">UNIX</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/intro_to_unix.html">Introduction to UNIX Quiz</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../where_is_my_understanding/computational_thinking_overview.html">Computational Thinking</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/computational_thinking.html">Computational Thinking Quiz</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../where_is_my_understanding/software_development.html">Software Development</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/software_development_best_practice.html">Software Development Best Practice Quiz</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../where_is_my_understanding/julia.html">Julia</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../where_is_my_understanding/introduction_to_julia.html">Introduction to Julia</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../pathways/related_courses.html">How do these courses relate?</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../pathways/hpc.html">High Performance Computing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pathways/r_ds.html">R Data Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pathways/python_ds.html">Python Data Science</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Courses We Offer</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../cfrr_program_details/courses_overview.html">Workshop Schedule and Signup</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../programme_information/programme_information.html">Workshop Information</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../programme_information/python.html">Python</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/intro_to_python.html">Introduction to Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/python_for_data_analysis.html">Python for Data Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../programme_information/R.html">R</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/intro_to_r.html">Introduction to R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/regression_analysis_with_r.html">Regression Analysis with R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/advanced_regression_analysis_with_r.html">Advanced Regression Analysis With R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/working_with_data_in_r.html">Working With Data in R</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../programme_information/high_performance_computing.html">High Performance Computing</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/intro_to_hpc.html">Introduction to HPC</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../programme_information/version_control.html">Version Control</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/intro_to_version_control.html">Introduction to Version Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/intermediate_version_control.html">Intermediate Version Control</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../programme_information/unix.html">UNIX</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/intro_to_unix.html">Introduction to UNIX</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../programme_information/computational_thinking_overview.html">Computational Thinking</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/computational_thinking.html">Computational Thinking</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../programme_information/software_development.html">Software Development</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/software_development_best_practices.html">Software Development Best Practice</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../programme_information/julia.html">Julia</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../programme_information/intro_to_julia.html">Introduction to Julia</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cfrr_program_details/course_feedback.html">Course Feedback</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../cfrr_program_details/self_study_notes.html">Self Study Notes</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../course_homepages/python.html">Python</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-21"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/introduction_to_python.html">Introduction to Python</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/motivation.html">Motivation and Background</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/fundamentals.html">Python Fundamentals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/lists.html">Lists</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/dictionaries.html">Dictionaries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/control_flow.html">Control Flow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/loops.html">Loops</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/additional_exercises.html">Additional Session 1 Exercises</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/recap.html">Session 1 Recap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/functions.html">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/imports.html">Imports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/analysis_task_intro.html">Data Analysis Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/analysis_task_1.html">Data Analysis Task 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/analysis_task_2.html">Data Analysis Task 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_python/analysis_task_3.html">Data Analysis Task 3</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/python_for_data_analysis.html">Python for Data Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-23"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../python_for_data_analysis/Python_Language_features.html">Advanced Language Features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python_for_data_analysis/Python_Virtual_environments.html">Virtual environments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python_for_data_analysis/Python_NumPy.html">Numpy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python_for_data_analysis/Python_Pandas.html">Pandas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python_for_data_analysis/Python_Matplotlib.html">Matplotlib</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python_for_data_analysis/Python_ScikitLearn.html">Scikit-Learn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python_for_data_analysis/data-analysis-plotly.html">Plotly</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python_for_data_analysis/Python_Testing.html">Checking and Testing Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python_for_data_analysis/data-analysis-task.html">Example Project</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../../course_homepages/R.html">R</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-24"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="../section_landing_pages/introduction_to_r.html">Introduction to R</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-25"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="gettingstarted.html">Getting Up and Running with R</a></li>
+<li class="toctree-l4 current active"><a class="current reference internal" href="#">Running Commands With R</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l4"><a class="reference internal" href="data_types.html">Data Types and Structures</a></li>
+
+
+
+
+
+<li class="toctree-l4"><a class="reference internal" href="load_data.html">Loading Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manipulating_data.html">Manipulating Datasets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control_flow.html">Control Flow</a></li>
+
+
+<li class="toctree-l4"><a class="reference internal" href="plots.html">Plotting in R</a></li>
+
+
+
+
+
+<li class="toctree-l4"><a class="reference internal" href="stats.html">Statistical Analysis</a></li>
+
+
+
+
+
+
+
+
+
+<li class="toctree-l4"><a class="reference internal" href="good_practise.html">Establishing Good Practices when Coding</a></li>
+
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/regression_analysis_with_R.html">Regression Analysis with R</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-26"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../regression_analysis_with_R/introduction_to_regression.html">Introduction to Regression Analysis</a></li>
+
+<li class="toctree-l4"><a class="reference internal" href="../regression_analysis_with_R/hypothesis_testing.html">Hypothesis Testing for Regression Models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../regression_analysis_with_R/multiple_linear_regression.html">Multiple Linear Regression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../regression_analysis_with_R/logistic_regression.html">Logistic Regression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../regression_analysis_with_R/summary.html">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../regression_analysis_with_R/extras.html">Extras</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/advanced_regression_analysis_with_R.html">Advanced Regression Analysis with R</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-27"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../advanced_regression_analysis_with_R/mixed_effects_models.html">Mixed Effects Models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../advanced_regression_analysis_with_R/expanding_the_mixed_effects_model_framework.html">Expanding the mixed effects model framework</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../advanced_regression_analysis_with_R/regression_models_with_interaction_terms.html">Regression models with interaction terms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../advanced_regression_analysis_with_R/summary.html">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../advanced_regression_analysis_with_R/extras.html">Extras</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/working_with_data_in_R.html">Working With Data in R</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-28"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../working_with_data_in_R/introducing_tidyverse.html">Tidyverse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../working_with_data_in_R/loading_data.html">Loading Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../working_with_data_in_R/manipulating_a_dataframe.html">Manipulating A Dataframe</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../working_with_data_in_R/piping.html">Piping and Functional Style</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../working_with_data_in_R/combining_datasets.html">Combining Datasets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../working_with_data_in_R/reshaping_datasets.html">Reshaping Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../working_with_data_in_R/strings_and_dates.html">Strings and Dates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../working_with_data_in_R/summary.html">Summary</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../course_homepages/high_performance_computing.html">High Performance Computing</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-29"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/introduction_to_hpc.html">Introduction to HPC and ISCA</a><input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-30"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_hpc/motivation.html">Why might I want to use a HPC Cluster?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_hpc/isca.html">Exeter supported HPC facilities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_hpc/connection.html">How do I connect to a HPC Cluster?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_hpc/file_transfer.html">File Transfer Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_hpc/schedulers.html">Running a job on a HPC system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_hpc/modules.html">Loading software packages on HPC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_hpc/example_jobs.html">Running more complex jobs on a HPC system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_hpc/exploiting_slurm.html">Harnessing the power of the scheduler</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../course_homepages/version_control.html">Version Control</a><input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-31"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/introduction_to_version_control.html">Introduction to Version Control</a><input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-32"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_version_control/motivation.html">Motivation: Why use Version Control Systems?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_version_control/git_vs_github.html">Git vs Github</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_version_control/configuring_git.html">Setting up Git and GitHub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_version_control/making_repos.html">Making Repositories</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_version_control/example_repo.html">An Example Repository</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_version_control/recording_changes.html">Recording Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_version_control/history_and_changes.html">Viewing History and Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_version_control/recording_changes_revisited.html">Recording Changes – Revisited</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_version_control/pushing_and_pulling.html">Pushing to and Pulling From the Remote Repository</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_version_control/undoing_changes.html">Undoing Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_version_control/ignoring_files.html">Ignoring Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_version_control/local_branches.html">Working with Local Branches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_version_control/remote_branches_with_github.html">Remote Branches with GitHub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_version_control/collaborating_with_branches.html">Collaborating with Branches</a></li>
+
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_version_control/merge_conflicts.html">Merge Conflicts</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/intermediate_version_control.html">Intermediate Version Control</a><input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-33"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../intermediate_version_control/introduction.html">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intermediate_version_control/config_git.html">Configuring Git</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intermediate_version_control/basic_git.html">Basic Git</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intermediate_version_control/typical_workflow.html">Typical Workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intermediate_version_control/branches_and_merging.html">Branches and Merging</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intermediate_version_control/remotes.html">Working with Remotes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intermediate_version_control/github_workflows.html">GitHub Workflows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intermediate_version_control/rewriting_history.html">Rewriting the History</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intermediate_version_control/further_topics.html">Some Additional Topics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../course_homepages/unix.html">UNIX</a><input class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-34"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/introduction_to_unix.html">Introduction to UNIX</a><input class="toctree-checkbox" id="toctree-checkbox-35" name="toctree-checkbox-35" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-35"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_unix/intro.html">Introducing the UNIX shell</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_unix/filedir.html">File Directory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_unix/create.html">Working With Files and Directories</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_unix/pipefilter.html">Pipes and Filters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_unix/loop.html">Loops</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_unix/script.html">Shell Scripts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_unix/find.html">Finding Things</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../course_homepages/computational_thinking.html">Computational Thinking</a><input class="toctree-checkbox" id="toctree-checkbox-36" name="toctree-checkbox-36" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-36"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/computational_thinking.html">Computational Thinking</a><input class="toctree-checkbox" id="toctree-checkbox-37" name="toctree-checkbox-37" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-37"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../computational_thinking/introduction.html">Computational Thinking</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../computational_thinking/algorithms.html">Algorithms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../computational_thinking/decomposition.html">Decomposition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../computational_thinking/pattern_recognition.html">Pattern recognition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../computational_thinking/abstraction.html">Abstraction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../computational_thinking/alignment.html">Aligning the human solution with the computer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../computational_thinking/final_exercise.html">Sudoku Task</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../course_homepages/software_development.html">Software Development</a><input class="toctree-checkbox" id="toctree-checkbox-38" name="toctree-checkbox-38" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-38"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/software_development_best_practice.html">Software Development Best Practice</a><input class="toctree-checkbox" id="toctree-checkbox-39" name="toctree-checkbox-39" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-39"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../software_development_best_practices/software_development_life_cycle.html">Software Development Life Cycle &amp; Methodologies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../software_development_best_practices/data_management.html">Data Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../software_development_best_practices/problem_solving.html">Problem Solving</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../software_development_best_practices/virtual_environments_dependency_managers.html">Virtual Environment and Dependency Managers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../software_development_best_practices/version_control.html">Version Control</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../software_development_best_practices/readable_code_and_documentation.html">Readable Code and Documentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../software_development_best_practices/testing.html">Testing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../software_development_best_practices/collaboration.html">Collaboration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../software_development_best_practices/reproducibility.html">Reproducibility</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../course_homepages/julia.html">Julia</a><input class="toctree-checkbox" id="toctree-checkbox-40" name="toctree-checkbox-40" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-40"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../section_landing_pages/introduction_to_julia.html">Introduction to Julia</a><input class="toctree-checkbox" id="toctree-checkbox-41" name="toctree-checkbox-41" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-41"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_julia/introduction_to_julia.html">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_julia/variables.html">Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_julia/operations.html">Operations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_julia/control_flow.html">Control Flow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_julia/functions.html">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_julia/arrays_and_matrices.html">Arrays and Matrices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_julia/io.html">Input Output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_julia/package_management.html">Package Management</a></li>
+
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_julia/visualisation.html">Plotting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction_to_julia/performant_code.html">Performant Code</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../bibliography.html">Bibliography</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Join Us!</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/contributing.html">Contributing to CfRR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/roles.html">Roles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/contributing_guidelines.html">Contributor Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/developing_a_course.html">Developing a Course Guidance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/suggestions_form.html">Feedback</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Community Guidelines</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../cfrr_program_details/code_of_conduct.html">Code of Conduct</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/coding-for-reproducible-research/CfRR_Courses/main?urlpath=tree/individual_modules/introduction_to_r/basic_commands.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/coding-for-reproducible-research/CfRR_Courses" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/coding-for-reproducible-research/CfRR_Courses/issues/new?title=Issue%20on%20page%20%2Findividual_modules/introduction_to_r/basic_commands.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/individual_modules/introduction_to_r/basic_commands.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Running Commands With R</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Running Commands With R</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#executing-commands-in-r">Executing Commands in R</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interacting-with-r">Interacting with R</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-the-working-directory">Set the Working Directory</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#absolute-vs-relative-filepaths">Absolute vs Relative Filepaths</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-variables">Defining Variables</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-operator">Assignment Operator</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#activity-assigning-values-to-variables">Activity: Assigning Values to Variables</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#printing-with-parentheses">Printing With Parentheses</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#naming-objects-in-r">Naming Objects in R</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-quiz">Summary Quiz</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="running-commands-with-r">
+<h1>Running Commands With R<a class="headerlink" href="#running-commands-with-r" title="Link to this heading">#</a></h1>
+<section id="learning-objectives">
+<h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Understand how to use the R console and RStudio interface for running commands and displaying results</p></li>
+<li><p>Learn the importance of the working directory in R and how to set and verify it using R commands</p></li>
+<li><p>Differentiate between absolute and relative file paths in R</p></li>
+<li><p>Learn to create, assign values to, and modify variables in R and understand their usage in programming</p></li>
+</ul>
+</section>
+<section id="executing-commands-in-r">
+<h2>Executing Commands in R<a class="headerlink" href="#executing-commands-in-r" title="Link to this heading">#</a></h2>
+<p>The console pane (in RStudio, the bottom left panel) is the place where R is waiting for you to tell it what to do, and where it will show the results of a command that has been executed. This console is the fundamental component of R and is available outside of RStudio. It is recognisable due to the blurb of text at the top (which provides details on which R version you are using) and the arrowhead cursor (&gt;).</p>
+<p><img alt="Alt Text" src="../../_images/r_console.png" /></p>
+<p>You can type commands directly into the console and press <code class="docutils literal notranslate"><span class="pre">Enter</span></code> to execute those commands. For example we can use R as a calculator:</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+2+2 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] 4
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="interacting-with-r">
+<h2>Interacting with R<a class="headerlink" href="#interacting-with-r" title="Link to this heading">#</a></h2>
+<p>There are two main ways of interacting with R: using the console or by using a script. A script is a text file that contains your code. R scripts are often saved with the file extension .r or .R.</p>
+<p>We want our code and workflow to be reproducible. In other words, we want to write code in a way that anyone (including ou future selves) can easily replicate, such they will obtain the same results from our code on their computer. If we type our commands directly into the Console, they will be forgotten when you close the session.  It is preferable to type the commands you want to run directly into the script editor, so that you can save the script. This way,  you have a complete record of what you did,  you can easily show others how you did it and you can do it again later on if needed.</p>
+<p>RStudio allows you to execute commands directly from the script editor by using the <kbd><code class="docutils literal notranslate"><span class="pre">Ctrl</span></code></kbd> + <kbd><code class="docutils literal notranslate"><span class="pre">Enter</span></code></kbd> shortcut. If no text is highlighted, the command on the current line in the script (i.e. where the line containing the cursor) will be sent to the console and executed. Alternatively you can select multiple lines to  send to the console for execution when you press <kbd><code class="docutils literal notranslate"><span class="pre">Ctrl</span></code></kbd> + <kbd><code class="docutils literal notranslate"><span class="pre">Enter</span></code></kbd>.</p>
+<p>There may be times when you want to type directly in the console, for example a quick calcuation.  RStudio provides the <kbd><code class="docutils literal notranslate"><span class="pre">Ctrl</span></code></kbd> + <kbd><code class="docutils literal notranslate"><span class="pre">1</span></code></kbd> and <kbd><code class="docutils literal notranslate"><span class="pre">Ctrl</span></code></kbd> + <kbd><code class="docutils literal notranslate"><span class="pre">2</span></code></kbd> shortcuts allow you to jump between the script and the console windows.</p>
+<p>If R is ready to accept commands, the R console shows a <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> prompt. If it receives a command (by typing, copy-pasting or sent from the script editor using <kbd><code class="docutils literal notranslate"><span class="pre">Ctrl</span></code></kbd> + <kbd><code class="docutils literal notranslate"><span class="pre">Enter</span></code></kbd>), R will try to execute it, and when ready, show the results and come back with a new <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>prompt to indicate it is ready for the next command.</p>
+<p>If R is still waiting for you to enter more text to complete the current command  the console will show a <code class="docutils literal notranslate"><span class="pre">+</span></code> prompt. It means that you haven’t finished entering a complete command. This is because it is expecting a specific character, that finishes a command you have already started. For example, if you open a parenthesis or quotation,  it needs to be closed before the command can be processed. Another way of thinking about this  is R expects for every left-parentheses you include, a right-parentheses to accompany it. Similarly, it expects an even  number of quotation marks. This can be quite frustrating, as it might not be obvious what R is waiting for, but if you’re in RStudio and this happens, click inside the console window and press <code class="docutils literal notranslate"><span class="pre">Esc</span></code>; this will cancel the incomplete command and return you to the <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> prompt.</p>
+</section>
+<section id="set-the-working-directory">
+<h2>Set the Working Directory<a class="headerlink" href="#set-the-working-directory" title="Link to this heading">#</a></h2>
+<p>When using R, often we want to analyse data stored in files on our computer and potentially save some output.</p>
+<p>It is important to note that we are always working in a folder or directory on our computer. There are times when this may not be important (for example running a simulation from given parameters).  But if we want a specific file, we need to tell R where to find it. We do using by specifying the filepath. One common issue, when  starting out with programming is understanding where a program (in this case R/Rstudio) is looking for the file(s).</p>
+<p>Theoretically, we can find any file from any location given the correct filepath. However, to make our code simpler, it can be helpful  to change location, and move to a folder where the files we want to work on are located. The folder we are currently in is called the working directory.</p>
+<p>Let’s create a folder on our computer, to store all the files we will work on for this series of workshops. On your computer, open up a  file explorer window (outside of Rstudio) and create a folder called <strong>R-workshop</strong> somewhere memorable. For example on the Desktop.</p>
+<p>In Rstudio, we can change the working directory through the drop down menus by selecting options</p>
+<p><code class="docutils literal notranslate"><span class="pre">Session</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">Working</span> <span class="pre">Directory</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Choose</span> <span class="pre">Directory...</span></code></p>
+<p>We then search for and select the folder we want.</p>
+<p><img alt="Alt Text" src="../../_images/rstudio_workdirectory.png" /></p>
+<p>You will note that in the R console a line of code has appeared.</p>
+<p><img alt="Alt Text" src="../../_images/rstudio_setwd.png" /></p>
+<p>This is the R command that is required to change the current working directory using the function <code class="docutils literal notranslate"><span class="pre">setwd()</span></code>.  The text string inside the “()” is the filepath to the folder we want to change to. If you save this to your script,  next time you won’t need to click through the menus, you can execute this line of code instead.</p>
+<p>You should also see that in the File Pane (bottom-right), this has also changed to this new directory. We need to  know where we are such that we can navigate R to find files and locations appropriately.  If we ever get lost we can use <code class="docutils literal notranslate"><span class="pre">getwd()</span></code> to get the path of our current location.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+getwd()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] &quot;/Users/lb788/Documents/CfRR/CfRR_Courses/individual_modules/introduction_to_r&quot;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="absolute-vs-relative-filepaths">
+<h1>Absolute vs Relative Filepaths<a class="headerlink" href="#absolute-vs-relative-filepaths" title="Link to this heading">#</a></h1>
+<p>We can specify filepaths in two ways:</p>
+<ol class="arabic simple">
+<li><p>Absolute - this is where we direct R how to get there from the root folder, which is the uppermost folder in the system and is denoted “/”.
+Any file path that starts with “/” is an absolute filepath.</p></li>
+<li><p>Relative - this is where we direct R how to get to the new folder from where we currently are. For example to get to a sub-folder of the current
+folder we can just provide the name of the current folder. We can use shortcuts to go up a folder (“..”). Relative file paths do not start with “/”</p></li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="defining-variables">
+<h1>Defining Variables<a class="headerlink" href="#defining-variables" title="Link to this heading">#</a></h1>
+<p>A key concept in any programming language is that of a variable. A variable is just a name, such as <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">current_temperature</span></code>, or <code class="docutils literal notranslate"><span class="pre">subject_id</span></code> which  represents some value. We use the word value here loosely as it could be a singular number, a matrix, or a more complex numerical structure. It also  does not have to even be a number it could be a string of text. The idea though is it’s value might change and we want to simplify how we process the value.</p>
+<p>In R, we can create a new variable simply by assigning a value to it using <code class="docutils literal notranslate"><span class="pre">&lt;-</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+weight_kg &lt;- 55
+weight_kg
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">55</div></div>
+</div>
+<p>Once a variable has a value, we can print it by typing the name of the variable and hitting <code class="docutils literal notranslate"><span class="pre">Enter</span></code> (or <code class="docutils literal notranslate"><span class="pre">return</span></code>).
+In general, R will print to the console any object returned by a function or operation <em>unless</em> we assign it to a variable.</p>
+<p>We can do arithmetic with the variable:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+2.2 * weight_kg
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">121</div></div>
+</div>
+<p>We can also change an object’s value by assigning it a new value, and see that accessing the variable again shows the new value.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+weight_kg &lt;- 57.5 
+weight_kg
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">57.5</div></div>
+</div>
+<p>If we imagine the variable as a sticky note with a name written on it,
+assignment is like putting the sticky note on a particular value:</p>
+<p><img alt="Variables as sticky notes" src="../../_images/python-sticky-note-variables-011.svg" /></p>
+<p>This means that assigning a value to one object does not change the values of other variables.
+For example, let’s store the subject’s weight in pounds in a variable:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+weight_lb &lt;- 2.2 * weight_kg
+# weight in kg...
+weight_kg
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">57.5</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+# ... and in pounds
+weight_lb 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">126.5</div></div>
+</div>
+<p><img alt="Creating another variable" src="../../_images/python-sticky-note-variables-021.svg" /></p>
+<p>and then change <code class="docutils literal notranslate"><span class="pre">weight_kg</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+weight_kg &lt;- 100.0
+# weight in kg now...
+weight_kg
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">100</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+# ...and weight in pounds still
+weight_lb
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">126.5</div></div>
+</div>
+<p><img alt="Updating a variable" src="../../_images/python-sticky-note-variables-031.svg" /></p>
+<p>Since <code class="docutils literal notranslate"><span class="pre">weight_lb</span></code> doesn’t “remember” where its value came from, it isn’t automatically updated when <code class="docutils literal notranslate"><span class="pre">weight_kg</span></code> changes.
+This is different from the way spreadsheets work.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="assignment-operator">
+<h1>Assignment Operator<a class="headerlink" href="#assignment-operator" title="Link to this heading">#</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;-</span></code> is the assignment operator. It assigns values on the right to objects on the left. So, after executing <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;-</span> <span class="pre">3</span></code>, the value of <code class="docutils literal notranslate"><span class="pre">x</span></code> is <code class="docutils literal notranslate"><span class="pre">3</span></code>. The arrow can be read as 3 <strong>goes into</strong> <code class="docutils literal notranslate"><span class="pre">x</span></code>.  For historical reasons, you can also use <code class="docutils literal notranslate"><span class="pre">=</span></code> for assignments, but not in every context. Because of the <a class="reference external" href="http://blog.revolutionanalytics.com/2008/12/use-equals-or-arrow-for-assignment.html">slight</a>
+<a class="reference external" href="https://web.archive.org/web/20130610005305/https://stat.ethz.ch/pipermail/r-help/2009-March/191462.html">differences</a> in syntax, it is good practice to use always <code class="docutils literal notranslate"><span class="pre">&lt;-</span></code> for assignments, except when specifying the values of arguments in functions, when only <code class="docutils literal notranslate"><span class="pre">=</span></code> should be used, see below.
+In RStudio, typing <kbd>Alt</kbd> + <kbd>-</kbd> (push <kbd>Alt</kbd> at thesame time as the <kbd>-</kbd> key) will write <code class="docutils literal notranslate"><span class="pre">&lt;-</span></code> in a single keystroke.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="activity-assigning-values-to-variables">
+<h1>Activity: Assigning Values to Variables<a class="headerlink" href="#activity-assigning-values-to-variables" title="Link to this heading">#</a></h1>
+<p>Draw diagrams showing what variables refer to what values after each statement in the following program:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+mass &lt;- 47.5
+age &lt;- 122
+mass &lt;- mass * 2.0
+age &lt;- age - 20
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="printing-with-parentheses">
+<h1>Printing With Parentheses<a class="headerlink" href="#printing-with-parentheses" title="Link to this heading">#</a></h1>
+<p>An alternative way to print the value of a variable is to use () around the assignment statement.
+As an example: <code class="docutils literal notranslate"><span class="pre">(total_weight</span> <span class="pre">&lt;-</span> <span class="pre">weight_kg</span> <span class="pre">+</span> <span class="pre">weight_lb)</span></code> adds the values of <code class="docutils literal notranslate"><span class="pre">weight_kg</span></code> and <code class="docutils literal notranslate"><span class="pre">weight_lb</span></code>, assigns the result to the <code class="docutils literal notranslate"><span class="pre">total_weight</span></code>, and finally prints the assigned value of the variable <code class="docutils literal notranslate"><span class="pre">total_weight</span></code>.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="naming-objects-in-r">
+<h1>Naming Objects in R<a class="headerlink" href="#naming-objects-in-r" title="Link to this heading">#</a></h1>
+<p>You can use any combination of alphanumeric characters, along with dots and underscores, to name an R object. But there are a few <em><strong>exceptions</strong></em>:</p>
+<ul class="simple">
+<li><p>Names cannot start with a number;</p></li>
+<li><p>Names cannot have spaces;</p></li>
+<li><p>Names cannot be a standalone number such as <code class="docutils literal notranslate"><span class="pre">12</span></code> or <code class="docutils literal notranslate"><span class="pre">0.34</span></code>;</p></li>
+<li><p>Names cannot be a reserved word such as <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">else</span></code>, <code class="docutils literal notranslate"><span class="pre">function</span></code>, <code class="docutils literal notranslate"><span class="pre">TRUE</span></code>, <code class="docutils literal notranslate"><span class="pre">FALSE</span></code> and <code class="docutils literal notranslate"><span class="pre">NULL</span></code> just to name a few (to see the full list of reserved words, type <code class="docutils literal notranslate"><span class="pre">?Reserved</span></code>).</p></li>
+</ul>
+<p>Examples of <strong><em>valid names</em></strong> include <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">dat2</span></code>, <code class="docutils literal notranslate"><span class="pre">cpi_index</span></code>, <code class="docutils literal notranslate"><span class="pre">.tmp</span></code>, and even a standalone dot <code class="docutils literal notranslate"><span class="pre">.</span></code> (though a dot can make reading code difficult under certain circumstances).</p>
+<p>Examples of <strong><em>invalid names</em></strong> include <code class="docutils literal notranslate"><span class="pre">1dat</span></code>,<code class="docutils literal notranslate"> <span class="pre">dat</span> <span class="pre">2</span></code> (note the space between <code class="docutils literal notranslate"><span class="pre">dat</span></code> and <code class="docutils literal notranslate"><span class="pre">2</span></code>), <code class="docutils literal notranslate"><span class="pre">df-ver2</span></code> (the dash is treated as a mathematical operator), and <code class="docutils literal notranslate"><span class="pre">Inf</span></code> (the latter is a reserved word listed in the <code class="docutils literal notranslate"><span class="pre">?Reserved</span></code> help document).</p>
+<p>You can mix cases, but use upper cases with caution since some letters look very much the same in both lower and upper cases (e.g. s and S).</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="functions">
+<h1>Functions<a class="headerlink" href="#functions" title="Link to this heading">#</a></h1>
+<p>Functions are a core concept in programming, they are commands which tells R to perform a particular task. The utility of a function is that it will perform its given action again and again. R identifies functions by the presence of “()” following their name. You can customise how the function behaves by the use of arguments, this is additional information provide to the function to allow it to run).</p>
+<p>We have already used two functions in this workshop. First we used <code class="docutils literal notranslate"><span class="pre">setwd()</span></code>. We used this function with an argument, which was the path to the folder we  wanted to change to. We can reuse this function to change to an unlimited number of different folders on our computer. Then we used <code class="docutils literal notranslate"><span class="pre">getwd()</span></code>, this is an example  of a function that doesn’t require any arguments.</p>
+<section id="summary-quiz">
+<h2>Summary Quiz<a class="headerlink" href="#summary-quiz" title="Link to this heading">#</a></h2>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div id="okBeGJsWAyIZ" data-shufflequestions="False"
+               data-shuffleanswers="True"
+               data-preserveresponses="false"
+               data-numquestions="1000000"
+               data-maxwidth="600"
+               style="border-radius: 10px; text-align: left"> <style>
+#okBeGJsWAyIZ {
+   --jq-multiple-choice-bg: #6f78ffff;
+   --jq-mc-button-bg: #fafafa;
+   --jq-mc-button-border: #e0e0e0e0;
+   --jq-mc-button-inset-shadow: #555555;
+   --jq-many-choice-bg: #f75c03ff;
+   --jq-numeric-bg: #392061ff;
+   --jq-numeric-input-bg: #c0c0c0;
+   --jq-numeric-input-label: #101010;
+   --jq-numeric-input-shadow: #999999;
+   --jq-incorrect-color: #c80202;
+   --jq-correct-color: #009113;
+   --jq-text-color: #fafafa;
+}
+
+.Quiz {
+    max-width: 600px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    line-height: 1.1;
+    font-size: 16pt;
+    border-radius: inherit;
+}
+
+.QuizCode {
+    font-size: 14pt;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.QuizCode>pre {
+    padding: 4px;
+}
+
+.Answer {
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    border-radius: inherit;
+}
+
+.Feedback {
+    font-size: 16pt;
+    text-align: center;
+    min-height: 2em;
+}
+
+.Input {
+    align: left;
+    font-size: 20pt;
+}
+
+.Input-text {
+    display: block;
+    margin: 10px;
+    color: inherit;
+    width: 140px;
+    background-color: var(--jq-numeric-input-bg);
+    color: var(--jq-text-color);
+    padding: 5px;
+    padding-left: 10px;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: inherit;
+    line-height: 20pt;
+    border: none;
+    border-radius: 0.2rem;
+    transition: box-shadow 0.1s);
+}
+
+.Input-text:focus {
+    outline: none;
+    background-color: var(--jq-numeric-input-bg);
+    box-shadow: 0.6rem 0.8rem 1.4rem -0.5rem var(--jq-numeric-input-shadow);
+}
+
+.MCButton {
+    background: var(--jq-mc-button-bg);
+    border: 1px solid var(--jq-mc-button-border);
+    border-radius: inherit;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MCButton p {
+    color: inherit;
+}
+
+.MultipleChoiceQn {
+    padding: 10px;
+    background: var(--jq-multiple-choice-bg);
+    color: var(--jq-text-color);
+    border-radius: inherit;
+}
+
+.ManyChoiceQn {
+    padding: 10px;
+    background: var(--jq-many-choice-bg);
+    color: var(--jq-text-color);
+    border-radius: inherit;
+}
+
+.NumericQn {
+    padding: 10px;
+    background: var(--jq-numeric-bg);
+    color: var(--jq-text-color);
+    border-radius: inherit;
+}
+
+.NumericQn p {
+    color: inherit;
+}
+
+.InpLabel {
+    line-height: 34px;
+    float: left;
+    margin-right: 10px;
+    color: var(--jq-numeric-input-label);
+    font-size: 15pt;
+}
+
+.incorrect {
+    color: var(--jq-incorrect-color);
+}
+
+.correct {
+    color: var(--jq-correct-color);
+}
+
+.correctButton {
+    /*
+    background: var(--jq-correct-color);
+   */
+    animation: correct-anim 0.6s ease;
+    animation-fill-mode: forwards;
+    color: var(--jq-text-color);
+    box-shadow: inset 0px 0px 5px var(--jq-mc-button-inset-shadow);
+    outline: none;
+}
+
+.incorrectButton {
+    animation: incorrect-anim 0.8s ease;
+    animation-fill-mode: forwards;
+    color: var(--jq-text-color);
+    box-shadow: inset 0px 0px 5px var(--jq-mc-button-inset-shadow);
+    outline: none;
+}
+
+@keyframes incorrect-anim {
+    100% {
+        background-color: var(--jq-incorrect-color);
+    }
+}
+
+@keyframes correct-anim {
+    100% {
+        background-color: var(--jq-correct-color);
+    }
+}
+</style></div><script type="application/javascript">var questionsokBeGJsWAyIZ=[
+    {
+        "question": "What does a relative file path NOT start with?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "A drive letter (e.g., C:)",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "A forward slash (/)",
+                "correct": true,
+                "feedback": "Correct"
+            },
+            {
+                "answer": "A dot (.)",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "A folder name",
+                "correct": false,
+                "feedback": "Incorrect"
+            }
+        ]
+    },
+    {
+        "question": "Which operator is used to assign a value to a variable in R?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "==",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "->",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "=",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "<-",
+                "correct": true,
+                "feedback": "Correct"
+            }
+        ]
+    },
+    {
+        "question": "What is the primary use of the console pane in RStudio?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "To edit scripts and save them for later use",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "To browse files and manage projects",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "To execute R commands and display results",
+                "correct": true,
+                "feedback": "Correct"
+            },
+            {
+                "answer": "To visualize data using plots",
+                "correct": false,
+                "feedback": "Incorrect"
+            }
+        ]
+    }
+];
+    // Make a random ID
+function makeid(length) {
+    var result = [];
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+    var charactersLength = characters.length;
+    for (var i = 0; i < length; i++) {
+        result.push(characters.charAt(Math.floor(Math.random() * charactersLength)));
+    }
+    return result.join('');
+}
+
+// Choose a random subset of an array. Can also be used to shuffle the array
+function getRandomSubarray(arr, size) {
+    var shuffled = arr.slice(0), i = arr.length, temp, index;
+    while (i--) {
+        index = Math.floor((i + 1) * Math.random());
+        temp = shuffled[index];
+        shuffled[index] = shuffled[i];
+        shuffled[i] = temp;
+    }
+    return shuffled.slice(0, size);
+}
+
+function printResponses(responsesContainer) {
+    var responses=JSON.parse(responsesContainer.dataset.responses);
+    var stringResponses='<B>IMPORTANT!</B>To preserve this answer sequence for submission, when you have finalized your answers: <ol> <li> Copy the text in this cell below "Answer String"</li> <li> Double click on the cell directly below the Answer String, labeled "Replace Me"</li> <li> Select the whole "Replace Me" text</li> <li> Paste in your answer string and press shift-Enter.</li><li>Save the notebook using the save icon or File->Save Notebook menu item</li></ul><br><br><br><b>Answer String:</b><br> ';
+    console.log(responses);
+    responses.forEach((response, index) => {
+        if (response) {
+            console.log(index + ': ' + response);
+            stringResponses+= index + ': ' + response +"<BR>";
+        }
+    });
+    responsesContainer.innerHTML=stringResponses;
+}
+function check_mc() {
+    var id = this.id.split('-')[0];
+    //var response = this.id.split('-')[1];
+    //console.log(response);
+    //console.log("In check_mc(), id="+id);
+    //console.log(event.srcElement.id)           
+    //console.log(event.srcElement.dataset.correct)   
+    //console.log(event.srcElement.dataset.feedback)
+
+    var label = event.srcElement;
+    //console.log(label, label.nodeName);
+    var depth = 0;
+    while ((label.nodeName != "LABEL") && (depth < 20)) {
+        label = label.parentElement;
+        console.log(depth, label);
+        depth++;
+    }
+
+
+
+    var answers = label.parentElement.children;
+
+    //console.log(answers);
+
+
+    // Split behavior based on multiple choice vs many choice:
+    var fb = document.getElementById("fb" + id);
+
+
+
+
+    if (fb.dataset.numcorrect == 1) {
+        // What follows is for the saved responses stuff
+        var outerContainer = fb.parentElement.parentElement;
+        var responsesContainer = document.getElementById("responses" + outerContainer.id);
+        if (responsesContainer) {
+            //console.log(responsesContainer);
+            var response = label.firstChild.innerText;
+            if (label.querySelector(".QuizCode")){
+                response+= label.querySelector(".QuizCode").firstChild.innerText;
+            }
+            console.log(response);
+            //console.log(document.getElementById("quizWrap"+id));
+            var qnum = document.getElementById("quizWrap"+id).dataset.qnum;
+            console.log("Question " + qnum);
+            //console.log(id, ", got numcorrect=",fb.dataset.numcorrect);
+            var responses=JSON.parse(responsesContainer.dataset.responses);
+            console.log(responses);
+            responses[qnum]= response;
+            responsesContainer.setAttribute('data-responses', JSON.stringify(responses));
+            printResponses(responsesContainer);
+        }
+        // End code to preserve responses
+        
+        for (var i = 0; i < answers.length; i++) {
+            var child = answers[i];
+            //console.log(child);
+            child.className = "MCButton";
+        }
+
+
+
+        if (label.dataset.correct == "true") {
+            // console.log("Correct action");
+            if ("feedback" in label.dataset) {
+                fb.textContent = jaxify(label.dataset.feedback);
+            } else {
+                fb.textContent = "Correct!";
+            }
+            label.classList.add("correctButton");
+
+            fb.className = "Feedback";
+            fb.classList.add("correct");
+
+        } else {
+            if ("feedback" in label.dataset) {
+                fb.textContent = jaxify(label.dataset.feedback);
+            } else {
+                fb.textContent = "Incorrect -- try again.";
+            }
+            //console.log("Error action");
+            label.classList.add("incorrectButton");
+            fb.className = "Feedback";
+            fb.classList.add("incorrect");
+        }
+    }
+    else {
+        var reset = false;
+        var feedback;
+         if (label.dataset.correct == "true") {
+            if ("feedback" in label.dataset) {
+                feedback = jaxify(label.dataset.feedback);
+            } else {
+                feedback = "Correct!";
+            }
+            if (label.dataset.answered <= 0) {
+                if (fb.dataset.answeredcorrect < 0) {
+                    fb.dataset.answeredcorrect = 1;
+                    reset = true;
+                } else {
+                    fb.dataset.answeredcorrect++;
+                }
+                if (reset) {
+                    for (var i = 0; i < answers.length; i++) {
+                        var child = answers[i];
+                        child.className = "MCButton";
+                        child.dataset.answered = 0;
+                    }
+                }
+                label.classList.add("correctButton");
+                label.dataset.answered = 1;
+                fb.className = "Feedback";
+                fb.classList.add("correct");
+
+            }
+        } else {
+            if ("feedback" in label.dataset) {
+                feedback = jaxify(label.dataset.feedback);
+            } else {
+                feedback = "Incorrect -- try again.";
+            }
+            if (fb.dataset.answeredcorrect > 0) {
+                fb.dataset.answeredcorrect = -1;
+                reset = true;
+            } else {
+                fb.dataset.answeredcorrect--;
+            }
+
+            if (reset) {
+                for (var i = 0; i < answers.length; i++) {
+                    var child = answers[i];
+                    child.className = "MCButton";
+                    child.dataset.answered = 0;
+                }
+            }
+            label.classList.add("incorrectButton");
+            fb.className = "Feedback";
+            fb.classList.add("incorrect");
+        }
+        // What follows is for the saved responses stuff
+        var outerContainer = fb.parentElement.parentElement;
+        var responsesContainer = document.getElementById("responses" + outerContainer.id);
+        if (responsesContainer) {
+            //console.log(responsesContainer);
+            var response = label.firstChild.innerText;
+            if (label.querySelector(".QuizCode")){
+                response+= label.querySelector(".QuizCode").firstChild.innerText;
+            }
+            console.log(response);
+            //console.log(document.getElementById("quizWrap"+id));
+            var qnum = document.getElementById("quizWrap"+id).dataset.qnum;
+            console.log("Question " + qnum);
+            //console.log(id, ", got numcorrect=",fb.dataset.numcorrect);
+            var responses=JSON.parse(responsesContainer.dataset.responses);
+            if (label.dataset.correct == "true") {
+                if (typeof(responses[qnum]) == "object"){
+                    if (!responses[qnum].includes(response))
+                        responses[qnum].push(response);
+                } else{
+                    responses[qnum]= [ response ];
+                }
+            } else {
+                responses[qnum]= response;
+            }
+            console.log(responses);
+            responsesContainer.setAttribute('data-responses', JSON.stringify(responses));
+            printResponses(responsesContainer);
+        }
+        // End save responses stuff
+
+
+
+        var numcorrect = fb.dataset.numcorrect;
+        var answeredcorrect = fb.dataset.answeredcorrect;
+        if (answeredcorrect >= 0) {
+            fb.textContent = feedback + " [" + answeredcorrect + "/" + numcorrect + "]";
+        } else {
+            fb.textContent = feedback + " [" + 0 + "/" + numcorrect + "]";
+        }
+
+
+    }
+
+    if (typeof MathJax != 'undefined') {
+        var version = MathJax.version;
+        console.log('MathJax version', version);
+        if (version[0] == "2") {
+            MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+        } else if (version[0] == "3") {
+            MathJax.typeset([fb]);
+        }
+    } else {
+        console.log('MathJax not detected');
+    }
+
+}
+
+function make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id) {
+    var shuffled;
+    if (shuffle_answers == "True") {
+        //console.log(shuffle_answers+" read as true");
+        shuffled = getRandomSubarray(qa.answers, qa.answers.length);
+    } else {
+        //console.log(shuffle_answers+" read as false");
+        shuffled = qa.answers;
+    }
+
+
+    var num_correct = 0;
+
+
+
+    shuffled.forEach((item, index, ans_array) => {
+        //console.log(answer);
+
+        // Make input element
+        var inp = document.createElement("input");
+        inp.type = "radio";
+        inp.id = "quizo" + id + index;
+        inp.style = "display:none;";
+        aDiv.append(inp);
+
+        //Make label for input element
+        var lab = document.createElement("label");
+        lab.className = "MCButton";
+        lab.id = id + '-' + index;
+        lab.onclick = check_mc;
+        var aSpan = document.createElement('span');
+        aSpan.classsName = "";
+        //qDiv.id="quizQn"+id+index;
+        if ("answer" in item) {
+            aSpan.innerHTML = jaxify(item.answer);
+            //aSpan.innerHTML=item.answer;
+        }
+        lab.append(aSpan);
+
+        // Create div for code inside question
+        var codeSpan;
+        if ("code" in item) {
+            codeSpan = document.createElement('span');
+            codeSpan.id = "code" + id + index;
+            codeSpan.className = "QuizCode";
+            var codePre = document.createElement('pre');
+            codeSpan.append(codePre);
+            var codeCode = document.createElement('code');
+            codePre.append(codeCode);
+            codeCode.innerHTML = item.code;
+            lab.append(codeSpan);
+            //console.log(codeSpan);
+        }
+
+        //lab.textContent=item.answer;
+
+        // Set the data attributes for the answer
+        lab.setAttribute('data-correct', item.correct);
+        if (item.correct) {
+            num_correct++;
+        }
+        if ("feedback" in item) {
+            lab.setAttribute('data-feedback', item.feedback);
+        }
+        lab.setAttribute('data-answered', 0);
+
+        aDiv.append(lab);
+
+    });
+
+    if (num_correct > 1) {
+        outerqDiv.className = "ManyChoiceQn";
+    } else {
+        outerqDiv.className = "MultipleChoiceQn";
+    }
+
+    return num_correct;
+
+}
+function check_numeric(ths, event) {
+
+    if (event.keyCode === 13) {
+        ths.blur();
+
+        var id = ths.id.split('-')[0];
+
+        var submission = ths.value;
+        if (submission.indexOf('/') != -1) {
+            var sub_parts = submission.split('/');
+            //console.log(sub_parts);
+            submission = sub_parts[0] / sub_parts[1];
+        }
+        //console.log("Reader entered", submission);
+
+        if ("precision" in ths.dataset) {
+            var precision = ths.dataset.precision;
+            // console.log("1:", submission)
+            submission = Math.round((1 * submission + Number.EPSILON) * 10 ** precision) / 10 ** precision;
+            // console.log("Rounded to ", submission, " precision=", precision  );
+        }
+
+
+        //console.log("In check_numeric(), id="+id);
+        //console.log(event.srcElement.id)           
+        //console.log(event.srcElement.dataset.feedback)
+
+        var fb = document.getElementById("fb" + id);
+        fb.style.display = "none";
+        fb.textContent = "Incorrect -- try again.";
+
+        var answers = JSON.parse(ths.dataset.answers);
+        //console.log(answers);
+
+        var defaultFB = "";
+        var correct;
+        var done = false;
+        answers.every(answer => {
+            //console.log(answer.type);
+
+            correct = false;
+            // if (answer.type=="value"){
+            if ('value' in answer) {
+                if (submission == answer.value) {
+                    if ("feedback" in answer) {
+                        fb.textContent = jaxify(answer.feedback);
+                    } else {
+                        fb.textContent = jaxify("Correct");
+                    }
+                    correct = answer.correct;
+                    //console.log(answer.correct);
+                    done = true;
+                }
+                // } else if (answer.type=="range") {
+            } else if ('range' in answer) {
+                //console.log(answer.range);
+                if ((submission >= answer.range[0]) && (submission < answer.range[1])) {
+                    fb.textContent = jaxify(answer.feedback);
+                    correct = answer.correct;
+                    //console.log(answer.correct);
+                    done = true;
+                }
+            } else if (answer.type == "default") {
+                defaultFB = answer.feedback;
+            }
+            if (done) {
+                return false; // Break out of loop if this has been marked correct
+            } else {
+                return true; // Keep looking for case that includes this as a correct answer
+            }
+        });
+
+        if ((!done) && (defaultFB != "")) {
+            fb.innerHTML = jaxify(defaultFB);
+            //console.log("Default feedback", defaultFB);
+        }
+
+        fb.style.display = "block";
+        if (correct) {
+            ths.className = "Input-text";
+            ths.classList.add("correctButton");
+            fb.className = "Feedback";
+            fb.classList.add("correct");
+        } else {
+            ths.className = "Input-text";
+            ths.classList.add("incorrectButton");
+            fb.className = "Feedback";
+            fb.classList.add("incorrect");
+        }
+
+        // What follows is for the saved responses stuff
+        var outerContainer = fb.parentElement.parentElement;
+        var responsesContainer = document.getElementById("responses" + outerContainer.id);
+        if (responsesContainer) {
+            console.log(submission);
+            var qnum = document.getElementById("quizWrap"+id).dataset.qnum;
+            //console.log("Question " + qnum);
+            //console.log(id, ", got numcorrect=",fb.dataset.numcorrect);
+            var responses=JSON.parse(responsesContainer.dataset.responses);
+            console.log(responses);
+            if (submission == ths.value){
+                responses[qnum]= submission;
+            } else {
+                responses[qnum]= ths.value + "(" + submission +")";
+            }
+            responsesContainer.setAttribute('data-responses', JSON.stringify(responses));
+            printResponses(responsesContainer);
+        }
+        // End code to preserve responses
+
+        if (typeof MathJax != 'undefined') {
+            var version = MathJax.version;
+            console.log('MathJax version', version);
+            if (version[0] == "2") {
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+            } else if (version[0] == "3") {
+                MathJax.typeset([fb]);
+            }
+        } else {
+            console.log('MathJax not detected');
+        }
+        return false;
+    }
+
+}
+
+function isValid(el, charC) {
+    //console.log("Input char: ", charC);
+    if (charC == 46) {
+        if (el.value.indexOf('.') === -1) {
+            return true;
+        } else if (el.value.indexOf('/') != -1) {
+            var parts = el.value.split('/');
+            if (parts[1].indexOf('.') === -1) {
+                return true;
+            }
+        }
+        else {
+            return false;
+        }
+    } else if (charC == 47) {
+        if (el.value.indexOf('/') === -1) {
+            if ((el.value != "") && (el.value != ".")) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    } else if (charC == 45) {
+        var edex = el.value.indexOf('e');
+        if (edex == -1) {
+            edex = el.value.indexOf('E');
+        }
+
+        if (el.value == "") {
+            return true;
+        } else if (edex == (el.value.length - 1)) { // If just after e or E
+            return true;
+        } else {
+            return false;
+        }
+    } else if (charC == 101) { // "e"
+        if ((el.value.indexOf('e') === -1) && (el.value.indexOf('E') === -1) && (el.value.indexOf('/') == -1)) {
+            // Prev symbol must be digit or decimal point:
+            if (el.value.slice(-1).search(/\d/) >= 0) {
+                return true;
+            } else if (el.value.slice(-1).search(/\./) >= 0) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    } else {
+        if (charC > 31 && (charC < 48 || charC > 57))
+            return false;
+    }
+    return true;
+}
+
+function numeric_keypress(evnt) {
+    var charC = (evnt.which) ? evnt.which : evnt.keyCode;
+
+    if (charC == 13) {
+        check_numeric(this, evnt);
+    } else {
+        return isValid(this, charC);
+    }
+}
+
+
+
+
+
+function make_numeric(qa, outerqDiv, qDiv, aDiv, id) {
+
+
+
+    //console.log(answer);
+
+
+    outerqDiv.className = "NumericQn";
+    aDiv.style.display = 'block';
+
+    var lab = document.createElement("label");
+    lab.className = "InpLabel";
+    lab.textContent = "Type numeric answer here:";
+    aDiv.append(lab);
+
+    var inp = document.createElement("input");
+    inp.type = "text";
+    //inp.id="input-"+id;
+    inp.id = id + "-0";
+    inp.className = "Input-text";
+    inp.setAttribute('data-answers', JSON.stringify(qa.answers));
+    if ("precision" in qa) {
+        inp.setAttribute('data-precision', qa.precision);
+    }
+    aDiv.append(inp);
+    //console.log(inp);
+
+    //inp.addEventListener("keypress", check_numeric);
+    //inp.addEventListener("keypress", numeric_keypress);
+    /*
+    inp.addEventListener("keypress", function(event) {
+        return numeric_keypress(this, event);
+    }
+                        );
+                        */
+    //inp.onkeypress="return numeric_keypress(this, event)";
+    inp.onkeypress = numeric_keypress;
+    inp.onpaste = event => false;
+
+    inp.addEventListener("focus", function (event) {
+        this.value = "";
+        return false;
+    }
+    );
+
+
+}
+function jaxify(string) {
+    var mystring = string;
+
+    var count = 0;
+    var loc = mystring.search(/([^\\]|^)(\$)/);
+
+    var count2 = 0;
+    var loc2 = mystring.search(/([^\\]|^)(\$\$)/);
+
+    //console.log(loc);
+
+    while ((loc >= 0) || (loc2 >= 0)) {
+
+        /* Have to replace all the double $$ first with current implementation */
+        if (loc2 >= 0) {
+            if (count2 % 2 == 0) {
+                mystring = mystring.replace(/([^\\]|^)(\$\$)/, "$1\\[");
+            } else {
+                mystring = mystring.replace(/([^\\]|^)(\$\$)/, "$1\\]");
+            }
+            count2++;
+        } else {
+            if (count % 2 == 0) {
+                mystring = mystring.replace(/([^\\]|^)(\$)/, "$1\\(");
+            } else {
+                mystring = mystring.replace(/([^\\]|^)(\$)/, "$1\\)");
+            }
+            count++;
+        }
+        loc = mystring.search(/([^\\]|^)(\$)/);
+        loc2 = mystring.search(/([^\\]|^)(\$\$)/);
+        //console.log(mystring,", loc:",loc,", loc2:",loc2);
+    }
+
+    //console.log(mystring);
+    return mystring;
+}
+
+
+function show_questions(json, mydiv) {
+    console.log('show_questions');
+    //var mydiv=document.getElementById(myid);
+    var shuffle_questions = mydiv.dataset.shufflequestions;
+    var num_questions = mydiv.dataset.numquestions;
+    var shuffle_answers = mydiv.dataset.shuffleanswers;
+    var max_width = mydiv.dataset.maxwidth;
+
+    if (num_questions > json.length) {
+        num_questions = json.length;
+    }
+
+    var questions;
+    if ((num_questions < json.length) || (shuffle_questions == "True")) {
+        //console.log(num_questions+","+json.length);
+        questions = getRandomSubarray(json, num_questions);
+    } else {
+        questions = json;
+    }
+
+    //console.log("SQ: "+shuffle_questions+", NQ: " + num_questions + ", SA: ", shuffle_answers);
+
+    // Iterate over questions
+    questions.forEach((qa, index, array) => {
+        //console.log(qa.question); 
+
+        var id = makeid(8);
+        //console.log(id);
+
+
+        // Create Div to contain question and answers
+        var iDiv = document.createElement('div');
+        //iDiv.id = 'quizWrap' + id + index;
+        iDiv.id = 'quizWrap' + id;
+        iDiv.className = 'Quiz';
+        iDiv.setAttribute('data-qnum', index);
+        iDiv.style.maxWidth  =max_width+"px";
+        mydiv.appendChild(iDiv);
+        // iDiv.innerHTML=qa.question;
+        
+        var outerqDiv = document.createElement('div');
+        outerqDiv.id = "OuterquizQn" + id + index;
+        // Create div to contain question part
+        var qDiv = document.createElement('div');
+        qDiv.id = "quizQn" + id + index;
+        
+        if (qa.question) {
+            iDiv.append(outerqDiv);
+
+            //qDiv.textContent=qa.question;
+            qDiv.innerHTML = jaxify(qa.question);
+            outerqDiv.append(qDiv);
+        }
+
+        // Create div for code inside question
+        var codeDiv;
+        if ("code" in qa) {
+            codeDiv = document.createElement('div');
+            codeDiv.id = "code" + id + index;
+            codeDiv.className = "QuizCode";
+            var codePre = document.createElement('pre');
+            codeDiv.append(codePre);
+            var codeCode = document.createElement('code');
+            codePre.append(codeCode);
+            codeCode.innerHTML = qa.code;
+            outerqDiv.append(codeDiv);
+            //console.log(codeDiv);
+        }
+
+
+        // Create div to contain answer part
+        var aDiv = document.createElement('div');
+        aDiv.id = "quizAns" + id + index;
+        aDiv.className = 'Answer';
+        iDiv.append(aDiv);
+
+        //console.log(qa.type);
+
+        var num_correct;
+        if ((qa.type == "multiple_choice") || (qa.type == "many_choice") ) {
+            num_correct = make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id);
+            if ("answer_cols" in qa) {
+                //aDiv.style.gridTemplateColumns = 'auto '.repeat(qa.answer_cols);
+                aDiv.style.gridTemplateColumns = 'repeat(' + qa.answer_cols + ', 1fr)';
+            }
+        } else if (qa.type == "numeric") {
+            //console.log("numeric");
+            make_numeric(qa, outerqDiv, qDiv, aDiv, id);
+        }
+
+
+        //Make div for feedback
+        var fb = document.createElement("div");
+        fb.id = "fb" + id;
+        //fb.style="font-size: 20px;text-align:center;";
+        fb.className = "Feedback";
+        fb.setAttribute("data-answeredcorrect", 0);
+        fb.setAttribute("data-numcorrect", num_correct);
+        iDiv.append(fb);
+
+
+    });
+    var preserveResponses = mydiv.dataset.preserveresponses;
+    console.log(preserveResponses);
+    console.log(preserveResponses == "true");
+    if (preserveResponses == "true") {
+        console.log(preserveResponses);
+        // Create Div to contain record of answers
+        var iDiv = document.createElement('div');
+        iDiv.id = 'responses' + mydiv.id;
+        iDiv.className = 'JCResponses';
+        // Create a place to store responses as an empty array
+        iDiv.setAttribute('data-responses', '[]');
+
+        // Dummy Text
+        iDiv.innerHTML="<b>Select your answers and then follow the directions that will appear here.</b>"
+        //iDiv.className = 'Quiz';
+        mydiv.appendChild(iDiv);
+    }
+//console.log("At end of show_questions");
+    if (typeof MathJax != 'undefined') {
+        console.log("MathJax version", MathJax.version);
+        var version = MathJax.version;
+        setTimeout(function(){
+            var version = MathJax.version;
+            console.log('After sleep, MathJax version', version);
+            if (version[0] == "2") {
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+            } else if (version[0] == "3") {
+                MathJax.typeset([mydiv]);
+            }
+        }, 500);
+if (typeof version == 'undefined') {
+        } else
+        {
+            if (version[0] == "2") {
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+            } else if (version[0] == "3") {
+                MathJax.typeset([mydiv]);
+            } else {
+                console.log("MathJax not found");
+            }
+        }
+    }
+    return false;
+}
+/* This is to handle asynchrony issues in loading Jupyter notebooks
+           where the quiz has been previously run. The Javascript was generally
+           being run before the div was added to the DOM. I tried to do this
+           more elegantly using Mutation Observer, but I didn't get it to work.
+
+           Someone more knowledgeable could make this better ;-) */
+
+        function try_show() {
+          if(document.getElementById("okBeGJsWAyIZ")) {
+            show_questions(questionsokBeGJsWAyIZ,  okBeGJsWAyIZ); 
+          } else {
+             setTimeout(try_show, 200);
+          }
+        };
+    
+        {
+        // console.log(element);
+
+        //console.log("okBeGJsWAyIZ");
+        // console.log(document.getElementById("okBeGJsWAyIZ"));
+
+        try_show();
+        }
+        </script></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "coding-for-reproducible-research/CfRR_Courses",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./individual_modules/introduction_to_r"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="gettingstarted.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Getting Up and Running with R</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="data_types.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Data Types and Structures</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Running Commands With R</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#executing-commands-in-r">Executing Commands in R</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interacting-with-r">Interacting with R</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-the-working-directory">Set the Working Directory</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#absolute-vs-relative-filepaths">Absolute vs Relative Filepaths</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-variables">Defining Variables</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-operator">Assignment Operator</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#activity-assigning-values-to-variables">Activity: Assigning Values to Variables</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#printing-with-parentheses">Printing With Parentheses</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#naming-objects-in-r">Naming Objects in R</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-quiz">Summary Quiz</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Coding For Reproducible Research Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
